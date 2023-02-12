@@ -1,0 +1,1861 @@
+
+Server Plugins
+--------------
+ Loading plugin: sampvoice.so
+[sv:dbg:network:init] : module initializing...
+[dbg:raknet:init] : module initializing...
+[dbg:raknet:init] : module initialized
+[sv:dbg:network:init] : module initialized
+[sv:dbg:main:Load] : creating 2 work threads...
+ -------------------------------------------    
+   ___                __   __    _              
+  / __| __ _ _ __  _ _\ \ / /__ (_) __ ___    
+  \__ \/ _` | '  \| '_ \   / _ \| |/ _/ -_)
+  |___/\__,_|_|_|_| .__/\_/\___/|_|\__\___|
+                  |_|                           
+ -------------------------------------------    
+           SampVoice by MOR loaded              
+ -------------------------------------------    
+  Loaded.
+ Loading plugin: crashdetect.so
+  CrashDetect plugin 4.19.4
+  Loaded.
+ Loading plugin: FCNPC.so
+
+-------------------------------------------------
+     FCNPC - Fully Controllable NPC v2.0.4
+            GNU/Linux SA-MP 0.3.7 R2
+           Nov 17 2021 at 02:37:24
+
+  Author:       OrMisicL (2013 - 2015)
+  Continued by: ziggi    (2016 - present)
+
+  See full credits in the README.md file
+-------------------------------------------------
+
+Loading...
+
+-------------------------------------------------
+   ColAndreasv1.4.0
+
+   Created By:
+     [uL]Chris42O
+     [uL]Slice
+     [uL]Pottus
+-------------------------------------------------
+
+Loading...
+ColAndreas v1.4.0 Loaded.
+  Loaded.
+ Loading plugin: whirlpool.so
+ 
+ ==================
+ 
+  Whirlpool loaded
+ 
+ ==================
+ 
+  Loaded.
+ Loading plugin: pawncmd.so
+Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+  Loaded.
+ Loading plugin: discord-connector.so
+ >> plugin.dc-connector: v0.3.5 successfully loaded.
+  Loaded.
+ Loading plugin: SKY.so
+  Loaded.
+ Loading plugin: sscanf.so
+
+
+ ===============================
+
+      sscanf plugin loaded.     
+
+         Version:  2.8.3        
+
+  (c) 2018 Alex "Y_Less" Cole  
+
+ ===============================
+
+  Loaded.
+ Loading plugin: streamer.so
+
+
+*** Streamer Plugin v2.9.5 by Incognito loaded ***
+
+  Loaded.
+ Loading plugin: mysql_static.so
+ >> plugin.mysql: R39-6 successfully loaded.
+  Loaded.
+ Loading plugin: nativechecker.so
+  Loaded.
+ Loading plugin: audio.so
+
+
+*** Audio Plugin v0.5 R2 by Incognito loaded ***
+
+  Loaded.
+ Loaded 12 plugins.
+
+
+Ban list
+--------
+ Loaded: samp.ban
+
+
+Started server on port: 7777, with maxplayers: 1000 lanmode is OFF.
+
+
+Filterscripts
+---------------
+  Loading filterscript 'acrpmap.amx'...
+[sv:dbg:main:AmxLoad] : net game pointer (value:0x9235580) received
+[sv:dbg:network:bind] : voice server running on port 39855
+No collision data found.
+  Loading filterscript 'ganghouses.amx'...
+  Loading filterscript 'mayor.amx'...
+  Loaded 3 filterscripts.
+
+   Error: Function not registered: 'Audio_CreateTCPServer'
+   Error: Function not registered: 'Audio_AddPlayer'
+   Error: Function not registered: 'Audio_RemovePlayer'
+   Error: Function not registered: 'Audio_RenamePlayer'
+OnScriptInit 1
+ 
+ 
+ 
+ ======================================= 
+ |                                     | 
+ |        YSI version 1.06.0002        | 
+ |        By Alex "Y_Less" Cole        | 
+ |                                     | 
+ ======================================= 
+ 
+OnScriptInit 2
+OnScriptInit 3
+Iter_OnGameModeInit start: 500
+*** Audio Plugin: Started TCP server on port 7777
+Mallu Gamers Mobile Community
+510 objects loaded.
+Iter_OnGameModeInit: first
+OnScriptInit 4
+Number of vehicle models: 11
+[Script] 14 atms loaded
+[Script] 95 houses loaded.
+[Script] 43 Public Garage loaded
+[Script] 0 vendors loaded
+[Script] 2 garages loaded.
+[Script] 25 businesses loaded.
+[Script] 87 entrances loaded.
+[Script] 10 factions loaded.
+[Script] 0 lands loaded.
+[Script] 11 gangs loaded.
+[Script] 0 points loaded.
+[Script] 3 turfs loaded.
+[Script] 1 actors loaded.
+[connection] 49.37.231.135:47765 requests connection cookie.
+[connection] incoming connection: 49.37.231.135:47765 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (49.37.231.135) ...
+[sv:dbg:network:connect] : player (0) assigned key (87e72531265e4692)
+[join] Lucy_Mon has joined the server (0:49.37.231.135)
+[connection] 103.147.208.254:3618 requests connection cookie.
+[connection] incoming connection: 103.147.208.254:3618 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (103.147.208.254) ...
+[sv:dbg:network:connect] : player (1) assigned key (fed0936787f86f60)
+[join] Fly_Boi has joined the server (1:103.147.208.254)
+[connection] 103.147.209.173:2435 requests connection cookie.
+[sv:dbg:network:receive] : player (1) identified (port:3623)
+[connection] incoming connection: 103.147.209.173:2435 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (103.147.209.173) ...
+[sv:dbg:network:connect] : player (2) assigned key (add19367bf5422be)
+[join] Tarzon_Antony has joined the server (2:103.147.209.173)
+[connection] 137.97.108.209:57679 requests connection cookie.
+[connection] incoming connection: 137.97.108.209:57679 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (137.97.108.209) ...
+[sv:dbg:network:connect] : player (3) assigned key (d16c618967f86076)
+[join] Raven_x has joined the server (3:137.97.108.209)
+[sv:dbg:network:receive] : player (3) identified (port:45592)
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Lucy_Mon has left the server (0:0)
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Tarzon_Antony has left the server (2:0)
+[connection] 137.97.78.35:60414 requests connection cookie.
+[connection] incoming connection: 137.97.78.35:60414 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (137.97.78.35) ...
+[sv:dbg:network:connect] : player (0) assigned key (234e6189509333e1)
+[join] Toxic_Op has joined the server (0:137.97.78.35)
+[sv:dbg:network:receive] : player (0) identified (port:36049)
+[cmd] Raven x: [f]
+AdmCmd:  Toxic Op has logged in.
+[connection] 27.59.214.139:30240 requests connection cookie.
+[connection] incoming connection: 27.59.214.139:30240 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (27.59.214.139) ...
+[sv:dbg:network:connect] : player (2) assigned key (8bd63b1b3af0c73a)
+[join] Jonny_Kuttan has joined the server (2:27.59.214.139)
+[sv:dbg:network:receive] : player (2) identified (port:30226)
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Fly_Boi has left the server (1:0)
+[connection] 117.230.158.140:7537 requests connection cookie.
+[connection] incoming connection: 117.230.158.140:7537 id: 1
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Jonny_Kuttan has left the server (2:0)
+[sv:dbg:network:connect] : connecting player (1) with address (117.230.158.140) ...
+[sv:dbg:network:connect] : player (1) assigned key (8c9ee675df3795f4)
+[join] Happy_Hogan has joined the server (1:117.230.158.140)
+[sv:dbg:network:receive] : player (1) identified (port:8296)
+[connection] 27.59.214.139:30309 requests connection cookie.
+[connection] incoming connection: 27.59.214.139:30309 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (27.59.214.139) ...
+[sv:dbg:network:connect] : player (2) assigned key (8bd63b1be4a31374)
+[join] Jonny_Kuttan has joined the server (2:27.59.214.139)
+[sv:dbg:network:receive] : player (2) identified (port:30150)
+AdmCmd: Developer Happy Hogan has logged in.
+[cmd] Toxic Op: [ah]
+[cmd] Happy Hogan: [setweather]
+[connection] 157.44.202.147:39167 requests connection cookie.
+[connection] incoming connection: 157.44.202.147:39167 id: 4
+[sv:dbg:network:connect] : connecting player (4) with address (157.44.202.147) ...
+[sv:dbg:network:connect] : player (4) assigned key (93ca2c9d86c9006f)
+[join] Rax_Mon has joined the server (4:157.44.202.147)
+[sv:dbg:network:receive] : player (4) identified (port:60227)
+[cmd] Happy Hogan: [setweather]
+[cmd] Happy Hogan: [setweather]
+[cmd] Happy Hogan: [setweather]
+[connection] 103.147.209.173:1760 requests connection cookie.
+[connection] incoming connection: 103.147.209.173:1760 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (103.147.209.173) ...
+[sv:dbg:network:connect] : player (5) assigned key (add193678b6da356)
+[join] Tarzon_Antony has joined the server (5:103.147.209.173)
+[sv:dbg:network:receive] : player (5) identified (port:1768)
+[cmd] Happy Hogan: [setweather]
+[cmd] Happy Hogan: [setweather]
+[cmd] Happy Hogan: [setweather]
+AdmCmd: Toxic Op spawned a Bullet.
+[cmd] Toxic Op: [veh]
+[cmd] Toxic Op: [goto]
+AdmWarning: Tarzon Antony[5] is possibly using airbreak hacks.
+[cmd] Happy Hogan: [sb]
+Toxic Op has teleported to Mulholland Bank.
+[cmd] Toxic Op: [goto]
+[connection] 157.46.165.172:51398 requests connection cookie.
+[connection] 157.46.165.172:51398 requests connection cookie.
+[connection] incoming connection: 157.46.165.172:51398 id: 6
+AdmWarning: Tarzon Antony[5] is possibly using airbreak hacks.
+AdmWarning: Tarzon Antony[5] is possibly using airbreak hacks.
+[cmd] Jonny Kuttan: [f]
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Tarzon_Antony has left the server (5:0)
+[cmd] Rax Mon: [f]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Happy_Hogan has left the server (1:0)
+[cmd] Raven x: [pass]
+[cmd] Jonny Kuttan: [f]
+[connection] 157.46.165.172:43540 requests connection cookie.
+[connection] incoming connection: 157.46.165.172:43540 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (157.46.165.172) ...
+[sv:dbg:network:connect] : player (1) assigned key (aca52e9d2ac4323d)
+[join] Hafees_Aachu has joined the server (1:157.46.165.172)
+[sv:dbg:network:receive] : player (1) identified (port:42303)
+[cmd] Rax Mon: [f]
+[cmd] Jonny Kuttan: [f]
+[connection] 117.230.190.117:13077 requests connection cookie.
+[connection] incoming connection: 117.230.190.117:13077 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (117.230.190.117) ...
+[sv:dbg:network:connect] : player (5) assigned key (75bee6756b79bad2)
+[join] Happy_Hogan has joined the server (5:117.230.190.117)
+[sv:dbg:network:receive] : player (5) identified (port:12536)
+AdmCmd: Developer Happy Hogan has logged in.
+[cmd] Hafees Aachu: [gfindcar]
+[cmd] Jonny Kuttan: [f]
+Happy Hogan has teleported to Toxic Op's position.
+[cmd] Happy Hogan: [goto]
+[chat] [Rax_Mon]: sir
+[cmd] Hafees Aachu: [n]
+[chat] [Happy_Hogan]: njn pc alla
+[connection] 103.147.209.173:1750 requests connection cookie.
+[connection] incoming connection: 103.147.209.173:1750 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (103.147.209.173) ...
+[sv:dbg:network:connect] : player (6) assigned key (add19367b552af38)
+[join] Tarzon_Antony has joined the server (6:103.147.209.173)
+[sv:dbg:network:receive] : player (6) identified (port:1753)
+AdmCmd: Toxic Op spawned a Huntley.
+[cmd] Toxic Op: [veh]
+[cmd] Jonny Kuttan: [userepairkit]
+[chat] [Hafees_Aachu]: w
+[cmd] Toxic Op: [nearest]
+[cmd] Rax Mon: [gstash]
+[cmd] Happy Hogan: [healrange]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[cmd] Tarzon Antony: [phone]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: mm
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: evide
+[chat] [Happy_Hogan]: evide
+[chat] [Happy_Hogan]: nok
+[chat] [Happy_Hogan]: mm
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: nok
+[cmd] Tarzon Antony: [upgrade]
+[chat] [Happy_Hogan]: mm
+[chat] [Happy_Hogan]: mathi
+[cmd] Tarzon Antony: [buylevel]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Hafees_Aachu]: ?
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[cmd] Tarzon Antony: [upgrade]
+Happy Hogan has teleported to Toxic Op's position.
+[cmd] Happy Hogan: [goto]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[cmd] Tarzon Antony: [buylevel]
+[chat] [Happy_Hogan]: mm
+[chat] [Hafees_Aachu]: gang varno
+[chat] [Happy_Hogan]: illa poi
+[cmd] Toxic Op: [editgate]
+[chat] [Hafees_Aachu]: evida poi
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: oottik
+[cmd] Tarzon Antony: [atm]
+[cmd] Raven x: [pass]
+ACmd: Toxic Op has adjusted the password of gate ID: 82 to 123.
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: hi monuu
+[chat] [Toxic_Op]: mic offff
+[chat] [Happy_Hogan]: per enna
+[chat] [Hafees_Aachu]: arooda
+[chat] [Happy_Hogan]: ninnod
+[chat] [Toxic_Op]: ninnod
+[chat] [Hafees_Aachu]: hafees achu
+[chat] [Happy_Hogan]: ahh
+[chat] [Happy_Hogan]: njn Happy
+[cmd] Hafees Aachu: [gang]
+[cmd] Rax Mon: [f]
+[chat] [Happy_Hogan]: Happy Hogan
+[chat] [Happy_Hogan]: nice to meet you
+[cmd] Rax Mon: [f]
+[cmd] Jonny Kuttan: [f]
+[chat] [Hafees_Aachu]: ok
+[cmd] Toxic Op: [a]
+[chat] [Happy_Hogan]: mm
+[cmd] Toxic Op: [destroygate]
+[chat] [Hafees_Aachu]: gang
+[chat] [Hafees_Aachu]: neme
+[chat] [Happy_Hogan]: gang?
+[cmd] Tarzon Antony: [phone]
+[chat] [Happy_Hogan]: ENTE ANO
+[chat] [Hafees_Aachu]: a
+[cmd] Toxic Op: [creategate]
+[cmd] Happy Hogan: [gangs]
+[chat] [Happy_Hogan]: SWANTHANAM
+[chat] [Hafees_Aachu]: a
+[chat] [Hafees_Aachu]: boss ano
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: ENNA
+[cmd] Hafees Aachu: [gangs]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: BOSS N
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Hafees_Aachu]: co ad boss
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: BOSS INE POLE THANNA
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Hafees_Aachu]: ethe ara 
+[chat] [Happy_Hogan]: NJNGALDE AVIDE BOSS CO BOSS ONNUM ILLA
+[cmd] Jonny Kuttan: [f]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: FAMILIYA
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Hafees_Aachu]: ngrp ille undo
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Rax Mon: [sendloc]
+[chat] [Hafees_Aachu]: a
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: AVN NJNGALDE FAMILY IL ULLATHA
+[chat] [Raven_x]: hii
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[cmd] Raven x: [gangs]
+[chat] [Hafees_Aachu]: a
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[cmd] Toxic Op: [a]
+[chat] [Hafees_Aachu]: 10k undo
+[chat] [Hafees_Aachu]: heh
+[cmd] Happy Hogan: [pay]
+[chat] [Toxic_Op]: gate pass entha 
+[chat] [Hafees_Aachu]: oppan akkan avon
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Raven x: [usedrug]
+[SYSTEM] Database sucessfully saved
+[chat] [Hafees_Aachu]: ne alle eppoboppn akki
+[cmd] Rax Mon: [loadtruck]
+[chat] [Hafees_Aachu]: oppan
+[cmd] Tarzon Antony: [phone]
+[cmd] Jonny Kuttan: [pass]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Raven_x has left the server (3:0)
+[chat] [Toxic_Op]: pass illa ippo gate nu nerathe undaya pass para
+[chat] [Happy_Hogan]: 123
+[cmd] Toxic Op: [a]
+[chat] [Happy_Hogan]: m
+[cmd] Rax Mon: [deliver]
+[chat] [Toxic_Op]: edai pass para 
+[chat] [Happy_Hogan]: dey
+[chat] [Toxic_Op]: hafees
+[chat] [Hafees_Aachu]: illa ne gang allalo
+[chat] [Happy_Hogan]: gate inu enth pass aa idande
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Jonny_Kuttan has left the server (2:0)
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Rax Mon: [sendloc]
+[cmd] Happy Hogan: [setstat]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Hafees_Aachu has left the server (1:0)
+[cmd] Happy Hogan: [setstat]
+[connection] 27.59.214.139:30146 requests connection cookie.
+[connection] incoming connection: 27.59.214.139:30146 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (27.59.214.139) ...
+[sv:dbg:network:connect] : player (1) assigned key (8bd63b1be448c8ff)
+[join] Jonny_Kuttan has joined the server (1:27.59.214.139)
+[sv:dbg:network:receive] : player (1) identified (port:30148)
+[cmd] Happy Hogan: [pay]
+[chat] [Toxic_Op]: 123 njan itta pass anu
+[cmd] Rax Mon: [loadtruck]
+[chat] [Happy_Hogan]: m
+[cmd] Happy Hogan: [setstat]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Rax Mon: [sendloc]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Jonny Kuttan: [f]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Rax Mon: [sendloc]
+[cmd] Happy Hogan: [setstat]
+[chat] [Rax_Mon]: truck job ind
+[chat] [Toxic_Op]: ee name gate akkiye anu ee gh te pinne fence um
+[cmd] Rax Mon: [f]
+[cmd] Happy Hogan: [pay]
+[cmd] Tarzon Antony: [phone]
+[cmd] Rax Mon: [loadtruck]
+[cmd] Happy Hogan: [pay]
+[chat] [Toxic_Op]: appo gate korach munnil ayi poyi gate akki ingame il ittapo
+[cmd] Happy Hogan: [setstat]
+[chat] [Toxic_Op]: nerathe undaya gh te gate munnil ayirunnu
+[chat] [Happy_Hogan]: ehh
+[cmd] Rax Mon: [loadtruck]
+[chat] [Happy_Hogan]: mm
+[chat] [Happy_Hogan]: aa poyavan ini varuvo
+[cmd] Jonny Kuttan: [sb]
+[cmd] Rax Mon: [sb]
+[cmd] Jonny Kuttan: [loadtruck]
+[chat] [Jonny_Kuttan]: kk
+ACmd: Toxic Op has adjusted the password of gate ID: 82 to 123.
+[cmd] Toxic Op: [editgate]
+ACmd: Toxic Op has adjusted the speed of gate ID: 82 to 3.00.
+[cmd] Toxic Op: [editgate]
+[chat] [Jonny_Kuttan]: kk
+[cmd] Rax Mon: [deliver]
+[chat] [Happy_Hogan]: m
+[chat] [Happy_Hogan]: chariv
+[cmd] Tarzon Antony: [loadtruck]
+[chat] [Happy_Hogan]: jokernod paraya
+[chat] [Happy_Hogan]: ila
+[chat] [Happy_Hogan]: nale
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[cmd] Happy Hogan: [help]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[cmd] Tarzon Antony: [deliver]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+ACmd: Toxic Op has adjusted the position of gate ID: 82.
+[cmd] Toxic Op: [editgate]
+[chat] [Happy_Hogan]: mm
+[chat] [Happy_Hogan]: illa
+[chat] [Happy_Hogan]: k
+[chat] [Happy_Hogan]: ith mathi
+[chat] [Happy_Hogan]: mm
+[cmd] Tarzon Antony: [f]
+[cmd] Tarzon Antony: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Toxic_Op has left the server (0:0)
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Jonny Kuttan: [sb]
+[chat] [Jonny_Kuttan]: kk
+[cmd] Happy Hogan: [twt]
+[cmd] Rax Mon: [fb]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Jonny Kuttan: [loadtruck]
+[cmd] Happy Hogan: [twt]
+[cmd] Rax Mon: [loadtruck]
+[cmd] Jonny Kuttan: [loadtruck]
+[chat] [Jonny_Kuttan]: w8
+[cmd] Happy Hogan: [twt]
+[cmd] Jonny Kuttan: [quitjob]
+[cmd] Jonny Kuttan: [loadtruck]
+[chat] [Jonny_Kuttan]: kk
+[cmd] Jonny Kuttan: [sb]
+[cmd] Rax Mon: [fb]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Happy Hogan: [twt]
+[connection] 103.183.82.120:1977 requests connection cookie.
+[connection] incoming connection: 103.183.82.120:1977 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (103.183.82.120) ...
+[sv:dbg:network:connect] : player (0) assigned key (7852b7678718fdec)
+[join] Jhon_Snow has joined the server (0:103.183.82.120)
+[sv:dbg:network:receive] : player (0) identified (port:1978)
+[connection] 137.97.82.86:43235 requests connection cookie.
+[connection] incoming connection: 137.97.82.86:43235 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (137.97.82.86) ...
+[sv:dbg:network:connect] : player (2) assigned key (56526189ab716aad)
+[join] Toxic_Op has joined the server (2:137.97.82.86)
+[sv:dbg:network:receive] : player (2) identified (port:37634)
+AdmCmd:  Toxic Op has logged in.
+[cmd] Happy Hogan: [destroyveh]
+AdmCmd: Toxic Op destroyed all admin spawned vehicles.
+[cmd] Toxic Op: [destroyveh]
+[chat] [Happy_Hogan]: illa
+[cmd] Rax Mon: [f]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Rax Mon: [f]
+[cmd] Toxic Op: [f]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Jonny Kuttan: [deliver]
+[cmd] Rax Mon: [deliver]
+[chat] [Jonny_Kuttan]: kk
+[cmd] Toxic Op: [healrange]
+[cmd] Tarzon Antony: [phone]
+[SYSTEM] Database sucessfully saved
+[cmd] Happy Hogan: [healrange]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Rax Mon: [fb]
+[cmd] Toxic Op: [fb]
+[cmd] Happy Hogan: [twt]
+[cmd] Happy Hogan: [twt]
+[cmd] Toxic Op: [fb]
+[cmd] Toxic Op: [fb]
+[cmd] Happy Hogan: [twt]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Jhon Snow: [getnationalid]
+[cmd] Rax Mon: [f]
+[chat] [Happy_Hogan]: mazhayayod veliyil eranganda enna parnje
+[connection] 27.61.33.176:64174 requests connection cookie.
+[connection] incoming connection: 27.61.33.176:64174 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (27.61.33.176) ...
+[sv:dbg:network:connect] : player (3) assigned key (b0213d1b9925058b)
+[join] Mr_Dizooza has joined the server (3:27.61.33.176)
+[sv:dbg:network:receive] : player (3) identified (port:36186)
+[cmd] Rax Mon: [fb]
+[cmd] Happy Hogan: [twt]
+[cmd] Happy Hogan: [pass]
+[cmd] Jonny Kuttan: [usedrug]
+[cmd] Jonny Kuttan: [drink]
+[cmd] Jonny Kuttan: [eat]
+[cmd] Rax Mon: [fb]
+[cmd] Toxic Op: [fb]
+[cmd] Tarzon Antony: [phone]
+[cmd] Toxic Op: [fb]
+[cmd] Jhon Snow: [phone]
+[cmd] Happy Hogan: [twt]
+[cmd] Jonny Kuttan: [sb]
+[cmd] Toxic Op: [twt]
+[cmd] Happy Hogan: [twt]
+[cmd] Rax Mon: [fb]
+[cmd] Jonny Kuttan: [loadtruck]
+[chat] [Jonny_Kuttan]: kk
+[cmd] Rax Mon: [loadtruck]
+[chat] [Jonny_Kuttan]: set
+[cmd] Toxic Op: [members]
+[cmd] Happy Hogan: [twt]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Mr_Dizooza has left the server (3:0)
+[cmd] Jonny Kuttan: [deliver]
+[chat] [Rax_Mon]: deliver
+[cmd] Rax Mon: [deliver]
+[cmd] Jonny Kuttan: [deliver]
+[cmd] Toxic Op: [pass]
+[cmd] Happy Hogan: [pass]
+[cmd] Jonny Kuttan: [deliver]
+[chat] [Jonny_Kuttan]: kk
+[chat] [Toxic_Op]: enth cheyannam
+[chat] [Jonny_Kuttan]: go
+[chat] [Happy_Hogan]: aaaaa
+[cmd] Tarzon Antony: [loadtruck]
+[chat] [Toxic_Op]: mod cheyannam oru vandi
+[chat] [Happy_Hogan]: mm
+[chat] [Happy_Hogan]: cheyam
+[chat] [Toxic_Op]: baa
+[cmd] Toxic Op: [fixveh]
+[chat] [Happy_Hogan]: vandi du
+[cmd] Rax Mon: [fb]
+[cmd] Jhon Snow: [loadtruck]
+[connection] 103.147.208.254:5487 requests connection cookie.
+[connection] incoming connection: 103.147.208.254:5487 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (103.147.208.254) ...
+[sv:dbg:network:connect] : player (3) assigned key (fed0936759b5c49c)
+[join] Fly_Boi has joined the server (3:103.147.208.254)
+[sv:dbg:network:receive] : player (3) identified (port:5494)
+[chat] [Toxic_Op]: ee vandi oruthante anu bug ayi ellam poyi nitro okke
+[chat] [Happy_Hogan]: mm
+[chat] [Toxic_Op]: vandi kannan ille
+[cmd] Rax Mon: [loadtruck]
+[chat] [Happy_Hogan]: illa
+[cmd] Jonny Kuttan: [loadtruck]
+[cmd] Jhon Snow: [loadtruck]
+Happy Hogan has teleported to Mall.
+[cmd] Happy Hogan: [goto]
+[cmd] Toxic Op: [park]
+[chat] [Toxic_Op]: ippo
+[cmd] Jonny Kuttan: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Happy_Hogan has left the server (5:0)
+[cmd] Rax Mon: [loadtruck]
+[cmd] Jonny Kuttan: [loadtruck]
+[cmd] Rax Mon: [f]
+[chat] [Jonny_Kuttan]: kk
+[connection] 117.230.190.117:13232 requests connection cookie.
+[connection] incoming connection: 117.230.190.117:13232 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (117.230.190.117) ...
+[sv:dbg:network:connect] : player (5) assigned key (75bee67556ac755f)
+[join] Happy_Hogan has joined the server (5:117.230.190.117)
+[sv:dbg:network:receive] : player (5) identified (port:13293)
+[cmd] Toxic Op: [f]
+AdmCmd: Developer Happy Hogan has logged in.
+[cmd] Tarzon Antony: [deliver]
+[cmd] Rax Mon: [f]
+[cmd] Toxic Op: [f]
+[cmd] Jonny Kuttan: [deliver]
+[chat] [Jonny_Kuttan]: kk
+[cmd] Rax Mon: [deliver]
+[cmd] Jonny Kuttan: [skill]
+[chat] [Toxic_Op]: thorakk
+[chat] [Happy_Hogan]: njn mech alla
+[chat] [Happy_Hogan]: nik
+AdmCmd: Happy Hogan has made Happy Hogan a Mechanic Head in MGMC AUTOPARTS.
+[cmd] Happy Hogan: [setfaction]
+[cmd] Happy Hogan: [upgradevehicle]
+[cmd] Rax Mon: [loadtruck]
+[cmd] Happy Hogan: [badge]
+[cmd] Jonny Kuttan: [loadtruck]
+[cmd] Fly Boi: [phone]
+[cmd] Happy Hogan: [upgradevehicle]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Happy Hogan: [upgradevehicle]
+[cmd] Jhon Snow: [loadtruck]
+[cmd] Happy Hogan: [upgradevehicle]
+[chat] [Jonny_Kuttan]: 73s
+[cmd] Happy Hogan: [upgradevehicle]
+[cmd] Happy Hogan: [tune]
+[chat] [Rax_Mon]: oo
+[chat] [Toxic_Op]: full mod akk
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Happy Hogan: [tune]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Jonny Kuttan: [sb]
+[chat] [Happy_Hogan]: park
+[cmd] Toxic Op: [park]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Fly Boi: [buyvehicle]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Happy Hogan: [tune]
+[chat] [Happy_Hogan]: eda spiler onnum vekkan pattunnila
+[chat] [Toxic_Op]: bug ayo vandi full appo
+[cmd] Happy Hogan: [tune]
+[chat] [Happy_Hogan]: m
+[SYSTEM] Database sucessfully saved
+AdmCmd: Toxic Op has made Toxic Op a Mechanic Head in MGMC AUTOPARTS.
+[cmd] Toxic Op: [setfaction]
+[cmd] Happy Hogan: [tune]
+[cmd] Toxic Op: [unmod]
+[cmd] Jonny Kuttan: [sb]
+[cmd] Toxic Op: [badge]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Toxic Op: [unmod]
+[cmd] Jonny Kuttan: [sb]
+[cmd] Jhon Snow: [deliver]
+[cmd] Toxic Op: [unmod]
+[cmd] Toxic Op: [unmod]
+[cmd] Toxic Op: [unmod]
+[cmd] Toxic Op: [unmod]
+[cmd] Fly Boi: [carhelp]
+[chat] [Toxic_Op]: new car
+[cmd] Fly Boi: [vstash]
+[chat] [Happy_Hogan]: m
+[cmd] Happy Hogan: [upgradevehicle]
+[chat] [Rax_Mon]: hii
+[cmd] Fly Boi: [vstash]
+[cmd] Toxic Op: [paintcar]
+[chat] [Happy_Hogan]: hlo
+[cmd] Toxic Op: [paintcar]
+[cmd] Happy Hogan: [tune]
+[chat] [Jonny_Kuttan]: hai
+[cmd] Fly Boi: [vstash]
+[chat] [Happy_Hogan]: illa
+[cmd] Toxic Op: [upgradevehicle]
+[cmd] Jonny Kuttan: [sb]
+[cmd] Toxic Op: [upgradevehicle]
+[chat] [Happy_Hogan]: njngal pokan erikkuva
+[cmd] Fly Boi: [vstash]
+[cmd] Jhon Snow: [loadtruck]
+[chat] [Jonny_Kuttan]: rate
+[cmd] Toxic Op: [upgradevehicle]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Toxic Op: [upgradevehicle]
+[cmd] Fly Boi: [vstash]
+[cmd] Toxic Op: [vstash]
+[cmd] Toxic Op: [vstash]
+[cmd] Toxic Op: [vstash]
+[cmd] Happy Hogan: [vstash]
+[cmd] Fly Boi: [guninv]
+[cmd] Jonny Kuttan: [sb]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Toxic Op: [tune]
+[cmd] Rax Mon: [sellcar]
+[cmd] Rax Mon: [sellcar]
+[cmd] Jhon Snow: [loadtruck]
+[cmd] Rax Mon: [sellcar]
+[chat] [Toxic_Op]: wheel nokk
+[cmd] Fly Boi: [vstash]
+[chat] [Happy_Hogan]: wheel marum
+[cmd] Toxic Op: [tune]
+[chat] [Happy_Hogan]: spiler bumber roof
+[chat] [Happy_Hogan]: maaroola
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Toxic Op: [tune]
+[cmd] Tarzon Antony: [phone]
+[cmd] Jhon Snow: [loadtruck]
+[chat] [Toxic_Op]: avunod
+[chat] [Happy_Hogan]: aar
+[cmd] Jhon Snow: [loadtruck]
+[cmd] Toxic Op: [tune]
+[chat] [Happy_Hogan]: spoiler vann
+[cmd] Happy Hogan: [tune]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Toxic Op: [tune]
+[cmd] Jonny Kuttan: [accept]
+[cmd] Jhon Snow: [loadtruck]
+[cmd] Toxic Op: [tune]
+[chat] [Rax_Mon]: ninde nalla delay ind relog akk
+[chat] [Happy_Hogan]: MODE AYALLO
+[cmd] Rax Mon: [userepairkit]
+[cmd] Toxic Op: [tune]
+[chat] [Rax_Mon]: ninde nalla delay ind relog akk
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Toxic Op: [tune]
+[cmd] Rax Mon: [lock]
+[cmd] Toxic Op: [park]
+[chat] [Toxic_Op]: full set
+[chat] [Happy_Hogan]: M
+AdmCmd: Toxic Op has made Toxic Op a DGP in MGMC POLICE.
+[cmd] Toxic Op: [setfaction]
+[cmd] Fly Boi: [atm]
+[chat] [Happy_Hogan]: hwy
+[chat] [Toxic_Op]: povam
+[chat] [Jonny_Kuttan]: hai
+[chat] [Toxic_Op]: ride
+[chat] [Happy_Hogan]: you are under urrest
+[chat] [Toxic_Op]: id 4
+[cmd] Rax Mon: [tie]
+[cmd] Happy Hogan: [cuff]
+[cmd] Happy Hogan: [d]
+[cmd] Tarzon Antony: [phone]
+[chat] [Toxic_Op]: ente id enikk national id illa
+[cmd] Happy Hogan: [d]
+[cmd] Jhon Snow: [phone]
+[chat] [Toxic_Op]: national id kittan 2 day avum enn gov paranju
+[cmd] Tarzon Antony: [loadtruck]
+[chat] [Toxic_Op]: ath anu id a
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Jonny_Kuttan has left the server (1:0)
+[cmd] Tarzon Antony: [phone]
+[chat] [Toxic_Op]: ath kittade eganne id parayan
+[cmd] Jhon Snow: [phone]
+AdmCmd: Rax Mon was slapped by Toxic Op.
+[cmd] Toxic Op: [slap]
+[cmd] Fly Boi: [buy]
+[chat] [Toxic_Op]: enth
+[connection] 27.59.214.139:32536 requests connection cookie.
+[connection] incoming connection: 27.59.214.139:32536 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (27.59.214.139) ...
+[sv:dbg:network:connect] : player (1) assigned key (8bd63b1bce1d528e)
+[join] Jonny_Kuttan has joined the server (1:27.59.214.139)
+[cmd] Fly Boi: [buy]
+[sv:dbg:network:receive] : player (1) identified (port:30160)
+[chat] [Toxic_Op]: njan police anu 
+[cmd] Fly Boi: [buy]
+[cmd] Fly Boi: [buy]
+[cmd] Fly Boi: [buy]
+[cmd] Fly Boi: [buy]
+[cmd] Jonny Kuttan: [f]
+[cmd] Fly Boi: [buy]
+[chat] [Toxic_Op]: on duty police thattikond povan mini 3 pd vennam city il
+[cmd] Fly Boi: [buy]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Jonny_Kuttan has left the server (1:0)
+[chat] [Toxic_Op]: badge okke on ayirunnu
+[connection] 27.59.214.139:32535 requests connection cookie.
+[connection] incoming connection: 27.59.214.139:32535 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (27.59.214.139) ...
+[sv:dbg:network:connect] : player (1) assigned key (8bd63b1b946968d6)
+[join] Jonny_Kuttan has joined the server (1:27.59.214.139)
+[sv:dbg:network:receive] : player (1) identified (port:30155)
+[cmd] Tarzon Antony: [deliver]
+[chat] [Toxic_Op]: njan off akkar illa
+[cmd] Fly Boi: [inventory]
+[cmd] Tarzon Antony: [phone]
+[cmd] Jonny Kuttan: [f]
+[cmd] Jhon Snow: [loadtruck]
+[chat] [Toxic_Op]: ath ookan tharum
+[chat] [Toxic_Op]: enikk arilla
+[cmd] Jonny Kuttan: [f]
+[chat] [Toxic_Op]: pc te onnum
+[cmd] Rax Mon: [f]
+[cmd] Jonny Kuttan: [f]
+[cmd] Fly Boi: [locate]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Jonny Kuttan: [sendloc]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Toxic Op: [ah]
+[chat] [Toxic_Op]: wait
+[chat] [Toxic_Op]: 1 min
+[cmd] Jonny Kuttan: [find]
+[cmd] Fly Boi: [vstash]
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Toxic_Op has left the server (2:0)
+[cmd] Fly Boi: [vstash]
+[cmd] Fly Boi: [vstash]
+[SYSTEM] Database sucessfully saved
+[cmd] Happy Hogan: [carry]
+[cmd] Fly Boi: [vstash]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Fly Boi: [vstash]
+[cmd] Happy Hogan: [kiss]
+[cmd] Fly Boi: [vstash]
+[cmd] Fly Boi: [vstash]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Fly Boi: [vstash]
+[cmd] Tarzon Antony: [phone]
+[cmd] Jonny Kuttan: [userepairkit]
+[cmd] Fly Boi: [vstash]
+[cmd] Fly Boi: [vstash]
+[connection] 137.97.82.86:57390 requests connection cookie.
+[connection] incoming connection: 137.97.82.86:57390 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (137.97.82.86) ...
+[sv:dbg:network:connect] : player (2) assigned key (56526189bf2a8a09)
+[join] Toxic_Op has joined the server (2:137.97.82.86)
+[sv:dbg:network:receive] : player (2) identified (port:58948)
+AdmCmd:  Toxic Op has logged in.
+Toxic Op is now spectating to Happy Hogan (ID:5).
+[cmd] Toxic Op: [spec]
+[cmd] Fly Boi: [vstash]
+[chat] [Rax_Mon]: id
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Happy_Hogan has left the server (5:0)
+Toxic Op is now spectating to Rax Mon (ID:4).
+[cmd] Toxic Op: [spec]
+[cmd] Fly Boi: [phone]
+AdmCmd: Rax Mon was slapped by Toxic Op.
+[cmd] Toxic Op: [slap]
+AdmCmd: Toxic Op is now on admin duty.
+[nick] Toxic_Op nick changed to TOXIC
+[cmd] TOXIC: [aduty]
+[cmd] TOXIC: [lock]
+AdmCmd: Rax Mon was slapped by TOXIC.
+[cmd] TOXIC: [slap]
+[cmd] Fly Boi: [hm]
+[cmd] Tarzon Antony: [deliver]
+[cmd] TOXIC: [lock]
+[cmd] TOXIC: [lock]
+[cmd] Rax Mon: [lock]
+[cmd] TOXIC: [lock]
+[cmd] Tarzon Antony: [phone]
+[cmd] Rax Mon: [lock]
+AdmCmd: Rax Mon was slapped by TOXIC.
+[cmd] TOXIC: [slap]
+[cmd] TOXIC: [lock]
+[cmd] TOXIC: [lock]
+[cmd] Jhon Snow: [deliver]
+[cmd] TOXIC: [lock]
+[cmd] Rax Mon: [lock]
+[cmd] Fly Boi: [buylevel]
+[chat] [Jonny_Kuttan]: 1
+[cmd] Jhon Snow: [deliver]
+[cmd] Rax Mon: [detain]
+[chat] [Jonny_Kuttan]: 1
+[cmd] Jonny Kuttan: [help]
+[cmd] TOXIC: [oldcar]
+[chat] [Jonny_Kuttan]: 1
+[cmd] Rax Mon: [detain]
+TOXIC stops spectating Rax Mon (ID:4).
+[cmd] TOXIC: [spec]
+[cmd] Rax Mon: [eject]
+TOXIC has teleported to Rax Mon's position.
+[cmd] TOXIC: [goto]
+[cmd] Jonny Kuttan: [phone]
+[cmd] TOXIC: [lock]
+[cmd] Rax Mon: [lock]
+[cmd] Rax Mon: [detain]
+[cmd] Jhon Snow: [phone]
+TOXIC is now spectating to Rax Mon (ID:4).
+[cmd] TOXIC: [spec]
+[cmd] TOXIC: [oldcar]
+[cmd] Rax Mon: [lock]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Jonny_Kuttan has left the server (1:0)
+[cmd] TOXIC: [despawnpveh]
+[cmd] Tarzon Antony: [loadtruck]
+[connection] 27.59.214.139:30149 requests connection cookie.
+[connection] incoming connection: 27.59.214.139:30149 id: 1
+[cmd] TOXIC: [despawnpveh]
+[sv:dbg:network:connect] : connecting player (1) with address (27.59.214.139) ...
+[sv:dbg:network:connect] : player (1) assigned key (8bd63b1bf121abe6)
+[join] Jonny_Kuttan has joined the server (1:27.59.214.139)
+[sv:dbg:network:receive] : player (1) identified (port:30151)
+[chat] [TOXIC]: :)
+[cmd] Tarzon Antony: [phone]
+[cmd] TOXIC: [despawnpveh]
+[chat] [TOXIC]: ne pani edukkanda
+[cmd] TOXIC: [despawnpveh]
+[cmd] TOXIC: [despawnpveh]
+[cmd] TOXIC: [f]
+[cmd] Rax Mon: [f]
+[cmd] Fly Boi: [f]
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[nick] TOXIC nick changed to Toxic_Op
+[part] Toxic_Op has left the server (2:0)
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Jonny Kuttan: [lock]
+[cmd] Tarzon Antony: [phone]
+[chat] [Rax_Mon]:  /park
+[cmd] Jonny Kuttan: [park]
+[cmd] Rax Mon: [userepairkit]
+[cmd] Jonny Kuttan: [userepairkit]
+[cmd] Fly Boi: [harvest]
+[sv:dbg:network:connect] : disconnecting player (4) ...
+[part] Rax_Mon has left the server (4:0)
+[cmd] Tarzon Antony: [deliver]
+[cmd] Tarzon Antony: [phone]
+[cmd] Tarzon Antony: [phone]
+[cmd] Jonny Kuttan: [phone]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Jonny Kuttan: [phone]
+[cmd] Tarzon Antony: [phone]
+[cmd] Jonny Kuttan: [phone]
+[cmd] Jonny Kuttan: [phone]
+[cmd] Jhon Snow: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Jonny Kuttan: [phone]
+[cmd] Jhon Snow: [phone]
+[cmd] Jonny Kuttan: [phone]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Tarzon Antony: [phone]
+[cmd] Jhon Snow: [deliver]
+[cmd] Jonny Kuttan: [phone]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Jonny_Kuttan has left the server (1:0)
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Jhon Snow: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [phone]
+[connection] 137.97.108.209:47972 requests connection cookie.
+[cmd] Jhon Snow: [loadtruck]
+[connection] incoming connection: 137.97.108.209:47972 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (137.97.108.209) ...
+[sv:dbg:network:connect] : player (1) assigned key (d16c61898c3e50af)
+[join] Raven_x has joined the server (1:137.97.108.209)
+[sv:dbg:network:receive] : player (1) identified (port:52477)
+[cmd] Jhon Snow: [loadtruck]
+[cmd] Raven x: [f]
+[cmd] Fly Boi: [f]
+[cmd] Raven x: [f]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Fly Boi: [f]
+[cmd] Raven x: [f]
+[cmd] Fly Boi: [f]
+[cmd] Jhon Snow: [deliver]
+[cmd] Raven x: [gangs]
+[cmd] Raven x: [gangs]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Jhon Snow: [phone]
+[cmd] Raven x: [deliver]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Tarzon Antony: [deliver]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Raven_x has left the server (1:0)
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Fly Boi: [harvest]
+[cmd] Jhon Snow: [loadtruck]
+[cmd] Jhon Snow: [phone]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [phone]
+[cmd] Jhon Snow: [deliver]
+[cmd] Tarzon Antony: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Jhon Snow: [loadtruck]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Fly Boi: [phone]
+[cmd] Jhon Snow: [loadtruck]
+[cmd] Jhon Snow: [deliver]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Jhon_Snow has left the server (0:0)
+[connection] 103.183.82.120:1939 requests connection cookie.
+[connection] incoming connection: 103.183.82.120:1939 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (103.183.82.120) ...
+[sv:dbg:network:connect] : player (0) assigned key (7852b767b9ce9f52)
+[join] Jhon_Snow has joined the server (0:103.183.82.120)
+[sv:dbg:network:receive] : player (0) identified (port:1921)
+[cmd] Tarzon Antony: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Jhon_Snow has left the server (0:0)
+[cmd] Tarzon Antony: [deliver]
+[cmd] Tarzon Antony: [deliver]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [loadtruck]
+[cmd] Tarzon Antony: [deliver]
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Tarzon_Antony has left the server (6:0)
+[SYSTEM] Database sucessfully saved
+[cmd] Fly Boi: [lock]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Fly_Boi has left the server (3:0)
+[SYSTEM] Database sucessfully saved
+[connection] 106.197.31.181:36511 requests connection cookie.
+[SYSTEM] Database sucessfully saved
+[connection] incoming connection: 106.197.31.181:36511 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (106.197.31.181) ...
+[sv:dbg:network:connect] : player (0) assigned key (b51fc56a57ccb87b)
+[join] Killadi_Raayan has joined the server (0:106.197.31.181)
+[sv:dbg:network:receive] : player (0) identified (port:36499)
+[cmd] Killadi Raayan: [atm]
+[connection] 42.109.139.24:51976 requests connection cookie.
+[connection] incoming connection: 42.109.139.24:51976 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (42.109.139.24) ...
+[sv:dbg:network:connect] : player (1) assigned key (188b6d2a0fa37efc)
+[join] Abhinav_R has joined the server (1:42.109.139.24)
+[sv:dbg:network:receive] : player (1) identified (port:20630)
+AdmCmd: Management Abhinav R has logged in.
+[cmd] Killadi Raayan: [pass]
+[cmd] Killadi Raayan: [pass]
+Abhinav R is now spectating to Killadi Raayan (ID:0).
+[cmd] Abhinav R: [spec]
+[cmd] Abhinav R: [gang]
+[cmd] Abhinav R: [gangs]
+[cmd] Abhinav R: [check]
+[cmd] Abhinav R: [check]
+[cmd] Abhinav R: [listpvehs]
+[cmd] Abhinav R: [listpvehs]
+[cmd] Killadi Raayan: [harvest]
+Abhinav R stops spectating Killadi Raayan (ID:0).
+[cmd] Abhinav R: [spec]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Abhinav_R has left the server (1:0)
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[SYSTEM] Database sucessfully saved
+[connection] 137.97.104.34:34376 requests connection cookie.
+[connection] incoming connection: 137.97.104.34:34376 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (137.97.104.34) ...
+[sv:dbg:network:connect] : player (1) assigned key (226861892be5cea7)
+[join] Raven_x has joined the server (1:137.97.104.34)
+[sv:dbg:network:receive] : player (1) identified (port:48555)
+[cmd] Raven x: [gangs]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Raven_x has left the server (1:0)
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[connection] 42.109.139.24:61206 requests connection cookie.
+[connection] incoming connection: 42.109.139.24:61206 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (42.109.139.24) ...
+[sv:dbg:network:connect] : player (1) assigned key (188b6d2a3099f9c7)
+[join] Abhinav_R has joined the server (1:42.109.139.24)
+[sv:dbg:network:receive] : player (1) identified (port:5307)
+AdmCmd: Management Abhinav R has logged in.
+Abhinav R is now spectating to Killadi Raayan (ID:0).
+[cmd] Abhinav R: [spec]
+[cmd] Abhinav R: [check]
+[cmd] Abhinav R: [check]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Abhinav R: [check]
+[cmd] Killadi Raayan: [harvest]
+Abhinav R stops spectating Killadi Raayan (ID:0).
+[cmd] Abhinav R: [spec]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Abhinav_R has left the server (1:0)
+[SYSTEM] Database sucessfully saved
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[SYSTEM] Database sucessfully saved
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[SYSTEM] Database sucessfully saved
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[connection] 42.109.139.24:56674 requests connection cookie.
+[connection] incoming connection: 42.109.139.24:56674 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (42.109.139.24) ...
+[sv:dbg:network:connect] : player (1) assigned key (188b6d2a0ac65789)
+[join] Abhinav_R has joined the server (1:42.109.139.24)
+[sv:dbg:network:receive] : player (1) identified (port:32698)
+[cmd] Killadi Raayan: [eat]
+[cmd] Killadi Raayan: [drink]
+AdmCmd: Management Abhinav R has logged in.
+Abhinav R is now spectating to Killadi Raayan (ID:0).
+[cmd] Abhinav R: [spec]
+[cmd] Abhinav R: [check]
+[cmd] Abhinav R: [check]
+[chat] [Abhinav_R]: go and sleep
+[chat] [Killadi_Raayan]: grinding aanu vro
+[chat] [Abhinav_R]: ok,vro
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Abhinav_R has left the server (1:0)
+[chat] [Killadi_Raayan]: grinding aanu vro
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[SYSTEM] Database sucessfully saved
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [vstash]
+[SYSTEM] Database sucessfully saved
+[cmd] Killadi Raayan: [vstash]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[SYSTEM] Database sucessfully saved
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[cmd] Killadi Raayan: [harvest]
+[SYSTEM] Database sucessfully saved
+[cmd] Killadi Raayan: [harvest]
+[connection] 42.106.188.215:56292 requests connection cookie.
+[connection] incoming connection: 42.106.188.215:56292 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (42.106.188.215) ...
+[sv:dbg:network:connect] : player (1) assigned key (d7bc6a2a11a40faf)
+[join] Rayan_Annan has joined the server (1:42.106.188.215)
+[sv:dbg:network:receive] : player (1) identified (port:20047)
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Rayan_Annan has left the server (1:0)
+[connection] 42.106.188.215:56295 requests connection cookie.
+[connection] incoming connection: 42.106.188.215:56295 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (42.106.188.215) ...
+[sv:dbg:network:connect] : player (1) assigned key (d7bc6a2ae92cb6dc)
+[join] Rayan_Annan has joined the server (1:42.106.188.215)
+[sv:dbg:network:receive] : player (1) identified (port:20048)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [drink]
+[cmd] Rayan Annan: [drink]
+[cmd] Killadi Raayan: [atm]
+[SYSTEM] Database sucessfully saved
+[cmd] Killadi Raayan: [atm]
+[cmd] Rayan Annan: [fb]
+[cmd] Rayan Annan: [fb]
+[cmd] Killadi Raayan: [fb]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Killadi Raayan: [vstash]
+[cmd] Rayan Annan: [fb]
+[cmd] Killadi Raayan: [fb]
+[chat] [Rayan_Annan]: ems
+[chat] [Rayan_Annan]: ayo
+[cmd] Rayan Annan: [fb]
+[cmd] Killadi Raayan: [vstash]
+[cmd] Rayan Annan: [fb]
+[cmd] Killadi Raayan: [vstash]
+[cmd] Killadi Raayan: [vstash]
+[cmd] Killadi Raayan: [vstash]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [fb]
+[cmd] Killadi Raayan: [lock]
+[cmd] Killadi Raayan: [fb]
+[cmd] Killadi Raayan: [fb]
+[cmd] Killadi Raayan: [lock]
+[cmd] Killadi Raayan: [fb]
+[cmd] Rayan Annan: [fb]
+[cmd] Killadi Raayan: [fb]
+[cmd] Killadi Raayan: [fb]
+[cmd] Rayan Annan: [fb]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Killadi_Raayan has left the server (0:0)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [robhouse]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [neon]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [cook]
+[cmd] Rayan Annan: [pickup]
+[cmd] Rayan Annan: [pickup]
+[cmd] Rayan Annan: [pickplant]
+[cmd] Rayan Annan: [pickplant]
+[cmd] Rayan Annan: [pickplant]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [inv]
+[cmd] Rayan Annan: [cc]
+[chat] [Rayan_Annan]: cookmeth
+[cmd] Rayan Annan: [cookmeth]
+[cmd] Rayan Annan: [getdrug]
+[cmd] Rayan Annan: [getdrug]
+[cmd] Rayan Annan: [cookmeth]
+[cmd] Rayan Annan: [cookmeth]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [vstash]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [quitjob]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[connection] 51.211.71.139:47940 requests connection cookie.
+[connection] incoming connection: 51.211.71.139:47940 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (51.211.71.139) ...
+[sv:dbg:network:connect] : player (0) assigned key (8b47d333c47a713e)
+[join] Kl_Killadi has joined the server (0:51.211.71.139)
+[sv:dbg:network:receive] : player (0) identified (port:41862)
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Kl_Killadi has left the server (0:2)
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [frisk]
+[cmd] Rayan Annan: [frisk]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [frisk]
+[cmd] Rayan Annan: [setradio]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [setradio]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [setradio]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[chat] [Rayan_Annan]: 100000
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [lock]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [neon]
+[cmd] Rayan Annan: [lock]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Rayan_Annan has left the server (1:0)
+[connection] 42.106.188.215:56298 requests connection cookie.
+[connection] incoming connection: 42.106.188.215:56298 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (42.106.188.215) ...
+[sv:dbg:network:connect] : player (0) assigned key (d7bc6a2ae21715c9)
+[join] Rayan_Annan has joined the server (0:42.106.188.215)
+[sv:dbg:network:receive] : player (0) identified (port:20049)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[connection] 180.214.233.91:49045 requests connection cookie.
+[connection] incoming connection: 180.214.233.91:49045 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (180.214.233.91) ...
+[sv:dbg:network:connect] : player (1) assigned key (5be9d6b4e5260921)
+[join] Jenar_OConner has joined the server (1:180.214.233.91)
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Jenar_OConner has left the server (1:2)
+[connection] 180.214.233.91:49050 requests connection cookie.
+[connection] incoming connection: 180.214.233.91:49050 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (180.214.233.91) ...
+[sv:dbg:network:connect] : player (1) assigned key (5be9d6b47f2d96b8)
+[join] Jenar_OConner has joined the server (1:180.214.233.91)
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Jenar_OConner has left the server (1:2)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[connection] 180.214.233.91:49056 requests connection cookie.
+[connection] incoming connection: 180.214.233.91:49056 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (180.214.233.91) ...
+[sv:dbg:network:connect] : player (1) assigned key (5be9d6b4223e8746)
+[join] nicegoat has joined the server (1:180.214.233.91)
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] nicegoat has left the server (1:2)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[connection] 106.200.72.100:1750 requests connection cookie.
+[connection] incoming connection: 106.200.72.100:1750 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (106.200.72.100) ...
+[sv:dbg:network:connect] : player (1) assigned key (6448c86a82d5708f)
+[join] Tom_Kgf has joined the server (1:106.200.72.100)
+[sv:dbg:network:receive] : player (1) identified (port:1752)
+[cmd] Rayan Annan: [deliver]
+[connection] 49.15.87.3:45905 requests connection cookie.
+[connection] incoming connection: 49.15.87.3:45905 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (49.15.87.3) ...
+[sv:dbg:network:connect] : player (2) assigned key (3570f317e25138c)
+[join] Ma_Lik has joined the server (2:49.15.87.3)
+[sv:dbg:network:receive] : player (2) identified (port:51238)
+[cmd] Ma Lik: [gethelp]
+[chat] [Rayan_Annan]: hi
+** Help Request from Ma Lik[2]: 1 **
+[cmd] Ma Lik: [gethelp]
+[chat] [Tom_Kgf]: helo
+[chat] [Rayan_Annan]: bro
+[cmd] Ma Lik: [sendto]
+[chat] [Tom_Kgf]: ys
+[chat] [Rayan_Annan]: car vano
+[chat] [Rayan_Annan]: vano
+[chat] [Tom_Kgf]: edha
+[chat] [Rayan_Annan]: va
+Ma Lik has sent Ma Lik to All Saints.
+[cmd] Ma Lik: [sendto]
+[chat] [Rayan_Annan]: eleag
+[chat] [Tom_Kgf]: ethraya
+[chat] [Rayan_Annan]: eleagy
+[cmd] Ma Lik: [badge]
+[chat] [Tom_Kgf]: ethrayann
+[chat] [Rayan_Annan]: eth 35lk
+[chat] [Tom_Kgf]: okk bro venda
+[chat] [Rayan_Annan]: 60
+[chat] [Tom_Kgf]: idhin 60 lakh ano
+[cmd] Ma Lik: [listpt]
+[chat] [Rayan_Annan]: 1.20 cr
+[chat] [Tom_Kgf]: venda
+[chat] [Rayan_Annan]: 30 lk
+[chat] [Tom_Kgf]: idhinn ethraya
+[chat] [Rayan_Annan]: mode
+[chat] [Tom_Kgf]: helo
+[chat] [Rayan_Annan]: stash
+[chat] [Tom_Kgf]: idhinethraya
+[chat] [Rayan_Annan]: etho
+[cmd] Ma Lik: [badge]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Tom_Kgf has left the server (1:0)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [fb]
+[cmd] Rayan Annan: [fb]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [fb]
+[cmd] Rayan Annan: [fb]
+[cmd] Rayan Annan: [fb]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[connection] 180.214.233.91:51058 requests connection cookie.
+[connection] incoming connection: 180.214.233.91:51058 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (180.214.233.91) ...
+[sv:dbg:network:connect] : player (1) assigned key (5be9d6b4813c768c)
+[join] JonerzVenedict4 has joined the server (1:180.214.233.91)
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] JonerzVenedict4 has left the server (1:2)
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Ma_Lik has left the server (2:0)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[connection] 120.188.74.251:44890 requests connection cookie.
+[connection] incoming connection: 120.188.74.251:44890 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (120.188.74.251) ...
+[sv:dbg:network:connect] : player (1) assigned key (fb4abc7867c02dcf)
+[join] DANZZZGaming_8888999 has joined the server (1:120.188.74.251)
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] DANZZZGaming_8888999 has left the server (1:2)
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[connection] 42.106.180.26:54996 requests connection cookie.
+[connection] incoming connection: 42.106.180.26:54996 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (42.106.180.26) ...
+[sv:dbg:network:connect] : player (1) assigned key (1ab46a2aec6c429b)
+[join] Bruce_Wayne has joined the server (1:42.106.180.26)
+[sv:dbg:network:receive] : player (1) identified (port:37066)
+[cmd] Bruce Wayne: [f]
+[cmd] Bruce Wayne: [f]
+[connection] 49.15.88.220:36888 requests connection cookie.
+[connection] incoming connection: 49.15.88.220:36888 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (49.15.88.220) ...
+[sv:dbg:network:connect] : player (2) assigned key (dc580f31459a81a0)
+[join] Ma_Lik has joined the server (2:49.15.88.220)
+[cmd] Bruce Wayne: [f]
+[sv:dbg:network:receive] : player (2) identified (port:35745)
+[cmd] Bruce Wayne: [g]
+[chat] [Bruce_Wayne]: raya
+[cmd] Bruce Wayne: [lock]
+[cmd] Bruce Wayne: [fb]
+[cmd] Bruce Wayne: [loadtruck]
+[cmd] Bruce Wayne: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Bruce_Wayne has left the server (1:0)
+[connection] 106.200.27.179:42016 requests connection cookie.
+[connection] incoming connection: 106.200.27.179:42016 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (106.200.27.179) ...
+[sv:dbg:network:connect] : player (1) assigned key (b31bc86a90f487e4)
+[join] Bruce_Wayne has joined the server (1:106.200.27.179)
+[cmd] Bruce Wayne: [loadtruck]
+[cmd] Bruce Wayne: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Bruce Wayne: [plantpot]
+[cmd] Bruce Wayne: [plantinfo]
+[cmd] Bruce Wayne: [frisk]
+[cmd] Bruce Wayne: [usedrug]
+[cmd] Bruce Wayne: [planthelp]
+[cmd] Bruce Wayne: [pickplant]
+[cmd] Bruce Wayne: [loadtruck]
+[cmd] Bruce Wayne: [deliver]
+[cmd] Bruce Wayne: [vstash]
+[cmd] Bruce Wayne: [vstash]
+[cmd] Bruce Wayne: [vstash]
+[cmd] Bruce Wayne: [loadtruck]
+[cmd] Ma Lik: [faction]
+[cmd] Bruce Wayne: [fb]
+[cmd] Bruce Wayne: [loadtruck]
+[cmd] Bruce Wayne: [loadtruck]
+[cmd] Bruce Wayne: [fb]
+[cmd] Ma Lik: [lock]
+[cmd] Bruce Wayne: [f]
+[cmd] Bruce Wayne: [twt]
+[cmd] Ma Lik: [lock]
+[cmd] Bruce Wayne: [twt]
+[cmd] Bruce Wayne: [fb]
+[cmd] Bruce Wayne: [deliver]
+[cmd] Ma Lik: [atm]
+[cmd] Ma Lik: [lock]
+[cmd] Ma Lik: [lock]
+[cmd] Ma Lik: [inv]
+[cmd] Ma Lik: [facrepair]
+[cmd] Bruce Wayne: [upgrade]
+[cmd] Bruce Wayne: [atm]
+[cmd] Bruce Wayne: [upgrade]
+[cmd] Bruce Wayne: [inventory]
+[cmd] Bruce Wayne: [upgrade]
+[cmd] Bruce Wayne: [upgrade]
+[cmd] Bruce Wayne: [upgrade]
+[cmd] Bruce Wayne: [upgrade]
+[cmd] Bruce Wayne: [inventory]
+[cmd] Ma Lik: [release]
+[SYSTEM] Database sucessfully saved
+[cmd] Ma Lik: [lock]
+[cmd] Bruce Wayne: [fb]
+[cmd] Bruce Wayne: [fb]
+[cmd] Ma Lik: [rvc]
+[chat] [Ma_Lik]: kekavo
+[chat] [Bruce_Wayne]: lla
+[chat] [Bruce_Wayne]: relog akkano
+[chat] [Ma_Lik]: aa
+[debug] Run time error 4: "Array index out of bounds"
+[debug]  Attempted to read/write array element at negative index -1
+[debug] AMX backtrace:
+[debug] #0 0030efac in main (2, 35233096) in MGMC.amx
+[cmd] Ma Lik: [fixvoice]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Bruce_Wayne has left the server (1:0)
+[debug] Run time error 4: "Array index out of bounds"
+[debug]  Attempted to read/write array element at negative index -1
+[debug] AMX backtrace:
+[debug] #0 0030efac in main (2, 35233096) in MGMC.amx
+[cmd] Ma Lik: [fixvoice]
+[connection] 106.200.27.179:9621 requests connection cookie.
+[connection] 106.200.27.179:9621 requests connection cookie.
+[connection] incoming connection: 106.200.27.179:9621 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (106.200.27.179) ...
+[sv:dbg:network:connect] : player (1) assigned key (b31bc86af0b533d9)
+[join] Bruce_Wayne has joined the server (1:106.200.27.179)
+[chat] [Bruce_Wayne]: sheri ayilla
+[debug] Run time error 4: "Array index out of bounds"
+[debug]  Attempted to read/write array element at negative index -1
+[debug] AMX backtrace:
+[debug] #0 0030efac in main (2, 35233096) in MGMC.amx
+[cmd] Ma Lik: [fixvoice]
+[chat] [Ma_Lik]: id
+[chat] [Ma_Lik]: id para
+[chat] [Bruce_Wayne]: 1
+[cmd] Ma Lik: [sell]
+[chat] [Bruce_Wayne]: id?
+[cmd] Ma Lik: [sell]
+[cmd] Ma Lik: [sell]
+[chat] [Ma_Lik]: accept adi
+[cmd] Ma Lik: [id]
+[cmd] Bruce Wayne: [accept]
+[chat] [Bruce_Wayne]: ok
+[chat] [Ma_Lik]: ok
+[chat] [Bruce_Wayne]: afk an
+[chat] [Ma_Lik]: ok
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Bruce_Wayne has left the server (1:0)
+[cmd] Ma Lik: [afk]
+[cmd] Ma Lik: [quitjob]
+[cmd] Ma Lik: [paytickets]
+[cmd] Ma Lik: [drink]
+[cmd] Ma Lik: [lock]
+[cmd] Ma Lik: [lock]
+[cmd] Ma Lik: [paytickets]
+[cmd] Ma Lik: [paytickets]
+[cmd] Ma Lik: [atm]
+[cmd] Ma Lik: [paytickets]
+[cmd] Ma Lik: [paytickets]
+[SYSTEM] Database sucessfully saved
+[cmd] Ma Lik: [afk]
+[cmd] Ma Lik: [saveall]
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Ma_Lik has left the server (2:0)
+[connection] 27.63.204.113:33610 requests connection cookie.
+[connection] incoming connection: 27.63.204.113:33610 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (27.63.204.113) ...
+[sv:dbg:network:connect] : player (1) assigned key (71cc3f1b4be28990)
+[join] Mr_kutan has joined the server (1:27.63.204.113)
+[sv:dbg:network:receive] : player (1) identified (port:32583)
+[SYSTEM] Database sucessfully saved
+[chat] [Mr_kutan]: hi
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr kutan: [loadtruck]
+[chat] [Mr_kutan]: loadtruck
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[connection] 157.44.162.203:49763 requests connection cookie.
+[connection] incoming connection: 157.44.162.203:49763 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (157.44.162.203) ...
+[sv:dbg:network:connect] : player (2) assigned key (cba22c9d53cc2a05)
+[join] Shezin_Kp has joined the server (2:157.44.162.203)
+[sv:dbg:network:receive] : player (2) identified (port:38941)
+[cmd] Mr kutan: [deliver]
+[cmd] Mr kutan: [atm]
+[connection] 117.230.11.221:40694 requests connection cookie.
+[connection] incoming connection: 117.230.11.221:40694 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (117.230.11.221) ...
+[sv:dbg:network:connect] : player (3) assigned key (dd0be6752aefebdc)
+[join] Mr_Jack has joined the server (3:117.230.11.221)
+[sv:dbg:network:receive] : player (3) identified (port:40797)

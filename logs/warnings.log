@@ -1,0 +1,40 @@
+[06/18/22 19:08:06] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/18/22 19:08:06] [plugins/discord-connector] Unknown gateway event 'INTEGRATION_DELETE'
+[06/18/22 19:12:06] [plugins/discord-connector] Unknown gateway event 'INTEGRATION_CREATE'
+[06/18/22 19:12:06] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/18/22 19:13:43] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/19/22 06:56:29] [plugins/discord-connector] Unknown gateway event 'INTEGRATION_CREATE'
+[06/20/22 11:06:20] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/20/22 14:20:49] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/20/22 14:20:50] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/20/22 17:53:50] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/20/22 17:53:50] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/20/22 17:54:04] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/20/22 17:57:34] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/20/22 18:21:27] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/21/22 01:31:17] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/21/22 09:15:20] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/22/22 04:03:42] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/22/22 04:03:43] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/22/22 04:03:44] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/22/22 04:03:45] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/22/22 04:03:46] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/22/22 17:45:40] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/22/22 17:48:17] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/22/22 19:16:12] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/23/22 14:39:28] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/24/22 14:17:03] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/24/22 14:46:58] [plugins/discord-connector] Unknown gateway event 'GUILD_APPLICATION_COMMAND_INDEX_UPDATE'
+[06/27/22 21:28:14] [plugins/discord-connector] Unknown gateway event 'INTEGRATION_CREATE'
+[06/27/22 21:31:21] [plugins/discord-connector] Unknown gateway event 'INTEGRATION_DELETE'
+[06/28/22 11:16:29] [plugins/discord-connector] Unknown gateway event 'INTEGRATION_CREATE'
+[06/28/22 11:16:50] [plugins/discord-connector] Unknown gateway event 'INTEGRATION_DELETE'
+[07/06/22 10:48:17] [plugins/discord-connector] Unknown gateway event 'INTEGRATION_CREATE'
+[07/14/22 05:20:29] [plugins/discord-connector] Error while shutting down SSL on HTTP connection: Broken pipe (32)
+[07/14/22 05:26:06] [plugins/discord-connector] Error while shutting down SSL on HTTP connection: Broken pipe (32)
+[08/03/22 10:54:43] [plugins/discord-connector] Error while shutting down SSL on HTTP connection: Broken pipe (32)
+[08/03/22 10:59:34] [plugins/discord-connector] Error while shutting down SSL on HTTP connection: Broken pipe (32)
+[08/07/22 00:30:22] [plugins/discord-connector] Error while shutting down SSL on HTTP connection: Broken pipe (32)
+[08/07/22 00:32:51] [plugins/discord-connector] Error while shutting down SSL on HTTP connection: Broken pipe (32)
+[08/09/22 00:30:19] [plugins/discord-connector] Error while shutting down SSL on HTTP connection: Broken pipe (32)
+[08/09/22 00:30:48] [plugins/discord-connector] Error while shutting down SSL on HTTP connection: Broken pipe (32)

@@ -1,0 +1,3516 @@
+
+Server Plugins
+--------------
+ Loading plugin: sampvoice.so
+[sv:dbg:network:init] : module initializing...
+[dbg:raknet:init] : module initializing...
+[dbg:raknet:init] : module initialized
+[sv:dbg:network:init] : module initialized
+[sv:dbg:main:Load] : creating 2 work threads...
+ -------------------------------------------    
+   ___                __   __    _              
+  / __| __ _ _ __  _ _\ \ / /__ (_) __ ___    
+  \__ \/ _` | '  \| '_ \   / _ \| |/ _/ -_)
+  |___/\__,_|_|_|_| .__/\_/\___/|_|\__\___|
+                  |_|                           
+ -------------------------------------------    
+           SampVoice by MOR loaded              
+ -------------------------------------------    
+  Loaded.
+ Loading plugin: crashdetect.so
+  CrashDetect plugin 4.19.4
+  Loaded.
+ Loading plugin: FCNPC.so
+
+-------------------------------------------------
+     FCNPC - Fully Controllable NPC v2.0.4
+            GNU/Linux SA-MP 0.3.7 R2
+           Nov 17 2021 at 02:37:24
+
+  Author:       OrMisicL (2013 - 2015)
+  Continued by: ziggi    (2016 - present)
+
+  See full credits in the README.md file
+-------------------------------------------------
+
+Loading...
+
+-------------------------------------------------
+   ColAndreasv1.4.0
+
+   Created By:
+     [uL]Chris42O
+     [uL]Slice
+     [uL]Pottus
+-------------------------------------------------
+
+Loading...
+ColAndreas v1.4.0 Loaded.
+  Loaded.
+ Loading plugin: whirlpool.so
+ 
+ ==================
+ 
+  Whirlpool loaded
+ 
+ ==================
+ 
+  Loaded.
+ Loading plugin: pawncmd.so
+Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+  Loaded.
+ Loading plugin: discord-connector.so
+ >> plugin.dc-connector: v0.3.5 successfully loaded.
+  Loaded.
+ Loading plugin: SKY.so
+  Loaded.
+ Loading plugin: sscanf.so
+
+
+ ===============================
+
+      sscanf plugin loaded.     
+
+         Version:  2.8.3        
+
+  (c) 2018 Alex "Y_Less" Cole  
+
+ ===============================
+
+  Loaded.
+ Loading plugin: streamer.so
+
+
+*** Streamer Plugin v2.9.5 by Incognito loaded ***
+
+  Loaded.
+ Loading plugin: mysql_static.so
+ >> plugin.mysql: R39-6 successfully loaded.
+  Loaded.
+ Loading plugin: nativechecker.so
+  Loaded.
+ Loading plugin: audio.so
+
+
+*** Audio Plugin v0.5 R2 by Incognito loaded ***
+
+  Loaded.
+ Loaded 12 plugins.
+
+
+Ban list
+--------
+ Loaded: samp.ban
+
+
+Started server on port: 7777, with maxplayers: 1000 lanmode is OFF.
+
+
+Filterscripts
+---------------
+  Loading filterscript 'acrpmap.amx'...
+[sv:dbg:main:AmxLoad] : net game pointer (value:0x9bd35b0) received
+[sv:dbg:network:bind] : voice server running on port 58862
+No collision data found.
+  Loading filterscript 'ganghouses.amx'...
+  Loaded 2 filterscripts.
+
+   Error: Function not registered: 'Audio_CreateTCPServer'
+   Error: Function not registered: 'Audio_AddPlayer'
+   Error: Function not registered: 'Audio_RemovePlayer'
+   Error: Function not registered: 'Audio_RenamePlayer'
+OnScriptInit 1
+ 
+ 
+ 
+ ======================================= 
+ |                                     | 
+ |        YSI version 1.06.0002        | 
+ |        By Alex "Y_Less" Cole        | 
+ |                                     | 
+ ======================================= 
+ 
+OnScriptInit 2
+OnScriptInit 3
+Iter_OnGameModeInit start: 500
+*** Audio Plugin: Started TCP server on port 7777
+Mallu Gamers Mobile Community
+510 objects loaded.
+Iter_OnGameModeInit: first
+OnScriptInit 4
+Number of vehicle models: 10
+[Script] 13 atms loaded
+[Script] 92 houses loaded.
+[Script] 41 Public Garage loaded
+[Script] 0 vendors loaded
+[Script] 0 garages loaded.
+[Script] 25 businesses loaded.
+[Script] 80 entrances loaded.
+[Script] 9 factions loaded.
+[Script] 0 lands loaded.
+[Script] 13 gangs loaded.
+[Script] 0 points loaded.
+[Script] 0 turfs loaded.
+[Script] 1 actors loaded.
+[connection] 103.181.40.138:2506 requests connection cookie.
+[connection] incoming connection: 103.181.40.138:2506 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (103.181.40.138) ...
+[sv:dbg:network:connect] : player (0) assigned key (8a28b567e0578d05)
+[join] Ookan_Tintu has joined the server (0:103.181.40.138)
+[sv:dbg:network:receive] : player (0) identified (port:2556)
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Ookan_Tintu has left the server (0:0)
+[connection] 157.46.191.170:45322 requests connection cookie.
+[connection] incoming connection: 157.46.191.170:45322 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (157.46.191.170) ...
+[sv:dbg:network:connect] : player (0) assigned key (aabf2e9d2cd408e7)
+[join] Bruce_Lee has joined the server (0:157.46.191.170)
+[sv:dbg:network:receive] : player (0) identified (port:49604)
+AdmCmd: Developer Bruce Lee has logged in.
+[cmd] Bruce Lee: [time]
+[cmd] Bruce Lee: [ah]
+[cmd] Bruce Lee: [givepayday]
+[cmd] Bruce Lee: [forcepayday]
+sscanf warning: Strings without a length are deprecated, please add a destination size.
+[cmd] Bruce Lee: [forcepayday]
+[cmd] Bruce Lee: [time]
+sscanf warning: Strings without a length are deprecated, please add a destination size.
+[cmd] Bruce Lee: [forcepayday]
+[cmd] Bruce Lee: [time]
+[cmd] Bruce Lee: [ah]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Bruce_Lee has left the server (0:0)
+[connection] 103.181.40.138:2505 requests connection cookie.
+[connection] incoming connection: 103.181.40.138:2505 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (103.181.40.138) ...
+[sv:dbg:network:connect] : player (0) assigned key (8a28b567f9d8305b)
+[join] Ookan_Tintu has joined the server (0:103.181.40.138)
+[sv:dbg:network:receive] : player (0) identified (port:2507)
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[cmd] Ookan Tintu: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Ookan Tintu: [deliver]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[cmd] Ookan Tintu: [loadtruck]
+[connection] 117.202.90.175:51009 requests connection cookie.
+[connection] incoming connection: 117.202.90.175:51009 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (117.202.90.175) ...
+[sv:dbg:network:connect] : player (1) assigned key (af5aca759f6ca5b9)
+[join] Stalin_John has joined the server (1:117.202.90.175)
+[sv:dbg:network:receive] : player (1) identified (port:36410)
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Stalin_John has left the server (1:0)
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[connection] 157.44.201.163:55278 requests connection cookie.
+[connection] incoming connection: 157.44.201.163:55278 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (157.44.201.163) ...
+[sv:dbg:network:connect] : player (1) assigned key (a3c92c9d667d8102)
+[join] Raven_x has joined the server (1:157.44.201.163)
+[sv:dbg:network:receive] : player (1) identified (port:39201)
+[cmd] Raven x: [stats]
+[SYSTEM] Database sucessfully saved
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Raven_x has left the server (1:0)
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[cmd] Ookan Tintu: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [loadtruck]
+[cmd] Ookan Tintu: [deliver]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Ookan_Tintu has left the server (0:1)
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[connection] 117.202.90.175:49467 requests connection cookie.
+[connection] incoming connection: 117.202.90.175:49467 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (117.202.90.175) ...
+[sv:dbg:network:connect] : player (0) assigned key (af5aca758214bb08)
+[join] Stalin_John has joined the server (0:117.202.90.175)
+[sv:dbg:network:receive] : player (0) identified (port:34252)
+[cmd] Stalin John: [gangs]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Stalin_John has left the server (0:0)
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[connection] 42.106.180.170:52350 requests connection cookie.
+[connection] incoming connection: 42.106.180.170:52350 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (42.106.180.170) ...
+[sv:dbg:network:connect] : player (0) assigned key (aab46a2a2205acae)
+[join] Veerappan_Op has joined the server (0:42.106.180.170)
+[sv:dbg:network:receive] : player (0) identified (port:30506)
+[cmd] Veerappan Op: [gang]
+[cmd] Veerappan Op: [gang]
+[cmd] Veerappan Op: [gang]
+[SYSTEM] Database sucessfully saved
+[cmd] Veerappan Op: [gang]
+[cmd] Veerappan Op: [gang]
+[cmd] Veerappan Op: [gang]
+[cmd] Veerappan Op: [gang]
+[cmd] Veerappan Op: [gang]
+[cmd] Veerappan Op: [gang]
+[cmd] Veerappan Op: [gang]
+[cmd] Veerappan Op: [gang]
+[SYSTEM] Database sucessfully saved
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Veerappan_Op has left the server (0:0)
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[SYSTEM] Database sucessfully saved
+[connection] 42.106.190.82:27716 requests connection cookie.
+[connection] incoming connection: 42.106.190.82:27716 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (42.106.190.82) ...
+[sv:dbg:network:connect] : player (0) assigned key (52be6a2a5ae9df43)
+[join] Rayan_Annan has joined the server (0:42.106.190.82)
+[sv:dbg:network:receive] : player (0) identified (port:58650)
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [buylevel]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[connection] 106.200.76.35:51883 requests connection cookie.
+[connection] incoming connection: 106.200.76.35:51883 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (106.200.76.35) ...
+[sv:dbg:network:connect] : player (1) assigned key (234cc86a30576a9c)
+[join] Arakkal_Tintu has joined the server (1:106.200.76.35)
+[sv:dbg:network:receive] : player (1) identified (port:51885)
+[cmd] Arakkal Tintu: [robplayer]
+[cmd] Arakkal Tintu: [loadtruck]
+[cmd] Arakkal Tintu: [deliver]
+[cmd] Arakkal Tintu: [loadtruck]
+[chat] [Arakkal_Tintu]: koii
+[SYSTEM] Database sucessfully saved
+[chat] [Arakkal_Tintu]: etharayi cash
+[chat] [Rayan_Annan]: hi
+[chat] [Arakkal_Tintu]: can i frisk
+[cmd] Rayan Annan: [loadtruck]
+[chat] [Arakkal_Tintu]: you frisk me
+[chat] [Rayan_Annan]: athinaya
+[chat] [Arakkal_Tintu]: vautha
+[cmd] Arakkal Tintu: [loadtruck]
+[chat] [Arakkal_Tintu]: varutha
+[chat] [Arakkal_Tintu]: akatee
+[chat] [Rayan_Annan]: avidaya
+[chat] [Arakkal_Tintu]: ?
+[chat] [Rayan_Annan]: gayangil
+[chat] [Rayan_Annan]: full ayo
+[chat] [Arakkal_Tintu]: gang anu
+[chat] [Rayan_Annan]: m
+[chat] [Arakkal_Tintu]: njan gNG 
+[chat] [Arakkal_Tintu]: njan gang alla ems ann
+[chat] [Rayan_Annan]: oo
+[chat] [Rayan_Annan]: poli
+[chat] [Rayan_Annan]: athrakium
+[chat] [Arakkal_Tintu]: bro eniku 1 lak thanirunu maranu
+[chat] [Rayan_Annan]: payisa
+[chat] [Arakkal_Tintu]: kurava 25k
+[chat] [Arakkal_Tintu]: tg
+[cmd] Arakkal Tintu: [loadtruck]
+[chat] [Rayan_Annan]: ooo amalayuda
+[chat] [Rayan_Annan]: mukalivachano
+[cmd] Arakkal Tintu: [deliver]
+[cmd] Rayan Annan: [deliver]
+[chat] [Rayan_Annan]: your place avidaya
+[chat] [Arakkal_Tintu]: malapuram
+[chat] [Arakkal_Tintu]: u
+[cmd] Rayan Annan: [loadtruck]
+[chat] [Arakkal_Tintu]: your
+[chat] [Rayan_Annan]: thiruvananthapuram
+[chat] [Arakkal_Tintu]: m
+[cmd] Arakkal Tintu: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Arakkal Tintu: [deliver]
+[cmd] Rayan Annan: [deliver]
+[cmd] Arakkal Tintu: [stats]
+[chat] [Arakkal_Tintu]: m
+[chat] [Arakkal_Tintu]: bro
+[chat] [Rayan_Annan]: m
+[chat] [Arakkal_Tintu]: etha deliver akunath
+[chat] [Rayan_Annan]: dres
+[chat] [Arakkal_Tintu]: m
+[chat] [Rayan_Annan]: :)
+[cmd] Rayan Annan: [loadtruck]
+[chat] [Arakkal_Tintu]: *_*
+[cmd] Arakkal Tintu: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Arakkal Tintu: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Arakkal Tintu: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Arakkal Tintu: [deliver]
+[cmd] Arakkal Tintu: [deliver]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [atm]
+[chat] [Arakkal_Tintu]: l
+[cmd] Arakkal Tintu: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Arakkal Tintu: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Arakkal Tintu: [loadtruck]
+[cmd] Arakkal Tintu: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Arakkal Tintu: [deliver]
+[cmd] Arakkal Tintu: [atm]
+[cmd] Rayan Annan: [deliver]
+[cmd] Arakkal Tintu: [atm]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Arakkal_Tintu has left the server (1:0)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [buylevel]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [quitjob]
+[cmd] Rayan Annan: [quitjob]
+[cmd] Rayan Annan: [quitjob]
+[cmd] Rayan Annan: [quitjob]
+[cmd] Rayan Annan: [jobhelp]
+[cmd] Rayan Annan: [sellvest]
+[cmd] Rayan Annan: [frisk]
+[cmd] Rayan Annan: [frisk]
+[cmd] Rayan Annan: [sellvest]
+[cmd] Rayan Annan: [sellvest]
+[cmd] Rayan Annan: [quitjob]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [help]
+[cmd] Rayan Annan: [buy]
+[cmd] Rayan Annan: [buy]
+[cmd] Rayan Annan: [buy]
+[cmd] Rayan Annan: [buy]
+[cmd] Rayan Annan: [buy]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Rayan_Annan has left the server (0:0)
+[SYSTEM] Database sucessfully saved
+[connection] 1.39.77.158:27835 requests connection cookie.
+[connection] incoming connection: 1.39.77.158:27835 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (1.39.77.158) ...
+[sv:dbg:network:connect] : player (0) assigned key (9e4d2701de99793d)
+[join] Rayan_Annan has joined the server (0:1.39.77.158)
+[sv:dbg:network:receive] : player (0) identified (port:63493)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[connection] 49.15.136.40:51978 requests connection cookie.
+[connection] incoming connection: 49.15.136.40:51978 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (49.15.136.40) ...
+[sv:dbg:network:connect] : player (1) assigned key (28880f314cd5552d)
+[join] Soman_Maman has joined the server (1:49.15.136.40)
+[sv:dbg:network:receive] : player (1) identified (port:36158)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[connection] 42.107.199.253:22514 requests connection cookie.
+[connection] incoming connection: 42.107.199.253:22514 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (42.107.199.253) ...
+[sv:dbg:network:connect] : player (2) assigned key (fdc76b2a584c04fa)
+[join] Ma_Lik has joined the server (2:42.107.199.253)
+[sv:dbg:network:receive] : player (2) identified (port:50046)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Ma Lik: [badge]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Soman Maman: [gang]
+[SYSTEM] Database sucessfully saved
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [deliver]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [stats]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [deliver]
+[cmd] Ma Lik: [saveall]
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Ma_Lik has left the server (2:0)
+[cmd] Soman Maman: [gang]
+[cmd] Rayan Annan: [accept]
+[cmd] Soman Maman: [gstash]
+[cmd] Rayan Annan: [gstash]
+[cmd] Soman Maman: [gstash]
+[cmd] Rayan Annan: [gstash]
+[cmd] Soman Maman: [gstash]
+[cmd] Rayan Annan: [gstash]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Soman_Maman has left the server (1:0)
+[connection] 49.15.136.40:40959 requests connection cookie.
+[connection] incoming connection: 49.15.136.40:40959 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (49.15.136.40) ...
+[sv:dbg:network:connect] : player (1) assigned key (28880f31c2b94709)
+[join] Soman_Maman has joined the server (1:49.15.136.40)
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [buy]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Soman_Maman has left the server (1:0)
+[cmd] Rayan Annan: [selfrepair]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[connection] 49.15.136.40:41570 requests connection cookie.
+[connection] incoming connection: 49.15.136.40:41570 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (49.15.136.40) ...
+[sv:dbg:network:connect] : player (1) assigned key (28880f310cbcced4)
+[join] Soman_Maman has joined the server (1:49.15.136.40)
+[sv:dbg:network:receive] : player (1) identified (port:34952)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Soman_Maman has left the server (1:0)
+[SYSTEM] Database sucessfully saved
+[connection] 49.15.136.40:59686 requests connection cookie.
+[connection] incoming connection: 49.15.136.40:59686 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (49.15.136.40) ...
+[sv:dbg:network:connect] : player (1) assigned key (28880f312f14d35a)
+[join] Soman_Maman has joined the server (1:49.15.136.40)
+[sv:dbg:network:receive] : player (1) identified (port:55801)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Soman Maman: [f]
+[cmd] Rayan Annan: [f]
+[cmd] Soman Maman: [gang]
+[cmd] Rayan Annan: [gang]
+[cmd] Soman Maman: [gang]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Soman Maman: [gang]
+[cmd] Soman Maman: [gang]
+[cmd] Rayan Annan: [deliver]
+[cmd] Soman Maman: [f]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Soman Maman: [gang]
+[cmd] Soman Maman: [gang]
+[cmd] Rayan Annan: [f]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Soman Maman: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Soman_Maman has left the server (1:0)
+[cmd] Rayan Annan: [loadtruck]
+[connection] 49.15.136.40:56591 requests connection cookie.
+[connection] incoming connection: 49.15.136.40:56591 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (49.15.136.40) ...
+[sv:dbg:network:connect] : player (1) assigned key (28880f31c9e2ea86)
+[join] Soman_Maman has joined the server (1:49.15.136.40)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Soman Maman: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[chat] [Soman_Maman]: deliver
+[cmd] Soman Maman: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Soman Maman: [loadtruck]
+[cmd] Soman Maman: [loadtruck]
+[cmd] Soman Maman: [loadtruck]
+[cmd] Rayan Annan: [deliver]
+[cmd] Soman Maman: [loadtruck]
+[cmd] Soman Maman: [deliver]
+[death] Soman_Maman died 255
+[death] Rayan_Annan died 255
+[cmd] Soman Maman: [checkin]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Soman Maman: [sendloc]
+[SYSTEM] Database sucessfully saved
+[connection] 42.107.199.253:32325 requests connection cookie.
+[connection] incoming connection: 42.107.199.253:32325 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (42.107.199.253) ...
+[sv:dbg:network:connect] : player (2) assigned key (fdc76b2a143b2d19)
+[join] Ma_Lik has joined the server (2:42.107.199.253)
+[sv:dbg:network:receive] : player (2) identified (port:16799)
+[connection] 137.97.108.24:48933 requests connection cookie.
+[chat] [Ma_Lik]: finoz007
+[connection] incoming connection: 137.97.108.24:48933 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (137.97.108.24) ...
+[sv:dbg:network:connect] : player (3) assigned key (186c61892bb664c1)
+[join] Mr_Torres has joined the server (3:137.97.108.24)
+[sv:dbg:network:receive] : player (3) identified (port:37042)
+[cmd] Rayan Annan: [refuel]
+[cmd] Mr Torres: [gascan]
+[cmd] Mr Torres: [gascan]
+[cmd] Mr Torres: [gascan]
+[connection] 106.200.51.198:6195 requests connection cookie.
+[connection] incoming connection: 106.200.51.198:6195 id: 4
+[sv:dbg:network:connect] : connecting player (4) with address (106.200.51.198) ...
+[sv:dbg:network:connect] : player (4) assigned key (c633c86a4ccc1deb)
+[join] Mr_Dizooza has joined the server (4:106.200.51.198)
+[cmd] Rayan Annan: [f]
+[chat] [Rayan_Annan]: halo
+[sv:dbg:network:connect] : disconnecting player (4) ...
+[part] Mr_Dizooza has left the server (4:0)
+[chat] [Rayan_Annan]: dayiii
+[chat] [Rayan_Annan]: yantha parupadii
+[chat] [Rayan_Annan]: mm
+[cmd] Mr Torres: [buy]
+[chat] [Soman_Maman]: hao
+[chat] [Mr_Torres]: hi
+[chat] [Soman_Maman]: ni gang il ondo
+[chat] [Mr_Torres]: illa
+[chat] [Rayan_Annan]: hi
+[chat] [Soman_Maman]: gangil charan thalpariyam ondo
+[chat] [Rayan_Annan]: nenak eth vano
+[cmd] Mr Torres: [lock]
+[chat] [Rayan_Annan]: para
+[cmd] Ma Lik: [loadtruck]
+[chat] [Mr_Torres]: gang active ano
+[chat] [Soman_Maman]: mm
+[chat] [Rayan_Annan]: torraa nenak gun vano
+[chat] [Mr_Torres]: ethra members und
+[chat] [Soman_Maman]: epol  taraf war thu dagum apol allavarum active
+[chat] [Soman_Maman]: 10
+[chat] [Mr_Torres]: ok
+[cmd] Ma Lik: [deliver]
+[chat] [Rayan_Annan]: w8
+[cmd] Ma Lik: [deliver]
+[chat] [Mr_Torres]: add
+[chat] [Soman_Maman]: wti re adichu varaam
+[chat] [Rayan_Annan]: soman epavarum
+[chat] [Soman_Maman]: mic poyi
+[chat] [Rayan_Annan]: bro
+[cmd] Ma Lik: [atm]
+[chat] [Rayan_Annan]: gun vano
+[chat] [Rayan_Annan]: freww
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Soman_Maman has left the server (1:0)
+[chat] [Rayan_Annan]: ne enala anodu choyichil
+[chat] [Mr_Torres]: ?
+[chat] [Rayan_Annan]: m4
+[chat] [Mr_Torres]: aa
+[chat] [Mr_Torres]: undo
+[connection] 49.15.136.40:60313 requests connection cookie.
+[connection] incoming connection: 49.15.136.40:60313 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (49.15.136.40) ...
+[sv:dbg:network:connect] : player (1) assigned key (28880f31af00ff04)
+[join] Soman_Maman has joined the server (1:49.15.136.40)
+[chat] [Rayan_Annan]: antayil ellayirunda
+[sv:dbg:network:receive] : player (1) identified (port:36163)
+[chat] [Rayan_Annan]: nan
+[cmd] Ma Lik: [loadtruck]
+[chat] [Rayan_Annan]: nenak vadichu chatam
+[chat] [Rayan_Annan]: nokatta
+[chat] [Rayan_Annan]: free ayitt
+[chat] [Soman_Maman]: kakavoo
+[chat] [Mr_Torres]: ni cash koduth ano vangunne
+[cmd] Ma Lik: [stats]
+[chat] [Mr_Torres]: illa
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Soman_Maman has left the server (1:0)
+[connection] 49.15.136.40:49874 requests connection cookie.
+[connection] incoming connection: 49.15.136.40:49874 id: 1
+[connection] 49.15.136.40:48644 requests connection cookie.
+[connection] incoming connection: 49.15.136.40:48644 id: 4
+[sv:dbg:network:connect] : connecting player (4) with address (49.15.136.40) ...
+[sv:dbg:network:connect] : player (4) assigned key (28880f313b0e5b87)
+[join] Soman_Maman has joined the server (4:49.15.136.40)
+[chat] [Rayan_Annan]: mm
+[cmd] Ma Lik: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (4) ...
+[part] Soman_Maman has left the server (4:0)
+[chat] [Mr_Torres]: ethra
+[chat] [Rayan_Annan]: nan vadichitt nenak tharam
+[chat] [Rayan_Annan]: 250000
+[connection] 49.15.136.40:52653 requests connection cookie.
+[connection] incoming connection: 49.15.136.40:52653 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (49.15.136.40) ...
+[sv:dbg:network:connect] : player (1) assigned key (28880f3135460205)
+[join] Soman_Maman has joined the server (1:49.15.136.40)
+[sv:dbg:network:receive] : player (1) identified (port:54328)
+[chat] [Rayan_Annan]: eth vao
+[cmd] Ma Lik: [deliver]
+[chat] [Mr_Torres]: ninakk  cash avanegil venda
+[chat] [Rayan_Annan]: vano
+[chat] [Rayan_Annan]: vand
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Soman_Maman has left the server (1:0)
+[chat] [Rayan_Annan]: nenak free ayitt tharam
+[connection] 49.15.136.40:49886 requests connection cookie.
+[connection] incoming connection: 49.15.136.40:49886 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (49.15.136.40) ...
+[sv:dbg:network:connect] : player (1) assigned key (28880f315ba4881f)
+[join] Soman_Maman has joined the server (1:49.15.136.40)
+[sv:dbg:network:receive] : player (1) identified (port:40337)
+[chat] [Mr_Torres]: vendada
+[cmd] Ma Lik: [loadtruck]
+[chat] [Soman_Maman]: haloo
+[chat] [Mr_Torres]: kelkka
+[chat] [Mr_Torres]: ipo add akkuo
+[chat] [Soman_Maman]: haloo
+[cmd] Ma Lik: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Rayan Annan: [give]
+[chat] [Mr_Torres]: illa
+[cmd] Ma Lik: [loadtruck]
+[cmd] Rayan Annan: [give]
+[cmd] Rayan Annan: [give]
+[cmd] Ma Lik: [deliver]
+[cmd] Mr Torres: [lock]
+[cmd] Ma Lik: [deliver]
+[cmd] Ma Lik: [atm]
+[connection] 42.106.189.36:45232 requests connection cookie.
+[connection] incoming connection: 42.106.189.36:45232 id: 4
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Ma_Lik has left the server (2:0)
+[chat] [Mr_Torres]: aa
+[sv:dbg:network:connect] : connecting player (4) with address (42.106.189.36) ...
+[sv:dbg:network:connect] : player (4) assigned key (24bd6a2a44e10e38)
+[join] Devin_Hellarc has joined the server (4:42.106.189.36)
+[sv:dbg:network:receive] : player (4) identified (port:56585)
+[cmd] Rayan Annan: [lock]
+[chat] [Mr_Torres]: 3
+[cmd] Soman Maman: [gang]
+[cmd] Soman Maman: [gang]
+[cmd] Devin Hellarc: [g]
+[cmd] Soman Maman: [gang]
+[cmd] Mr Torres: [accept]
+[cmd] Rayan Annan: [give]
+[cmd] Rayan Annan: [give]
+[chat] [Soman_Maman]: gstash
+[cmd] Mr Torres: [gstash]
+[cmd] Rayan Annan: [give]
+AdmWarning: Devin Hellarc[4] is possibly using airbreak hacks.
+[chat] [Mr_Torres]: hi
+[cmd] Devin Hellarc: [quitjob]
+[chat] [Rayan_Annan]: torata
+[chat] [Rayan_Annan]: byck kodukuna
+[chat] [Mr_Torres]: nan full active
+[chat] [Mr_Torres]: gate pass ?
+[chat] [Rayan_Annan]: bro
+[chat] [Rayan_Annan]: bro
+[chat] [Mr_Torres]: aa
+[cmd] Devin Hellarc: [faction]
+[chat] [Mr_Torres]: aa
+[chat] [Rayan_Annan]: bro
+[cmd] Devin Hellarc: [atm]
+[chat] [Rayan_Annan]: byck kodukuna
+[chat] [Mr_Torres]: Y
+[chat] [Mr_Torres]: pass endha
+[chat] [Mr_Torres]: type
+[chat] [Rayan_Annan]: okok
+[chat] [Soman_Maman]: okok
+[chat] [Mr_Torres]: aa
+[chat] [Mr_Torres]: ready
+[cmd] Devin Hellarc: [siren]
+[chat] [Soman_Maman]: ok
+[chat] [Mr_Torres]: kelkka
+[cmd] Devin Hellarc: [facrepair]
+[chat] [Soman_Maman]: baki kariyam verappan varubol nan vilikum apol ni vRAMA
+[chat] [Mr_Torres]: aa
+[chat] [Soman_Maman]: OK
+[cmd] Devin Hellarc: [mdc]
+[chat] [Mr_Torres]: aa
+[cmd] Rayan Annan: [loadtruck]
+[chat] [Mr_Torres]: ok
+[SYSTEM] Database sucessfully saved
+[chat] [Mr_Torres]: active alla
+[cmd] Rayan Annan: [deliver]
+[chat] [Mr_Torres]: jhon 
+[cmd] Rayan Annan: [atm]
+[cmd] Rayan Annan: [atm]
+[chat] [Devin_Hellarc]: hlo
+[chat] [Soman_Maman]: mm
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Soman_Maman has left the server (1:0)
+[connection] 157.44.139.50:43013 requests connection cookie.
+[connection] incoming connection: 157.44.139.50:43013 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (157.44.139.50) ...
+[sv:dbg:network:connect] : player (1) assigned key (328b2c9d793e1d5e)
+[join] Mr_Rolex has joined the server (1:157.44.139.50)
+[sv:dbg:network:receive] : player (1) identified (port:45333)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Mr_Torres has left the server (3:0)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Devin Hellarc: [facrepair]
+[cmd] Devin Hellarc: [siren]
+[cmd] Rayan Annan: [fb]
+[cmd] Rayan Annan: [fb]
+[chat] [Mr_Rolex]: j
+[cmd] Mr Rolex: [fb]
+[cmd] Devin Hellarc: [members]
+[cmd] Rayan Annan: [deliver]
+[cmd] Mr Rolex: [fixvw]
+[cmd] Mr Rolex: [fb]
+[sv:dbg:network:connect] : disconnecting player (4) ...
+[part] Devin_Hellarc has left the server (4:0)
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Rolex: [sendloc]
+[cmd] Rayan Annan: [fb]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Rolex: [sendloc]
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Mr_Rolex has left the server (1:0)
+[connection] 157.44.139.50:48474 requests connection cookie.
+[connection] incoming connection: 157.44.139.50:48474 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (157.44.139.50) ...
+[sv:dbg:network:connect] : player (1) assigned key (328b2c9d89d01c30)
+[join] Mr_Rolex has joined the server (1:157.44.139.50)
+[sv:dbg:network:receive] : player (1) identified (port:44179)
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Rolex: [sendloc]
+[chat] [Rayan_Annan]: hi
+[chat] [Mr_Rolex]: cash undo
+[chat] [Mr_Rolex]: ha
+[chat] [Rayan_Annan]: 9 lk ayi
+[chat] [Mr_Rolex]: aa
+[chat] [Mr_Rolex]: ok
+[chat] [Rayan_Annan]: da nee gangil varuna
+[chat] [Rayan_Annan]: poli ganga
+[chat] [Mr_Rolex]: id 1
+[chat] [Mr_Rolex]: edha
+[chat] [Mr_Rolex]: cheguthankottayao
+[chat] [Rayan_Annan]: 1aulumkuda ullu spayis
+[chat] [Mr_Rolex]: etra members und
+[chat] [Rayan_Annan]: mm
+[chat] [Rayan_Annan]: 10
+[chat] [Mr_Rolex]: active ano
+[chat] [Mr_Rolex]: gang
+[chat] [Mr_Rolex]: gh kanikk
+[chat] [Rayan_Annan]: oda
+[SYSTEM] Database sucessfully saved
+[chat] [Rayan_Annan]: ene taraf war und
+[chat] [Mr_Rolex]: aa
+[chat] [Mr_Rolex]: njn und
+[chat] [Rayan_Annan]: ath udana thudangum
+[chat] [Rayan_Annan]: aa apa nan parayam
+[chat] [Mr_Rolex]: m nee ippo dress shop po
+[chat] [Mr_Rolex]: veerapan ennod innale choichinu
+[chat] [Rayan_Annan]: nenak anth prashnam vanalum ne gangil payanmara vilichal mathi
+[chat] [Mr_Rolex]: aranu leader
+[chat] [Mr_Rolex]: aa
+[chat] [Rayan_Annan]: veerapan
+[chat] [Mr_Rolex]: aa ok
+[chat] [Mr_Rolex]: jee vqndi eduk
+[chat] [Mr_Rolex]: nee
+[chat] [Mr_Rolex]: drsshop
+[cmd] Rayan Annan: [givekeys]
+[chat] [Rayan_Annan]: by
+[chat] [Mr_Rolex]: ?
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Rayan_Annan has left the server (0:0)
+[sv:dbg:network:connect] : disconnecting player (1) ...
+[part] Mr_Rolex has left the server (1:0)
+[connection] 137.97.83.164:34154 requests connection cookie.
+[connection] incoming connection: 137.97.83.164:34154 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (137.97.83.164) ...
+[sv:dbg:network:connect] : player (0) assigned key (a453618900083e3b)
+[join] Mr_Arjun has joined the server (0:137.97.83.164)
+[sv:dbg:network:receive] : player (0) identified (port:53144)
+[cmd] Mr Arjun: [gfindcar]
+[SYSTEM] Database sucessfully saved
+[cmd] Mr Arjun: [top]
+[cmd] Mr Arjun: [buy]
+[cmd] Mr Arjun: [robbiz]
+[cmd] Mr Arjun: [hide]
+[cmd] Mr Arjun: [stopanim]
+[connection] 27.63.204.125:22211 requests connection cookie.
+[connection] incoming connection: 27.63.204.125:22211 id: 1
+[join] Mr_kutan has joined the server (1:27.63.204.125)
+[cmd] Mr Arjun: [gfindcar]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Mr_Arjun has left the server (0:0)
+[chat] [Mr_kutan]: y
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr kutan: [skills]
+[cmd] Mr kutan: [loadtruck]
+[connection] 42.107.199.253:43156 requests connection cookie.
+[connection] incoming connection: 42.107.199.253:43156 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (42.107.199.253) ...
+[sv:dbg:network:connect] : player (0) assigned key (fdc76b2a68f0e879)
+[join] Ma_Lik has joined the server (0:42.107.199.253)
+[sv:dbg:network:receive] : player (0) identified (port:23441)
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr kutan: [skills]
+[SYSTEM] Database sucessfully saved
+[cmd] Ma Lik: [deliver]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[chat] [Mr_kutan]: hi
+[cmd] Ma Lik: [deliver]
+[cmd] Mr kutan: [deliver]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [stats]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[connection] 137.97.108.24:42710 requests connection cookie.
+[connection] incoming connection: 137.97.108.24:42710 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (137.97.108.24) ...
+[sv:dbg:network:connect] : player (2) assigned key (186c6189646eeb91)
+[join] Mr_Torres has joined the server (2:137.97.108.24)
+[sv:dbg:network:receive] : player (2) identified (port:42347)
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Torres: [find]
+[cmd] Mr Torres: [findcar]
+[cmd] Ma Lik: [deliver]
+[cmd] Mr Torres: [gascan]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr Torres: [refuel]
+[connection] 157.46.210.214:60832 requests connection cookie.
+[connection] incoming connection: 157.46.210.214:60832 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (157.46.210.214) ...
+[sv:dbg:network:connect] : player (3) assigned key (d6d22e9db2ee7c49)
+[join] Mr_Arjun has joined the server (3:157.46.210.214)
+[sv:dbg:network:receive] : player (3) identified (port:48797)
+[cmd] Mr Torres: [phone]
+[cmd] Mr Torres: [gang]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Arjun: [gfindcar]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr Arjun: [fb]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [fb]
+[cmd] Mr Arjun: [fb]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [deliver]
+[cmd] Mr Torres: [selfrepair]
+[cmd] Mr Arjun: [helpers]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr kutan: [skills]
+[cmd] Ma Lik: [fb]
+[cmd] Mr Arjun: [f]
+[cmd] Mr Arjun: [fb]
+[cmd] Mr Torres: [f]
+[cmd] Mr Arjun: [members]
+[cmd] Mr Arjun: [f]
+[cmd] Ma Lik: [fb]
+[cmd] Mr Torres: [f]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[connection] 106.200.47.140:5367 requests connection cookie.
+[cmd] Mr Arjun: [fb]
+[connection] incoming connection: 106.200.47.140:5367 id: 4
+[sv:dbg:network:connect] : connecting player (4) with address (106.200.47.140) ...
+[sv:dbg:network:connect] : player (4) assigned key (8c2fc86a794e2760)
+[join] Mi_Key has joined the server (4:106.200.47.140)
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr Arjun: [fb]
+[cmd] Ma Lik: [deliver]
+[cmd] Mi Key: [fb]
+[cmd] Mr Torres: [fb]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mi Key: [fb]
+[cmd] Ma Lik: [atm]
+[cmd] Mi Key: [loadtruck]
+[cmd] Mi Key: [loadtruck]
+[chat] [Mr_kutan]: sry
+[cmd] Mi Key: [loadtruck]
+[cmd] Mr Torres: [hotwire]
+[cmd] Mr kutan: [deliver]
+[sv:dbg:network:connect] : disconnecting player (4) ...
+[part] Mi_Key has left the server (4:0)
+[cmd] Ma Lik: [fb]
+[connection] 27.61.45.236:52978 requests connection cookie.
+[connection] incoming connection: 27.61.45.236:52978 id: 4
+[sv:dbg:network:connect] : connecting player (4) with address (27.61.45.236) ...
+[sv:dbg:network:connect] : player (4) assigned key (ec2d3d1b85455431)
+[join] Mi_Key has joined the server (4:27.61.45.236)
+[sv:dbg:network:receive] : player (4) identified (port:5891)
+[cmd] Mr Arjun: [f]
+[cmd] Mr Arjun: [fb]
+[cmd] Mr Torres: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mi Key: [loadtruck]
+[cmd] Mr Arjun: [fb]
+[cmd] Mr Torres: [deliver]
+[cmd] Mi Key: [fb]
+[cmd] Mr Arjun: [fb]
+[connection] 27.61.48.150:43513 requests connection cookie.
+[connection] incoming connection: 27.61.48.150:43513 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (27.61.48.150) ...
+[sv:dbg:network:connect] : player (5) assigned key (96303d1be01cd5ce)
+[join] Mr_Dizooza has joined the server (5:27.61.48.150)
+[sv:dbg:network:receive] : player (5) identified (port:20710)
+[cmd] Mi Key: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Dizooza has left the server (5:0)
+[cmd] Mi Key: [loadtruck]
+[connection] 27.61.48.150:55466 requests connection cookie.
+[connection] incoming connection: 27.61.48.150:55466 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (27.61.48.150) ...
+[sv:dbg:network:connect] : player (5) assigned key (96303d1b6f209e96)
+[join] Mr_Dizooza has joined the server (5:27.61.48.150)
+[sv:dbg:network:receive] : player (5) identified (port:35173)
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Arjun: [fb]
+[cmd] Mi Key: [loadtruck]
+[cmd] Mr Torres: [loadtruck]
+[cmd] Ma Lik: [deliver]
+[cmd] Mr Torres: [loadtruck]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr Torres: [loadtruck]
+[cmd] Mi Key: [loadtruck]
+[cmd] Ma Lik: [rvc]
+[chat] [Mi_Key]: hlo
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mi Key: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Torres: [deliver]
+[cmd] Ma Lik: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Mr_Arjun has left the server (3:0)
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Dizooza: [sendloc]
+[cmd] Mi Key: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mi Key: [loadtruck]
+[cmd] Mr Dizooza: [deliver]
+[cmd] Mi Key: [loadtruck]
+[cmd] Mr kutan: [deliver]
+[cmd] Mi Key: [loadtruck]
+[cmd] Ma Lik: [deliver]
+[chat] [Mr_Torres]: ?
+[chat] [Mr_Dizooza]: .
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Ma Lik: [facrepair]
+[cmd] Mr Torres: [loadtruck]
+[chat] [Mi_Key]: loadtruck adikkan pttunnilla
+[chat] [Mr_Torres]: vandi matt
+[cmd] Mr Dizooza: [stuck]
+[cmd] Mr Dizooza: [stuck]
+[cmd] Mr Dizooza: [stuck]
+[chat] [Mr_Dizooza]: kelkkunnundo
+[cmd] Mr Dizooza: [stuck]
+[chat] [Mr_Torres]: ?illa
+[cmd] Mr Torres: [loadtruck]
+[cmd] Mr Dizooza: [stuck]
+[cmd] Mr Dizooza: [rvc]
+[chat] [Mr_Dizooza]: relog akk
+[cmd] Mi Key: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[chat] [Mr_Torres]: ni keriyo
+[chat] [Mr_Dizooza]: vandi kanunnilla
+[cmd] Mr Dizooza: [members]
+[SYSTEM] Database sucessfully saved
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mi Key: [deliver]
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Torres: [deliver]
+[cmd] Mr Torres: [atm]
+[cmd] Mr kutan: [deliver]
+[cmd] Ma Lik: [deliver]
+[cmd] Mr Dizooza: [deliver]
+[cmd] Mi Key: [loadtruck]
+[cmd] Mr Dizooza: [atm]
+[cmd] Mr kutan: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Mr_Torres has left the server (2:0)
+[cmd] Mi Key: [phone]
+[connection] 157.44.202.74:59110 requests connection cookie.
+[connection] incoming connection: 157.44.202.74:59110 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (157.44.202.74) ...
+[sv:dbg:network:connect] : player (2) assigned key (4aca2c9d9b53e028)
+[join] Raven_x has joined the server (2:157.44.202.74)
+[sv:dbg:network:receive] : player (2) identified (port:34689)
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mi Key: [atm]
+[cmd] Mr Dizooza: [gangs]
+[cmd] Mr Dizooza: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Dizooza has left the server (5:0)
+[chat] [Mi_Key]: buy
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mi Key: [buy]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mi Key: [buy]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mi Key: [buy]
+[cmd] Mi Key: [buy]
+[cmd] Mi Key: [buy]
+[cmd] Raven x: [stats]
+[connection] 157.44.139.50:38281 requests connection cookie.
+[connection] 157.44.139.50:38281 requests connection cookie.
+[connection] incoming connection: 157.44.139.50:38281 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (157.44.139.50) ...
+[sv:dbg:network:connect] : player (3) assigned key (328b2c9d5f7f184d)
+[join] Mr_Rolex has joined the server (3:157.44.139.50)
+[sv:dbg:network:receive] : player (3) identified (port:41626)
+[cmd] Mi Key: [robbiz]
+[connection] 157.46.210.214:46476 requests connection cookie.
+[connection] incoming connection: 157.46.210.214:46476 id: 5
+[cmd] Ma Lik: [deliver]
+[cmd] Ma Lik: [deliver]
+[cmd] Mr kutan: [deliver]
+[connection] 157.46.210.214:42840 requests connection cookie.
+[connection] incoming connection: 157.46.210.214:42840 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (157.46.210.214) ...
+[sv:dbg:network:connect] : player (5) assigned key (d6d22e9d7fbfbe9a)
+[join] Mr_Arjun has joined the server (5:157.46.210.214)
+[sv:dbg:network:receive] : player (5) identified (port:57746)
+[cmd] Mi Key: [phone]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Mr_Rolex has left the server (3:0)
+[cmd] Mr kutan: [atm]
+[cmd] Mr Arjun: [fixvw]
+[connection] 157.44.139.50:47298 requests connection cookie.
+[connection] incoming connection: 157.44.139.50:47298 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (157.44.139.50) ...
+[sv:dbg:network:connect] : player (3) assigned key (328b2c9db0611836)
+[join] Mr_Rolex has joined the server (3:157.44.139.50)
+[sv:dbg:network:receive] : player (3) identified (port:49012)
+[cmd] Raven x: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Arjun has left the server (5:0)
+[cmd] Mr kutan: [atm]
+[cmd] Ma Lik: [drink]
+[cmd] Raven x: [deliver]
+[cmd] Mi Key: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [deliver]
+[cmd] Raven x: [a]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Raven x: [atm]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mi Key: [deliver]
+[cmd] Ma Lik: [deliver]
+[cmd] Raven x: [loadtruck]
+[cmd] Mi Key: [twt]
+[cmd] Mi Key: [twt]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Mr_Rolex has left the server (3:0)
+[cmd] Ma Lik: [atm]
+[chat] [Mr_kutan]: undenkill truck job come
+[connection] 157.44.139.50:42982 requests connection cookie.
+[connection] incoming connection: 157.44.139.50:42982 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (157.44.139.50) ...
+[sv:dbg:network:connect] : player (3) assigned key (328b2c9d16d12568)
+[join] Mr_Rolex has joined the server (3:157.44.139.50)
+[cmd] Raven x: [loadtruck]
+[chat] [Mr_kutan]: mikey bike veno
+[cmd] Mi Key: [loadtruck]
+[cmd] Ma Lik: [id]
+[cmd] Raven x: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Mr_Rolex has left the server (3:0)
+[cmd] Mi Key: [loadtruck]
+[cmd] Mi Key: [twt]
+[chat] [Mr_kutan]: 80 k
+[cmd] Mi Key: [twt]
+[cmd] Ma Lik: [fb]
+[chat] [Mi_Key]: PHONE
+[cmd] Mi Key: [phone]
+[chat] [Mr_kutan]: number phone
+[cmd] Raven x: [fb]
+[cmd] Mi Key: [loadtruck]
+[cmd] Raven x: [deliver]
+[cmd] Mi Key: [loadtruck]
+[cmd] Ma Lik: [fb]
+[chat] [Mr_kutan]: da
+[chat] [Mi_Key]: ha
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Raven x: [sendloc]
+[chat] [Mr_kutan]: vandi veno
+[chat] [Raven_x]: deii
+[chat] [Mi_Key]: etha vndi
+[chat] [Mi_Key]: rate etgray
+[chat] [Mr_kutan]: bike
+[cmd] Ma Lik: [loadtruck]
+[chat] [Ma_Lik]: ba
+[chat] [Mr_kutan]: 80 k
+[chat] [Mi_Key]: eth bike
+[chat] [Mr_kutan]: kananamenkil truck job come
+[chat] [Mi_Key]: njn avde und
+[chat] [Mr_kutan]: evde ok
+[chat] [Mi_Key]: ippo verM
+[cmd] Ma Lik: [loadtruck]
+[connection] 106.200.51.222:44708 requests connection cookie.
+[connection] incoming connection: 106.200.51.222:44708 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (106.200.51.222) ...
+[sv:dbg:network:connect] : player (3) assigned key (de33c86abc454534)
+[join] Mr_Dizooza has joined the server (3:106.200.51.222)
+[sv:dbg:network:receive] : player (3) identified (port:8475)
+[SYSTEM] Database sucessfully saved
+[cmd] Ma Lik: [loadtruck]
+[warning] client exceeded 'ackslimit' 106.200.51.222:44708 (4105) Limit: 3000/sec
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Mr_Dizooza has left the server (3:0)
+[chat] [Mr_kutan]: hi
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[chat] [Mr_kutan]: ithanu
+[connection] 157.46.210.214:44777 requests connection cookie.
+[connection] incoming connection: 157.46.210.214:44777 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (157.46.210.214) ...
+[sv:dbg:network:connect] : player (3) assigned key (d6d22e9d1e8a5225)
+[join] Mr_Arjun has joined the server (3:157.46.210.214)
+[chat] [Mi_Key]: IPPO VDNA
+[cmd] Ma Lik: [deliver]
+[cmd] Raven x: [deliver]
+[chat] [Mi_Key]: vnda
+[cmd] Mr Arjun: [fixvw]
+[chat] [Mr_kutan]: enda
+[chat] [Mi_Key]: cash kurava bobcat edthu
+[chat] [Mr_kutan]: ethre und
+[cmd] Mi Key: [loadtruck]
+[cmd] Mi Key: [loadtruck]
+[cmd] Mr Arjun: [quitjob]
+[cmd] Raven x: [loadtruck]
+[cmd] Ma Lik: [saveall]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Ma_Lik has left the server (0:0)
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mi Key: [deliver]
+[chat] [Raven_x]: o
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Mr_Arjun has left the server (3:0)
+[cmd] Mr kutan: [deliver]
+[cmd] Mi Key: [fb]
+[cmd] Mi Key: [phone]
+[cmd] Raven x: [loadtruck]
+[chat] [Mi_Key]: number tharuo
+[cmd] Raven x: [deliver]
+[cmd] Mi Key: [twt]
+[connection] 157.46.210.214:47741 requests connection cookie.
+[connection] incoming connection: 157.46.210.214:47741 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (157.46.210.214) ...
+[sv:dbg:network:connect] : player (0) assigned key (d6d22e9d908f76ed)
+[join] Mr_Arjun has joined the server (0:157.46.210.214)
+[chat] [Mr_kutan]: yes]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Mr_Arjun has left the server (0:0)
+[chat] [Mr_kutan]: illa bro
+[chat] [Mi_Key]: ok
+[connection] 157.46.210.214:47698 requests connection cookie.
+[connection] incoming connection: 157.46.210.214:47698 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (157.46.210.214) ...
+[sv:dbg:network:connect] : player (0) assigned key (d6d22e9df3ecc2a4)
+[join] Mr_Arjun has joined the server (0:157.46.210.214)
+[sv:dbg:network:receive] : player (0) identified (port:39208)
+[chat] [Mr_kutan]: bro tripne undo
+[chat] [Mr_kutan]: raven ano
+[cmd] Raven x: [neon]
+[chat] [Mr_kutan]: bro 5 lakh car undo
+[cmd] Raven x: [loadtruck]
+[chat] [Mr_kutan]: 5 lakhne car undo
+[chat] [Mr_kutan]: hi
+[chat] [Mr_kutan]: car kodukanundo
+[chat] [Raven_x]: 6 lakh n car ond
+[chat] [Mr_kutan]: 5 lakh illa
+[connection] 137.97.93.214:42977 requests connection cookie.
+[connection] incoming connection: 137.97.93.214:42977 id: 3
+[chat] [Raven_x]: car dealership poyi nokk
+[sv:dbg:network:connect] : connecting player (3) with address (137.97.93.214) ...
+[sv:dbg:network:connect] : player (3) assigned key (d65d6189404ef6d5)
+[join] Bruce_Lee has joined the server (3:137.97.93.214)
+[sv:dbg:network:receive] : player (3) identified (port:52850)
+AdmCmd: Developer Bruce Lee has logged in.
+[cmd] Bruce Lee: [badge]
+[chat] [Mr_kutan]: bro avide modified cheythu kittila enik 2nd maathi
+AdmWarning: Mr Arjun[0] is possibly using airbreak hacks.
+[chat] [Mr_kutan]: kere
+[cmd] Bruce Lee: [ah]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [f]
+[chat] [Mr_kutan]: va
+[cmd] Bruce Lee: [f]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Mr_Arjun has left the server (0:0)
+[sv:dbg:network:connect] : disconnecting player (4) ...
+[part] Mi_Key has left the server (4:0)
+[cmd] Bruce Lee: [f]
+[cmd] Raven x: [f]
+[connection] 157.44.139.50:49276 requests connection cookie.
+[connection] incoming connection: 157.44.139.50:49276 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (157.44.139.50) ...
+[sv:dbg:network:connect] : player (0) assigned key (328b2c9d7f54ae30)
+[join] Mr_Rolex has joined the server (0:157.44.139.50)
+[sv:dbg:network:receive] : player (0) identified (port:48193)
+[cmd] Bruce Lee: [f]
+[cmd] Raven x: [f]
+[cmd] Raven x: [deliver]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Bruce_Lee has left the server (3:0)
+[cmd] Mr kutan: [loadtruck]
+[connection] 157.44.204.161:37819 requests connection cookie.
+[connection] incoming connection: 157.44.204.161:37819 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (157.44.204.161) ...
+[sv:dbg:network:connect] : player (3) assigned key (a1cc2c9d7ac75364)
+[join] Bruce_Lee has joined the server (3:157.44.204.161)
+[sv:dbg:network:receive] : player (3) identified (port:35192)
+AdmCmd: Developer Bruce Lee has logged in.
+[cmd] Raven x: [loadtruck]
+[cmd] Bruce Lee: [setskin]
+[connection] 157.46.210.214:60945 requests connection cookie.
+[connection] incoming connection: 157.46.210.214:60945 id: 4
+[sv:dbg:network:connect] : connecting player (4) with address (157.46.210.214) ...
+[sv:dbg:network:connect] : player (4) assigned key (d6d22e9dbc9cebcc)
+[join] Mr_Arjun has joined the server (4:157.46.210.214)
+[sv:dbg:network:receive] : player (4) identified (port:35452)
+[cmd] Raven x: [loadtruck]
+[cmd] Bruce Lee: [f]
+[cmd] Raven x: [f]
+[connection] 106.200.49.198:33830 requests connection cookie.
+[connection] incoming connection: 106.200.49.198:33830 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (106.200.49.198) ...
+[sv:dbg:network:connect] : player (5) assigned key (c631c86a546fc850)
+[join] Mr_Dizooza has joined the server (5:106.200.49.198)
+[cmd] Mr kutan: [deliver]
+[cmd] Raven x: [loadtruck]
+[cmd] Mr Dizooza: [members]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Dizooza: [sendloc]
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Dizooza has left the server (5:0)
+[connection] 106.200.49.198:51862 requests connection cookie.
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Rolex: [sendloc]
+[connection] incoming connection: 106.200.49.198:51862 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (106.200.49.198) ...
+[sv:dbg:network:connect] : player (5) assigned key (c631c86ae646c444)
+[join] Mr_Dizooza has joined the server (5:106.200.49.198)
+[sv:dbg:network:receive] : player (5) identified (port:30452)
+[SYSTEM] Database sucessfully saved
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Rolex: [sendloc]
+[cmd] Raven x: [loadtruck]
+[chat] [Mr_kutan]: 2n car koduknundo
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Mr Rolex: [buy]
+[cmd] Bruce Lee: [refuel]
+[chat] [Raven_x]: njano
+[chat] [Mr_kutan]: m
+[cmd] Mr Rolex: [bwithdraw]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Rolex: [phone]
+[chat] [Mr_Dizooza]: 5
+[cmd] Mr Dizooza: [gangs]
+[cmd] Raven x: [deliver]
+[cmd] Mr Dizooza: [stats]
+[cmd] Bruce Lee: [editvehicle]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Raven x: [park]
+[cmd] Mr Dizooza: [bwithdraw]
+[cmd] Mr Dizooza: [bwithdraw]
+[cmd] Mr Rolex: [hotwire]
+[chat] [Bruce_Lee]: baa
+[cmd] Mr kutan: [deliver]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Bruce Lee: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[chat] [Bruce_Lee]: edutho
+[cmd] Raven x: [loadtruck]
+[cmd] Mr Arjun: [members]
+[cmd] Raven x: [loadtruck]
+[chat] [Bruce_Lee]: ookan onnum kerille
+[chat] [Raven_x]: kelkanille
+[chat] [Mr_Rolex]: hi
+[chat] [Bruce_Lee]: kelkam
+[chat] [Bruce_Lee]: ok
+[cmd] Raven x: [loadtruck]
+[cmd] Bruce Lee: [time]
+[cmd] Bruce Lee: [settime]
+[cmd] Mr Arjun: [helpers]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Bruce Lee: [deliver]
+[cmd] Raven x: [deliver]
+[cmd] Raven x: [loadtruck]
+[cmd] Bruce Lee: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Raven x: [f]
+[cmd] Bruce Lee: [park]
+** Help Request from Mr Arjun[4]: namuk plane odich kalikka **
+[cmd] Mr Arjun: [gethelp]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Bruce Lee: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+Helper: Bruce Lee has answered Mr Arjun's help request.
+[cmd] Bruce Lee: [answerhelp]
+[cmd] Raven x: [loadtruck]
+[chat] [Raven_x]: pova
+[cmd] Bruce Lee: [loadtruck]
+[cmd] Mr Arjun: [r]
+[cmd] Mr Arjun: [rr]
+[chat] [Mr_kutan]: vandi kodukanundo
+[cmd] Mr Dizooza: [members]
+** Help Request from Mr Arjun[4]: ok :( but enik plane illa oru heli tharo **
+[cmd] Mr Arjun: [gethelp]
+[cmd] Bruce Lee: [deliver]
+[cmd] Raven x: [deliver]
+[chat] [Mr_kutan]: vandi kodukanundo
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Rolex: [loadtruck]
+[chat] [Mr_kutan]: car sale undo
+Helper: Bruce Lee has answered Mr Arjun's help request.
+[cmd] Bruce Lee: [answerhelp]
+[chat] [Mr_Rolex]: illa koduthu
+[chat] [Mr_Rolex]: vere car und
+[chat] [Mr_Rolex]: beno
+** Help Request from Mr Arjun[4]: ok bie :( **
+[cmd] Mr Arjun: [gethelp]
+[cmd] Mr Arjun: [stats]
+[cmd] Bruce Lee: [loadtruck]
+[cmd] Mr Dizooza: [deliver]
+[cmd] Mr Rolex: [deliver]
+[chat] [Mr_kutan]: vebem
+[cmd] Mr kutan: [deliver]
+[chat] [Mr_kutan]: supra undo
+[cmd] Raven x: [loadtruck]
+[chat] [Mr_kutan]: rite ethre
+[cmd] Bruce Lee: [loadtruck]
+[chat] [Mr_Rolex]: 14 lakh
+[chat] [Mr_Rolex]: mathi
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[chat] [Mr_kutan]: ok fund setayit mathi bro
+[cmd] Bruce Lee: [loadtruck]
+[chat] [Raven_x]: pova
+[chat] [Mr_Dizooza]: 13 lakh mathi
+[chat] [Mr_kutan]: ipo 5 lakh ollu 
+[chat] [Mr_Dizooza]: dsil und
+[chat] [Mr_Rolex]: full mode anu
+[chat] [Mr_Rolex]: full mod cheytha 15 lkh avum
+[cmd] Mr Arjun: [phone]
+[chat] [Mr_kutan]: m
+[cmd] Bruce Lee: [deliver]
+[cmd] Raven x: [deliver]
+[chat] [Mr_Rolex]: ootunno
+[chat] [Mr_kutan]: supra car showroom unbdo
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Rolex: [sendloc]
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Dizooza: [loadtruck]
+[chat] [Mr_kutan]: m
+[chat] [Bruce_Lee]: ?
+[chat] [Bruce_Lee]: enthinna loc ayache
+[chat] [Bruce_Lee]: rolex
+[chat] [Mr_Rolex]: cash vende
+[chat] [Bruce_Lee]: id 3
+[cmd] Mr Dizooza: [deliver]
+[cmd] Mr Rolex: [phone]
+[SYSTEM] Database sucessfully saved
+[cmd] Mr Dizooza: [phone]
+[chat] [Bruce_Lee]: dizooza id 3
+[cmd] Mr Arjun: [phone]
+[chat] [Bruce_Lee]: villikk
+[cmd] Mr Rolex: [phone]
+[cmd] Mr kutan: [loadtruck]
+[chat] [Bruce_Lee]: m4 vennam para
+[cmd] Mr Arjun: [phone]
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Rolex: [loadtruck]
+[chat] [Bruce_Lee]: rolex ne
+[cmd] Mr Dizooza: [tog]
+[cmd] Bruce Lee: [loadtruck]
+[cmd] Raven x: [phone]
+[cmd] Mr Dizooza: [tog]
+[cmd] Mr Dizooza: [number]
+[cmd] Mr Dizooza: [phone]
+[chat] [Raven_x]: gun venam m4
+[chat] [Mr_Rolex]: hlo
+[cmd] Mr kutan: [loadtruck]
+[chat] [Bruce_Lee]: call il alla ne -_-
+[cmd] Mr Arjun: [members]
+[chat] [Mr_kutan]: haa para
+[chat] [Mr_Rolex]: hlo
+[debug] Run time error 4: "Array index out of bounds"
+[debug]  Attempted to read/write array element at index 65535 in array of size 501
+[debug] AMX backtrace:
+[debug] #0 0006d8b4 in ?? (2, 1) in MGMC.amx
+[debug] #1 000f3834 in public SM_OnPlayerClickTextDraw (2, 47) in MGMC.amx
+[debug] #2 00013efc in public CB_OnPlayerClickTextDraw (2, 47) in MGMC.amx
+[debug] #3 000102e4 in public MP_OPCTD (2, 47) in MGMC.amx
+[debug] #4 native CallLocalFunction () in samp03svr
+[debug] #5 0000a640 in public OnPlayerClickTextDraw (2, 47) in MGMC.amx
+[debug] Run time error 4: "Array index out of bounds"
+[debug]  Attempted to read/write array element at index 65535 in array of size 501
+[debug] AMX backtrace:
+[debug] #0 0006d8b4 in ?? (0, 1) in MGMC.amx
+[debug] #1 000f3834 in public SM_OnPlayerClickTextDraw (0, 47) in MGMC.amx
+[debug] #2 00013efc in public CB_OnPlayerClickTextDraw (0, 47) in MGMC.amx
+[debug] #3 000102e4 in public MP_OPCTD (0, 47) in MGMC.amx
+[debug] #4 native CallLocalFunction () in samp03svr
+[debug] #5 0000a640 in public OnPlayerClickTextDraw (0, 47) in MGMC.amx
+[cmd] Mr Rolex: [phone]
+[cmd] Mr Rolex: [stats]
+[chat] [Mr_kutan]: kelkilla 
+[chat] [Mr_Dizooza]: kelkkunnille
+[chat] [Raven_x]: nan onn relog aakatte
+[chat] [Mr_Dizooza]: enthina ph on akkan paranje
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Arjun: [phone]
+[chat] [Mr_Dizooza]: hlo
+[cmd] Bruce Lee: [pm]
+[connection] 103.155.222.211:3578 requests connection cookie.
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Raven_x has left the server (2:0)
+[connection] incoming connection: 103.155.222.211:3578 id: 2
+[chat] [Mr_kutan]: manasilayilla
+[sv:dbg:network:connect] : connecting player (2) with address (103.155.222.211) ...
+[sv:dbg:network:connect] : player (2) assigned key (d3de9b6735abc69b)
+[join] Kutti_Krishnan has joined the server (2:103.155.222.211)
+[sv:dbg:network:receive] : player (2) identified (port:3579)
+[chat] [Mr_Dizooza]: ooh sry number mari
+[chat] [Mr_Rolex]: hlo
+AdmCmd: Developer Kutti Krishnan has logged in.
+[connection] 157.44.202.74:44574 requests connection cookie.
+[cmd] Mr Dizooza: [re]
+[connection] incoming connection: 157.44.202.74:44574 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (157.44.202.74) ...
+[sv:dbg:network:connect] : player (6) assigned key (4aca2c9d284db4d6)
+[join] Raven_x has joined the server (6:157.44.202.74)
+[cmd] Mr kutan: [loadtruck]
+[sv:dbg:network:receive] : player (6) identified (port:34420)
+[chat] [Mr_Rolex]: aa
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Dizooza: [deliver]
+[cmd] Bruce Lee: [a]
+[cmd] Mr Dizooza: [number]
+[cmd] Mr Dizooza: [phone]
+[chat] [Mr_Rolex]: cash undo
+[cmd] Kutti Krishnan: [a]
+[chat] [Mr_Rolex]: lakhs avum
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Dizooza: [sendloc]
+[connection] 42.107.199.253:50586 requests connection cookie.
+[connection] incoming connection: 42.107.199.253:50586 id: 7
+[chat] [Mr_Rolex]: aa
+[sv:dbg:network:connect] : connecting player (7) with address (42.107.199.253) ...
+[sv:dbg:network:connect] : player (7) assigned key (fdc76b2a47e3740b)
+[join] Ma_Lik has joined the server (7:42.107.199.253)
+[sv:dbg:network:receive] : player (7) identified (port:4691)
+[cmd] Raven x: [number]
+Kutti Krishnan is now spectating to Mr Rolex (ID:0).
+[cmd] Kutti Krishnan: [spec]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr Arjun: [h]
+Kutti Krishnan is now spectating to Mr kutan (ID:1).
+[cmd] Kutti Krishnan: [spec]
+Kutti Krishnan is now spectating to Bruce Lee (ID:3).
+[cmd] Kutti Krishnan: [spec]
+[cmd] Raven x: [phone]
+[cmd] Bruce Lee: [a]
+[cmd] Mr Rolex: [phone]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Dizooza: [sendloc]
+[cmd] Bruce Lee: [loadtruck]
+[cmd] Kutti Krishnan: [a]
+Kutti Krishnan is now spectating to Mr Arjun (ID:4).
+[cmd] Kutti Krishnan: [spec]
+Kutti Krishnan is now spectating to Mr Dizooza (ID:5).
+[cmd] Kutti Krishnan: [spec]
+[cmd] Mr Dizooza: [loadtruck]
+Kutti Krishnan is now spectating to Raven x (ID:6).
+[cmd] Kutti Krishnan: [spec]
+Kutti Krishnan is now spectating to Ma Lik (ID:7).
+[cmd] Kutti Krishnan: [spec]
+[chat] [Raven_x]: hello
+[cmd] Mr Arjun: [fb]
+[cmd] Kutti Krishnan: [spec]
+[chat] [Mr_Rolex]: aa
+[chat] [Raven_x]: gun venam 
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Dizooza: [sendloc]
+Kutti Krishnan stops spectating Ma Lik (ID:7).
+[cmd] Kutti Krishnan: [spec]
+[chat] [Mr_kutan]: a
+[chat] [Mr_Rolex]: cash ille
+[chat] [Raven_x]: ond
+[chat] [Mr_Rolex]: 3:50
+[chat] [Raven_x]: haa
+[cmd] Bruce Lee: [deliver]
+[cmd] Ma Lik: [lock]
+Kutti Krishnan has teleported to Grotti Dealership.
+[cmd] Kutti Krishnan: [goto]
+[chat] [Mr_Rolex]: adyam cash
+[chat] [Raven_x]: evide
+AdmCmd: Kutti Krishnan has given a jetpack to Kutti Krishnan.
+[cmd] Kutti Krishnan: [jetpack]
+[chat] [Mr_Rolex]: g pay cheyy
+[chat] [Mr_Rolex]: id 0
+[cmd] Mr Dizooza: [rvc]
+[chat] [Raven_x]: ethrannam kittum
+[cmd] Kutti Krishnan: [dynamichelp]
+[chat] [Mr_Dizooza]: hlo
+[cmd] Mr Rolex: [fixvw]
+[chat] [Mr_kutan]: m
+[chat] [Mr_Dizooza]: shot gun veno
+[cmd] Kutti Krishnan: [tog]
+[chat] [Mr_kutan]: v
+[cmd] Bruce Lee: [loadtruck]
+[cmd] Mr Dizooza: [loadtruck]
+[chat] [Raven_x]: back po
+[chat] [Mr_Rolex]: evide anu
+[chat] [Mr_Arjun]: hello
+[chat] [Raven_x]: daa 5 ,ennam ondo
+[chat] [Mr_Rolex]: illa
+[chat] [Mr_kutan]: m
+[chat] [Raven_x]: pine
+[chat] [Mr_Rolex]: 1 und 
+[chat] [Mr_kutan]: bike vene
+[cmd] Mr Dizooza: [deliver]
+[chat] [Mr_Rolex]: veno
+[chat] [Raven_x]: okay
+[chat] [Raven_x]: noktte wait
+[cmd] Mr Arjun: [lock]
+[cmd] Bruce Lee: [factions]
+[chat] [Raven_x]: wait 
+[cmd] Mr Arjun: [phone]
+[chat] [Mr_kutan]: vandi vilkununde veno
+[cmd] Bruce Lee: [factions]
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Raven_x has left the server (6:0)
+[connection] 157.44.202.74:47197 requests connection cookie.
+[connection] incoming connection: 157.44.202.74:47197 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (157.44.202.74) ...
+[sv:dbg:network:connect] : player (6) assigned key (4aca2c9d22f80cb7)
+[join] Raven_x has joined the server (6:157.44.202.74)
+[sv:dbg:network:receive] : player (6) identified (port:39317)
+[cmd] Mr kutan: [loadtruck]
+[chat] [Bruce_Lee]: 1 nu ethraya
+[cmd] Bruce Lee: [park]
+[chat] [Mr_Rolex]: da
+[chat] [Mr_kutan]: m
+[chat] [Mr_Rolex]: m4 vwno 4 lalkh
+[chat] [Mr_Rolex]: lakh
+[chat] [Mr_kutan]: venda
+[cmd] Ma Lik: [park]
+[chat] [Mr_kutan]: enik 
+[chat] [Raven_x]: 3.50
+AdmCmd: Bruce Lee has made Bruce Lee a Unspecified in Terrorist.
+[cmd] Bruce Lee: [setfaction]
+[chat] [Bruce_Lee]: ok
+Kutti Krishnan has teleported to Bruce Lee's position.
+[cmd] Kutti Krishnan: [goto]
+AdmCmd: Bruce Lee was slapped by Kutti Krishnan.
+[cmd] Kutti Krishnan: [slap]
+[cmd] Bruce Lee: [hmole]
+Bruce Lee has been teleported to Kutti Krishnan's position by using [/gethere]
+[cmd] Kutti Krishnan: [gethere]
+[cmd] Mr Arjun: [buy]
+[cmd] Mr Dizooza: [buy]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr Dizooza: [buy]
+[cmd] Mr Arjun: [buy]
+[cmd] Mr Rolex: [contract]
+[chat] [Bruce_Lee]: :)
+sscanf warning: Strings without a length are deprecated, please add a destination size.
+AdmCmd: Kutti Krishnan has revived Kutti Krishnan. REASON: /
+[cmd] Kutti Krishnan: [revive]
+[cmd] Ma Lik: [badge]
+[chat] [Raven_x]: hello
+[cmd] Ma Lik: [listpt]
+[chat] [Mr_Rolex]: #null
+[cmd] Ma Lik: [badge]
+sscanf warning: Strings without a length are deprecated, please add a destination size.
+AdmCmd: Kutti Krishnan has revived Kutti Krishnan. REASON: /
+[cmd] Kutti Krishnan: [revive]
+[chat] [Kutti_Krishnan]: da
+[cmd] Ma Lik: [id]
+[chat] [Bruce_Lee]: aa
+[cmd] Kutti Krishnan: [healrange]
+[cmd] Ma Lik: [fb]
+[chat] [Kutti_Krishnan]: ba
+[cmd] Mr Arjun: [buy]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Dizooza: [buy]
+[chat] [Kutti_Krishnan]: dei nee tha
+[chat] [Kutti_Krishnan]: dei nee etha
+[connection] 42.104.158.100:16819 requests connection cookie.
+[connection] incoming connection: 42.104.158.100:16819 id: 8
+[sv:dbg:network:connect] : connecting player (8) with address (42.104.158.100) ...
+[sv:dbg:network:connect] : player (8) assigned key (649e682aefbcffcd)
+[join] Thala_Annan has joined the server (8:42.104.158.100)
+[sv:dbg:network:receive] : player (8) identified (port:16820)
+[cmd] Ma Lik: [refuel]
+[cmd] Bruce Lee: [ah]
+[cmd] Mr Dizooza: [f]
+[cmd] Ma Lik: [rvc]
+[SYSTEM] Database sucessfully saved
+[cmd] Raven x: [fb]
+[cmd] Raven x: [loadtruck]
+[cmd] Mr Rolex: [buy]
+[cmd] Thala Annan: [gangs]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Bruce Lee: [ah]
+[cmd] Mr Rolex: [buy]
+[cmd] Mr Arjun: [buy]
+[cmd] Mr Rolex: [ad]
+Bruce Lee has teleported to San Fierro.
+[cmd] Bruce Lee: [goto]
+Kutti Krishnan has teleported to San Fierro.
+[cmd] Kutti Krishnan: [goto]
+[cmd] Kutti Krishnan: [superman]
+[cmd] Mr Dizooza: [give]
+[cmd] Mr Dizooza: [give]
+[sv:dbg:network:connect] : disconnecting player (8) ...
+[part] Thala_Annan has left the server (8:0)
+[connection] 42.104.158.100:16823 requests connection cookie.
+[connection] incoming connection: 42.104.158.100:16823 id: 8
+[cmd] Mr Dizooza: [buy]
+[sv:dbg:network:connect] : connecting player (8) with address (42.104.158.100) ...
+[sv:dbg:network:connect] : player (8) assigned key (649e682a22082ff9)
+[join] Thala_Annan has joined the server (8:42.104.158.100)
+[cmd] Mr Dizooza: [buy]
+[cmd] Raven x: [deliver]
+[cmd] Mr Dizooza: [buy]
+[cmd] Bruce Lee: [a]
+[cmd] Mr Dizooza: [bwithdraw]
+[sv:dbg:network:connect] : disconnecting player (8) ...
+[part] Thala_Annan has left the server (8:0)
+[cmd] Kutti Krishnan: [a]
+[cmd] Mr Dizooza: [bwithdraw]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr Rolex: [ad]
+Bruce Lee is now spectating to Kutti Krishnan (ID:2).
+[cmd] Bruce Lee: [spec]
+[connection] 8.34.69.119:14107 requests connection cookie.
+[connection] incoming connection: 8.34.69.119:14107 id: 8
+[cmd] Kutti Krishnan: [a]
+[sv:dbg:network:connect] : connecting player (8) with address (8.34.69.119) ...
+[sv:dbg:network:connect] : player (8) assigned key (77452208f2cf96e2)
+[join] Thala_Annan has joined the server (8:8.34.69.119)
+[sv:dbg:network:receive] : player (8) identified (port:31024)
+[cmd] Kutti Krishnan: [superman]
+[cmd] Kutti Krishnan: [gethere]
+[cmd] Raven x: [atm]
+[cmd] Ma Lik: [d]
+[chat] [Bruce_Lee]: ivide und 
+[chat] [Kutti_Krishnan]: spec matt myre
+[sv:dbg:network:connect] : disconnecting player (8) ...
+[part] Thala_Annan has left the server (8:0)
+Bruce Lee stops spectating Kutti Krishnan (ID:2).
+[cmd] Bruce Lee: [spec]
+Bruce Lee has been teleported to Kutti Krishnan's position by using [/gethere]
+[cmd] Kutti Krishnan: [gethere]
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Dizooza has left the server (5:0)
+[cmd] Ma Lik: [facrepair]
+[connection] 8.34.69.119:58488 requests connection cookie.
+[connection] incoming connection: 8.34.69.119:58488 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (8.34.69.119) ...
+[sv:dbg:network:connect] : player (5) assigned key (774522087044071b)
+[join] Thala_Annan has joined the server (5:8.34.69.119)
+[sv:dbg:network:receive] : player (5) identified (port:60447)
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [neon]
+[cmd] Raven x: [neon]
+[cmd] Raven x: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Arjun: [members]
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Raven_x has left the server (6:0)
+[cmd] Bruce Lee: [top]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Bruce Lee: [ah]
+[chat] [Mr_Rolex]: hlo
+[cmd] Mr kutan: [deliver]
+[cmd] Kutti Krishnan: [superman]
+[chat] [Mr_Rolex]: car sale undo
+AdmCmd: Bruce Lee has given a jetpack to Bruce Lee.
+[cmd] Bruce Lee: [jetpack]
+[chat] [Thala_Annan]: 50lak
+[chat] [Mr_kutan]: hlo
+[cmd] Mr Arjun: [gstash]
+[cmd] Mr Arjun: [gstash]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Kutti Krishnan: [superman]
+[connection] 137.97.124.138:44053 requests connection cookie.
+[connection] incoming connection: 137.97.124.138:44053 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (137.97.124.138) ...
+[sv:dbg:network:connect] : player (6) assigned key (8a7c61898570c48d)
+[join] Mr_Torres has joined the server (6:137.97.124.138)
+[sv:dbg:network:receive] : player (6) identified (port:46234)
+[cmd] Mr kutan: [loadtruck]
+[cmd] Thala Annan: [atm]
+Bruce Lee has been teleported to Kutti Krishnan's position by using [/gethere]
+[cmd] Kutti Krishnan: [gethere]
+Bruce Lee has been teleported to Kutti Krishnan's position by using [/gethere]
+[cmd] Kutti Krishnan: [gethere]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Bruce_Lee has left the server (3:0)
+[cmd] Kutti Krishnan: [a]
+[connection] 157.44.204.161:38367 requests connection cookie.
+[connection] incoming connection: 157.44.204.161:38367 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (157.44.204.161) ...
+[sv:dbg:network:connect] : player (3) assigned key (a1cc2c9deda77691)
+[join] Bruce_Lee has joined the server (3:157.44.204.161)
+[cmd] Mr Torres: [loadtruck]
+[cmd] Thala Annan: [selfrepair]
+[connection] 157.44.202.74:41066 requests connection cookie.
+[connection] incoming connection: 157.44.202.74:41066 id: 8
+[sv:dbg:network:connect] : connecting player (8) with address (157.44.202.74) ...
+[sv:dbg:network:connect] : player (8) assigned key (4aca2c9d8490947c)
+[join] Raven_x has joined the server (8:157.44.202.74)
+[sv:dbg:network:receive] : player (8) identified (port:53695)
+[cmd] Mr kutan: [deliver]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Bruce_Lee has left the server (3:0)
+[cmd] Mr kutan: [atm]
+[connection] 157.46.217.21:37915 requests connection cookie.
+[cmd] Mr Torres: [deliver]
+[connection] incoming connection: 157.46.217.21:37915 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (157.46.217.21) ...
+[sv:dbg:network:connect] : player (3) assigned key (15d92e9df98f420d)
+[join] Bruce_Lee has joined the server (3:157.46.217.21)
+[sv:dbg:network:receive] : player (3) identified (port:59952)
+AdmCmd: Developer Bruce Lee has logged in.
+[cmd] Bruce Lee: [healrange]
+Bruce Lee has been teleported to Kutti Krishnan's position by using [/gethere]
+[cmd] Kutti Krishnan: [gethere]
+[cmd] Raven x: [loadtruck]
+[cmd] Mr kutan: [atm]
+[chat] [Mr_Arjun]: hello
+[chat] [Thala_Annan]: ha
+[chat] [Mr_Arjun]: gun sale und vena
+AdmCmd: Bruce Lee has given a jetpack to Bruce Lee.
+[cmd] Bruce Lee: [jetpack]
+Bruce Lee has been teleported to Kutti Krishnan's position by using [/gethere]
+[cmd] Kutti Krishnan: [gethere]
+[chat] [Thala_Annan]: vebndaa
+[chat] [Mr_Arjun]: ok
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Thala_Annan has left the server (5:0)
+[cmd] Kutti Krishnan: [superman]
+[cmd] Raven x: [gangs]
+[cmd] Mr Torres: [loadtruck]
+** Help Request from Mr Rolex[0]: bug **
+[cmd] Mr Rolex: [gethelp]
+[cmd] Mr Arjun: [bp]
+[cmd] Mr Arjun: [bp]
+[connection] 103.154.54.164:1375 requests connection cookie.
+[connection] incoming connection: 103.154.54.164:1375 id: 5
+[cmd] Raven x: [deliver]
+[cmd] Kutti Krishnan: [superman]
+Bruce Lee has been teleported to Kutti Krishnan's position by using [/gethere]
+[cmd] Kutti Krishnan: [gethere]
+AdmCmd: Bruce Lee has given a jetpack to Bruce Lee.
+[cmd] Bruce Lee: [jetpack]
+[cmd] Mr Arjun: [f]
+[cmd] Kutti Krishnan: [dynamichelp]
+[cmd] Mr Torres: [f]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [facrepair]
+[cmd] Kutti Krishnan: [createturf]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Mr_Rolex has left the server (0:0)
+[cmd] Bruce Lee: [ah]
+[cmd] Ma Lik: [stats]
+[cmd] Mr Arjun: [f]
+[cmd] Raven x: [loadtruck]
+[chat] [Bruce_Lee]: m
+[cmd] Mr Torres: [buy]
+[SYSTEM] Database sucessfully saved
+[cmd] Kutti Krishnan: [createturf]
+[chat] [Bruce_Lee]: .
+[cmd] Mr Torres: [businessmenu]
+[cmd] Raven x: [loadtruck]
+[cmd] Mr Torres: [buy]
+[cmd] Mr Torres: [buy]
+[cmd] Mr Arjun: [buy]
+[cmd] Mr Torres: [buy]
+AdmCmd: Kutti Krishnan has given a jetpack to Kutti Krishnan.
+[cmd] Kutti Krishnan: [jetpack]
+[cmd] Mr Torres: [buy]
+[cmd] Mr Torres: [buy]
+[connection] 8.34.69.119:59790 requests connection cookie.
+[connection] incoming connection: 8.34.69.119:59790 id: 0
+[cmd] Mr Torres: [buy]
+[sv:dbg:network:connect] : connecting player (0) with address (8.34.69.119) ...
+[sv:dbg:network:connect] : player (0) assigned key (77452208fb2a7d77)
+[join] Thala_Annan has joined the server (0:8.34.69.119)
+[sv:dbg:network:receive] : player (0) identified (port:23034)
+[cmd] Mr Torres: [businessmenu]
+[cmd] Mr kutan: [deliver]
+[cmd] Kutti Krishnan: [confirm]
+[cmd] Mr Arjun: [phone]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Bruce_Lee has left the server (3:0)
+[cmd] Raven x: [loadtruck]
+[cmd] Ma Lik: [paytickets]
+[cmd] Mr Torres: [lock]
+[cmd] Kutti Krishnan: [confirm]
+[cmd] Ma Lik: [paytickets]
+[connection] 157.46.167.46:47169 requests connection cookie.
+[connection] incoming connection: 157.46.167.46:47169 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (157.46.167.46) ...
+[sv:dbg:network:connect] : player (3) assigned key (2ea72e9d364e7432)
+[join] Bruce_Lee has joined the server (3:157.46.167.46)
+[sv:dbg:network:receive] : player (3) identified (port:48693)
+[cmd] Ma Lik: [saveall]
+AdmCmd: Developer Bruce Lee has logged in.
+[cmd] Raven x: [deliver]
+[sv:dbg:network:connect] : disconnecting player (7) ...
+[part] Ma_Lik has left the server (7:0)
+[cmd] Bruce Lee: [ah]
+[cmd] Kutti Krishnan: [confirm]
+AdmCmd: Bruce Lee has given a jetpack to Bruce Lee.
+[cmd] Bruce Lee: [jetpack]
+[connection] 157.44.139.50:42977 requests connection cookie.
+[cmd] Mr kutan: [loadtruck]
+[connection] incoming connection: 157.44.139.50:42977 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (157.44.139.50) ...
+[sv:dbg:network:connect] : player (5) assigned key (328b2c9d79a8a1e3)
+[join] Mr_Rolex has joined the server (5:157.44.139.50)
+[sv:dbg:network:receive] : player (5) identified (port:40447)
+[cmd] Kutti Krishnan: [confirm]
+[connection] 106.200.49.198:24000 requests connection cookie.
+[connection] incoming connection: 106.200.49.198:24000 id: 7
+[sv:dbg:network:connect] : connecting player (7) with address (106.200.49.198) ...
+[sv:dbg:network:connect] : player (7) assigned key (c631c86a342fe794)
+[join] Mr_Dizooza has joined the server (7:106.200.49.198)
+[sv:dbg:network:receive] : player (7) identified (port:21004)
+[cmd] Mr kutan: [loadtruck]
+[warning] client exceeded 'ackslimit' 106.200.49.198:24000 (6008) Limit: 3000/sec
+[sv:dbg:network:connect] : disconnecting player (7) ...
+[part] Mr_Dizooza has left the server (7:0)
+[cmd] Raven x: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Mr_Torres has left the server (6:0)
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Mr kutan: [deliver]
+[cmd] Raven x: [loadtruck]
+[connection] 27.61.50.246:6401 requests connection cookie.
+[cmd] Raven x: [loadtruck]
+[connection] incoming connection: 27.61.50.246:6401 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (27.61.50.246) ...
+[sv:dbg:network:connect] : player (6) assigned key (f6323d1b64a2dfc4)
+[join] Mr_Dizooza has joined the server (6:27.61.50.246)
+[sv:dbg:network:receive] : player (6) identified (port:25104)
+[cmd] Raven x: [loadtruck]
+[cmd] Kutti Krishnan: [dynamichelp]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Raven x: [loadtruck]
+[cmd] Kutti Krishnan: [editturf]
+** Help Request from Mr Dizooza[6]: bug **
+[cmd] Mr Dizooza: [gethelp]
+[cmd] Kutti Krishnan: [turfs]
+AdmWarning: Mr Dizooza[6] is possibly teleport hacking (distance: 113.9).
+AdmCmd: Bruce Lee has accepted help request Mr Dizooza.
+[cmd] Bruce Lee: [accepthelp]
+[cmd] Raven x: [deliver]
+[cmd] Mr kutan: [loadtruck]
+[chat] [Bruce_Lee]: ok
+[cmd] Bruce Lee: [return]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Rolex: [sendloc]
+[cmd] Kutti Krishnan: [claim]
+[chat] [Mr_Rolex]: $_do
+[cmd] Thala Annan: [f]
+[chat] [Mr_Rolex]: porth irakk
+[cmd] Mr Dizooza: [f]
+[chat] [Mr_Rolex]: vandi
+[chat] [Mr_Rolex]: und
+[cmd] Kutti Krishnan: [help]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Kutti Krishnan: [setgang]
+[cmd] Mr Arjun: [quitjob]
+[cmd] Thala Annan: [f]
+[cmd] Bruce Lee: [createturf]
+[cmd] Kutti Krishnan: [gangs]
+[cmd] Thala Annan: [fixvw]
+[cmd] Kutti Krishnan: [creategang]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Dizooza: [sendloc]
+AdmCmd: Kutti Krishnan has setup gang {F7A763}ADMINS{FF6347} in slot ID 5.
+[cmd] Kutti Krishnan: [creategang]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Raven x: [stats]
+[chat] [Thala_Annan]: okk
+[cmd] Raven x: [loadtruck]
+AdmCmd: Kutti Krishnan has made Kutti Krishnan a Unspecified in ADMINS.
+[cmd] Kutti Krishnan: [setgang]
+[chat] [Thala_Annan]: pani edukkaa
+[cmd] Mr Arjun: [helpers]
+[cmd] Kutti Krishnan: [turfs]
+[cmd] Raven x: [loadtruck]
+[cmd] Bruce Lee: [claim]
+[chat] [Thala_Annan]: edaanalla job
+** Help Request from Mr Arjun[4]: arms dealer job edkan pattunnilla **
+[cmd] Mr Arjun: [gethelp]
+[chat] [Mr_Dizooza]: kelkkunnille
+[chat] [Thala_Annan]: jkekkaa
+[chat] [Thala_Annan]: keka
+[cmd] Mr kutan: [deliver]
+[cmd] Mr Dizooza: [stats]
+Helper: Bruce Lee has answered Mr Arjun's help request.
+[cmd] Bruce Lee: [answerhelp]
+[cmd] Raven x: [loadtruck]
+[cmd] Kutti Krishnan: [claim]
+[chat] [Thala_Annan]: itrem paisa aark koduth
+[cmd] Mr kutan: [atm]
+** Help Request from Mr Arjun[4]: enth illa **
+[cmd] Mr Arjun: [gethelp]
+[chat] [Thala_Annan]: nta 18aarnalla
+[cmd] Kutti Krishnan: [editturf]
+[cmd] Kutti Krishnan: [editturf]
+[chat] [Thala_Annan]: aah adh
+[cmd] Mr Dizooza: [members]
+AdmCmd: Kutti Krishnan has set the time of turf 1 to 0 hours.
+[cmd] Kutti Krishnan: [editturf]
+Helper: Bruce Lee has answered Mr Arjun's help request.
+[cmd] Bruce Lee: [answerhelp]
+[cmd] Kutti Krishnan: [claim]
+[cmd] Bruce Lee: [claim]
+[cmd] Raven x: [deliver]
+[cmd] Mr Arjun: [f]
+[chat] [Thala_Annan]: turfff vanno
+[cmd] Mr Arjun: [members]
+[cmd] Mr Dizooza: [phone]
+AdmCmd: Bruce Lee has made Bruce Lee a Unspecified in ADMINS.
+[cmd] Bruce Lee: [setgang]
+[cmd] Bruce Lee: [claim]
+[cmd] Mr Arjun: [phone]
+[cmd] Kutti Krishnan: [claim]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Rolex: [sendloc]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Arjun: [phone]
+[cmd] Mr Arjun: [cursor]
+[cmd] Kutti Krishnan: [editgang]
+[cmd] Mr Arjun: [phone]
+[cmd] Bruce Lee: [editgang]
+[cmd] Mr Arjun: [gps]
+[cmd] Kutti Krishnan: [editgang]
+[cmd] Mr Arjun: [phone]
+AdmCmd: Kutti Krishnan has set the turf tokens of gang ID 5 to 10000.
+[cmd] Kutti Krishnan: [editgang]
+[cmd] Bruce Lee: [claim]
+[cmd] Kutti Krishnan: [claim]
+[cmd] Mr Arjun: [cursor]
+[cmd] Mr Arjun: [phone]
+[cmd] Thala Annan: [phone]
+[cmd] Bruce Lee: [tog]
+[cmd] Mr Arjun: [cursor]
+[cmd] Mr Arjun: [phone]
+[cmd] Mr Arjun: [fixvw]
+[cmd] Mr Dizooza: [members]
+[cmd] Bruce Lee: [tog]
+[cmd] Raven x: [atm]
+[cmd] Bruce Lee: [tog]
+[cmd] Mr Dizooza: [gangs]
+[sv:dbg:network:connect] : disconnecting player (4) ...
+[part] Mr_Arjun has left the server (4:0)
+[cmd] Bruce Lee: [tog]
+[cmd] Mr kutan: [skills]
+[cmd] Mr Dizooza: [gangs]
+[cmd] Mr Dizooza: [gangs]
+[cmd] Mr Dizooza: [gangs]
+[connection] 157.46.210.214:60549 requests connection cookie.
+[cmd] Mr Dizooza: [gangs]
+[connection] incoming connection: 157.46.210.214:60549 id: 4
+[sv:dbg:network:connect] : connecting player (4) with address (157.46.210.214) ...
+[sv:dbg:network:connect] : player (4) assigned key (d6d22e9de1b1c1f6)
+[join] Mr_Arjun has joined the server (4:157.46.210.214)
+[cmd] Mr Dizooza: [gangs]
+[sv:dbg:network:receive] : player (4) identified (port:53329)
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Rolex has left the server (5:0)
+[cmd] Raven x: [atm]
+[cmd] Mr Dizooza: [gangs]
+[connection] 157.44.139.50:39076 requests connection cookie.
+[connection] incoming connection: 157.44.139.50:39076 id: 5
+[cmd] Mr Arjun: [phone]
+[cmd] Bruce Lee: [a]
+[cmd] Mr Dizooza: [pass]
+[cmd] Mr kutan: [loadtruck]
+[connection] 157.44.139.50:40952 requests connection cookie.
+[connection] incoming connection: 157.44.139.50:40952 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (157.44.139.50) ...
+[sv:dbg:network:connect] : player (5) assigned key (328b2c9d567250a5)
+[join] Mr_Rolex has joined the server (5:157.44.139.50)
+[sv:dbg:network:receive] : player (5) identified (port:49462)
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Rolex has left the server (5:2)
+[sv:dbg:network:connect] : disconnecting player (4) ...
+[part] Mr_Arjun has left the server (4:0)
+[connection] 157.46.210.214:54074 requests connection cookie.
+[connection] incoming connection: 157.46.210.214:54074 id: 4
+[sv:dbg:network:connect] : connecting player (4) with address (157.46.210.214) ...
+[sv:dbg:network:connect] : player (4) assigned key (d6d22e9d4428c505)
+[join] Mr_Arjun has joined the server (4:157.46.210.214)
+[sv:dbg:network:connect] : disconnecting player (8) ...
+[part] Raven_x has left the server (8:0)
+[connection] 157.44.139.50:46633 requests connection cookie.
+[connection] incoming connection: 157.44.139.50:46633 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (157.44.139.50) ...
+[sv:dbg:network:connect] : player (5) assigned key (328b2c9dda3ff2de)
+[join] Mr_Rolex has joined the server (5:157.44.139.50)
+[sv:dbg:network:receive] : player (5) identified (port:39259)
+[cmd] Mr kutan: [deliver]
+[chat] [Thala_Annan]: illa chance illa
+[chat] [Thala_Annan]: test aan
+[cmd] Mr Arjun: [phone]
+[SYSTEM] Database sucessfully saved
+[cmd] Mr kutan: [loadtruck]
+[chat] [Thala_Annan]: myr moonji
+[cmd] Mr Dizooza: [bandana]
+[cmd] Thala Annan: [bandana]
+[cmd] Mr Rolex: [fb]
+[cmd] Thala Annan: [bandana]
+[cmd] Mr Dizooza: [bandana]
+[cmd] Mr Dizooza: [bandana]
+[cmd] Mr Arjun: [fb]
+[cmd] Mr Dizooza: [gangs]
+[cmd] Mr Dizooza: [members]
+[cmd] Bruce Lee: [createturf]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Dizooza: [charity]
+[cmd] Mr Rolex: [gascan]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr Rolex: [sendloc]
+[cmd] Kutti Krishnan: [a]
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Kutti_Krishnan has left the server (2:1)
+[cmd] Mr Arjun: [fb]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr Rolex: [loadtruck]
+[cmd] Bruce Lee: [a]
+[cmd] Mr Dizooza: [helpers]
+[cmd] Mr Dizooza: [charity]
+[chat] [Mr_Arjun]: hi
+[cmd] Mr Dizooza: [charity]
+[chat] [Mr_Rolex]: mm
+[cmd] Mr Dizooza: [pass]
+[chat] [Mr_Arjun]: ntha
+[chat] [Mr_Rolex]: da nammde gh evia
+[chat] [Mr_Rolex]: evida
+[cmd] Bruce Lee: [fb]
+[chat] [Thala_Annan]: vann
+[cmd] Mr Arjun: [members]
+[chat] [Thala_Annan]: kolla
+[chat] [Mr_Arjun]: ayin ni ente gang allallo
+[cmd] Mr Dizooza: [charity]
+[chat] [Mr_kutan]: car kodukanundo
+[chat] [Mr_Arjun]: illa
+[chat] [Mr_Rolex]: edh
+[cmd] Mr Dizooza: [members]
+[chat] [Mr_Arjun]: ni etha gang
+[chat] [Mr_Rolex]: chwguthankota
+[cmd] Thala Annan: [phone]
+[chat] [Mr_Arjun]: ni ee gang alla membersil ninte name illallo
+[cmd] Mr Dizooza: [stats]
+[cmd] Bruce Lee: [ah]
+[chat] [Mr_Rolex]: keran nikkanu avan varumbo edukkanu paraja
+[chat] [Mr_Rolex]: rayanod choichok
+[chat] [Mr_Rolex]: arum ille ippo
+[chat] [Mr_Arjun]: ah
+[chat] [Mr_kutan]: bro
+[chat] [Bruce_Lee]: .
+[cmd] Mr Dizooza: [charity]
+[chat] [Thala_Annan]: idharn mats
+[cmd] Mr Dizooza: [phone]
+[cmd] Bruce Lee: [editturf]
+[cmd] Mr Rolex: [fb]
+[cmd] Mr Arjun: [quitjob]
+[chat] [Thala_Annan]: wait aake oc aayit foddeett vara
+[cmd] Mr Rolex: [fb]
+[cmd] Mr Dizooza: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Thala_Annan has left the server (0:0)
+[cmd] Mr Dizooza: [deliver]
+[chat] [Mr_Rolex]: evide
+[cmd] Mr Dizooza: [phone]
+[cmd] Mr kutan: [loadtruck]
+[chat] [Mr_Rolex]: da
+Bruce Lee has teleported to Mall.
+[cmd] Bruce Lee: [goto]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Bruce_Lee has left the server (3:0)
+[cmd] Mr Dizooza: [gangs]
+[chat] [Mr_Rolex]: gang house evide
+[cmd] Mr kutan: [deliver]
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Dizooza: [helpers]
+[cmd] Mr Dizooza: [charity]
+[chat] [Mr_Rolex]: da
+[chat] [Mr_Rolex]: endhelum para
+[cmd] Mr Dizooza: [charity]
+[chat] [Mr_kutan]: hi
+[cmd] Mr Dizooza: [loadtruck]
+[chat] [Mr_Dizooza]: hi
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Rolex has left the server (5:0)
+[chat] [Mr_kutan]: car vilkundo
+[chat] [Mr_Dizooza]: car illa
+[cmd] Mr Arjun: [quitjob]
+[chat] [Mr_Dizooza]: bike und
+[cmd] Mr Dizooza: [loadtruck]
+[SYSTEM] Database sucessfully saved
+[chat] [Mr_kutan]: venda
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Dizooza: [deliver]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Arjun: [stash]
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Mr_Dizooza has left the server (6:0)
+[cmd] Mr Arjun: [stash]
+[cmd] Mr Arjun: [drink]
+[connection] 103.181.40.138:1777 requests connection cookie.
+[connection] incoming connection: 103.181.40.138:1777 id: 0
+[sv:dbg:network:connect] : connecting player (0) with address (103.181.40.138) ...
+[sv:dbg:network:connect] : player (0) assigned key (8a28b567ade06053)
+[join] Ookan_Tintu has joined the server (0:103.181.40.138)
+[sv:dbg:network:receive] : player (0) identified (port:1778)
+[cmd] Mr kutan: [deliver]
+[cmd] Mr kutan: [stats]
+[cmd] Ookan Tintu: [fixvw]
+[cmd] Ookan Tintu: [fixme]
+[cmd] Mr kutan: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[part] Ookan_Tintu has left the server (0:0)
+[cmd] Mr Arjun: [buy]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Arjun: [buy]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Arjun: [buy]
+[cmd] Mr Arjun: [drink]
+[cmd] Mr Arjun: [drink]
+[cmd] Mr Arjun: [use]
+[cmd] Mr Arjun: [eat]
+[cmd] Mr kutan: [deliver]
+[connection] 103.154.54.164:1360 requests connection cookie.
+[connection] incoming connection: 103.154.54.164:1360 id: 0
+[cmd] Mr Arjun: [buy]
+[sv:dbg:network:connect] : connecting player (0) with address (103.154.54.164) ...
+[sv:dbg:network:connect] : player (0) assigned key (a4369a673eca4c8d)
+[cmd] Mr Arjun: [buy]
+[connection] 103.181.40.138:2549 requests connection cookie.
+[connection] incoming connection: 103.181.40.138:2549 id: 0
+[sv:dbg:network:connect] : disconnecting player (0) ...
+[sv:dbg:network:connect] : connecting player (0) with address (103.181.40.138) ...
+[sv:dbg:network:connect] : player (0) assigned key (8a28b56782608e2e)
+[join] Ookan_Tintu has joined the server (0:103.181.40.138)
+[sv:dbg:network:receive] : player (0) identified (port:2525)
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Arjun: [selfrepair]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Arjun: [selfrepair]
+[chat] [Mr_kutan]: vandi kodukndo
+[chat] [Ookan_Tintu]: 50 LAKH
+[chat] [Mr_kutan]: car sale undo
+[chat] [Mr_kutan]: 10 lakh illa
+[chat] [Ookan_Tintu]: BIKE UND
+[chat] [Mr_kutan]: car vela kurave etha
+[chat] [Ookan_Tintu]: 4 SEATER SUV VENO
+[connection] 103.154.54.164:1825 requests connection cookie.
+[connection] incoming connection: 103.154.54.164:1825 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (103.154.54.164) ...
+[sv:dbg:network:connect] : player (2) assigned key (a4369a67013c1f06)
+[chat] [Mr_kutan]: nokette
+[chat] [Ookan_Tintu]: KAYYIL ILLA GH LA ULLE
+[chat] [Ookan_Tintu]: ITH VENO
+[chat] [Mr_kutan]: bro gang rule padich gang cherkumo 
+[chat] [Mr_kutan]: ithu venda
+[cmd] Ookan Tintu: [vstash]
+[chat] [Ookan_Tintu]: NOKKADA 
+[chat] [Mr_kutan]: supra car dealer ship kittooola
+[chat] [Ookan_Tintu]: 90 LAKH AHN ATH
+[chat] [Mr_kutan]: m
+[SYSTEM] Database sucessfully saved
+[cmd] Mr Arjun: [helpers]
+[chat] [Ookan_Tintu]: NINK ENGNTHE VANDIYA VENDE
+[chat] [Ookan_Tintu]: ITH ANO
+[chat] [Mr_kutan]: igenetyhe
+[chat] [Mr_kutan]: m
+[chat] [Ookan_Tintu]: 15 LAKH
+[chat] [Mr_kutan]: m parachu
+[chat] [Ookan_Tintu]: AAH
+[cmd] Mr Arjun: [buyvehicle]
+[chat] [Mr_kutan]: avan kurakumo
+[chat] [Ookan_Tintu]: NOKTE NJN NINK  OR 14  NN THARA
+[chat] [Mr_kutan]: m
+[chat] [Ookan_Tintu]: VENO
+[chat] [Mr_kutan]: 13 lakh ipo 8 lakh ollu 
+[sv:dbg:network:connect] : disconnecting player (4) ...
+[part] Mr_Arjun has left the server (4:0)
+[chat] [Ookan_Tintu]: BAAKI 6 AKEET VILI
+[chat] [Mr_kutan]: m
+[chat] [Ookan_Tintu]: PAISA AVUMBO VILICHA MATHI
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [deliver]
+[cmd] Ookan Tintu: [neon]
+[cmd] Mr kutan: [atm]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [deliver]
+[cmd] Ookan Tintu: [cook]
+[connection] 157.44.132.218:44564 requests connection cookie.
+[connection] incoming connection: 157.44.132.218:44564 id: 2
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[sv:dbg:network:connect] : connecting player (2) with address (157.44.132.218) ...
+[sv:dbg:network:connect] : player (2) assigned key (da842c9d8d1471e2)
+[join] Mr_Rolex has joined the server (2:157.44.132.218)
+[sv:dbg:network:receive] : player (2) identified (port:49572)
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Mr_Rolex has left the server (2:0)
+[cmd] Ookan Tintu: [cook]
+[connection] 157.44.214.156:60084 requests connection cookie.
+[connection] incoming connection: 157.44.214.156:60084 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (157.44.214.156) ...
+[sv:dbg:network:connect] : player (2) assigned key (9cd62c9de708ef64)
+[join] Bruce_Lee has joined the server (2:157.44.214.156)
+[sv:dbg:network:receive] : player (2) identified (port:39275)
+AdmCmd: Developer Bruce Lee has logged in.
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Bruce_Lee has left the server (2:0)
+[chat] [Mr_kutan]: y
+[connection] 137.97.66.221:50246 requests connection cookie.
+[connection] incoming connection: 137.97.66.221:50246 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (137.97.66.221) ...
+[sv:dbg:network:connect] : player (2) assigned key (dd4261897c59df66)
+[join] Bruce_Lee has joined the server (2:137.97.66.221)
+[sv:dbg:network:receive] : player (2) identified (port:34642)
+[cmd] Mr kutan: [loadtruck]
+AdmCmd: Developer Bruce Lee has logged in.
+[cmd] Ookan Tintu: [cook]
+[chat] [Bruce_Lee]: !
+[cmd] Bruce Lee: [settime]
+Bruce Lee has teleported to Ookan Tintu's position.
+[cmd] Bruce Lee: [goto]
+[cmd] Bruce Lee: [inv]
+[SYSTEM] Database sucessfully saved
+[cmd] Bruce Lee: [cook]
+[cmd] Mr kutan: [deliver]
+[cmd] Ookan Tintu: [cook]
+[cmd] Bruce Lee: [healrange]
+[cmd] Bruce Lee: [turfs]
+[cmd] Ookan Tintu: [turfs]
+[cmd] Bruce Lee: [turfs]
+[cmd] Bruce Lee: [cook]
+[cmd] Ookan Tintu: [cook]
+[connection] 42.107.199.253:59928 requests connection cookie.
+[connection] incoming connection: 42.107.199.253:59928 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (42.107.199.253) ...
+[sv:dbg:network:connect] : player (3) assigned key (fdc76b2a1ac454a5)
+[join] Ma_Lik has joined the server (3:42.107.199.253)
+[sv:dbg:network:receive] : player (3) identified (port:61399)
+[cmd] Bruce Lee: [cook]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ookan Tintu: [cook]
+[cmd] Bruce Lee: [ah]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr kutan: [deliver]
+[cmd] Bruce Lee: [cook]
+[cmd] Bruce Lee: [ah]
+[cmd] Ma Lik: [deliver]
+[cmd] Bruce Lee: [turfs]
+[chat] [Mr_kutan]: hi
+[chat] [Ma_Lik]: hi
+[cmd] Ookan Tintu: [turfs]
+[cmd] Ma Lik: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Bruce_Lee has left the server (2:0)
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[connection] 157.44.141.247:48325 requests connection cookie.
+[connection] incoming connection: 157.44.141.247:48325 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (157.44.141.247) ...
+[sv:dbg:network:connect] : player (2) assigned key (f78d2c9d7b755aa4)
+[join] Bruce_Lee has joined the server (2:157.44.141.247)
+[cmd] Ma Lik: [loadtruck]
+[sv:dbg:network:receive] : player (2) identified (port:48971)
+[cmd] Ma Lik: [loadtruck]
+[warning] client exceeded 'ackslimit' 157.44.141.247:48325 (3220) Limit: 3000/sec
+[connection] 157.51.14.204:60263 requests connection cookie.
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Bruce_Lee has left the server (2:0)
+[connection] incoming connection: 157.51.14.204:60263 id: 2
+[sv:dbg:network:connect] : connecting player (2) with address (157.51.14.204) ...
+[sv:dbg:network:connect] : player (2) assigned key (cc0e339d4219276a)
+[join] Pc_George has joined the server (2:157.51.14.204)
+[sv:dbg:network:receive] : player (2) identified (port:53202)
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ookan Tintu: [cook]
+[cmd] Ookan Tintu: [drink]
+[cmd] Mr kutan: [deliver]
+[cmd] Ookan Tintu: [drink]
+[connection] 157.44.138.115:40041 requests connection cookie.
+[connection] incoming connection: 157.44.138.115:40041 id: 4
+[sv:dbg:network:connect] : connecting player (4) with address (157.44.138.115) ...
+[sv:dbg:network:connect] : player (4) assigned key (738a2c9dc04fde92)
+[join] Bruce_Lee has joined the server (4:157.44.138.115)
+[sv:dbg:network:receive] : player (4) identified (port:59006)
+[cmd] Pc George: [id]
+[cmd] Ookan Tintu: [drink]
+[cmd] Pc George: [fd]
+[cmd] Ma Lik: [deliver]
+[cmd] Mr kutan: [stop]
+[cmd] Ookan Tintu: [cook]
+[cmd] Ma Lik: [loadtruck]
+AdmCmd: Developer Bruce Lee has logged in.
+[cmd] Bruce Lee: [inv]
+[chat] [Mr_kutan]: bro egene location snduva
+[cmd] Bruce Lee: [cook]
+[cmd] Mr kutan: [loadtruck]
+AdmCmd: Bruce Lee has made Bruce Lee a PD CHIEF in MGMC POLICE.
+[cmd] Bruce Lee: [setfaction]
+[cmd] Bruce Lee: [r]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+[chat] [Ma_Lik]:  /sendloc id
+[cmd] Bruce Lee: [turfs]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Bruce Lee: [turfs]
+[cmd] Pc George: [r]
+[chat] [Mr_kutan]: ok
+[cmd] Bruce Lee: [r]
+[cmd] Mr kutan: [sendloc]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Pc George: [r]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Bruce Lee: [cook]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Mr kutan: [sendloc]
+[cmd] Ookan Tintu: [cook]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Bruce Lee: [cook]
+[cmd] Bruce Lee: [editturf]
+[cmd] Ma Lik: [deliver]
+[cmd] Bruce Lee: [gototurf]
+[cmd] Bruce Lee: [gototurf]
+[cmd] Bruce Lee: [gototurf]
+[cmd] Pc George: [r]
+[cmd] Mr kutan: [deliver]
+[SYSTEM] Database sucessfully saved
+[cmd] Ma Lik: [stats]
+[cmd] Ookan Tintu: [cook]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Bruce Lee: [fc]
+[cmd] Ma Lik: [loadtruck]
+** Head Helper Pc George: yes **
+[cmd] Pc George: [c]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+** Developer Bruce Lee: id **
+[cmd] Bruce Lee: [c]
+[cmd] Ma Lik: [loadtruck]
+** Head Helper Pc George: 2 **
+[cmd] Pc George: [c]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Bruce Lee: [givepveh]
+[cmd] Ma Lik: [loadtruck]
+AdmCmd: Bruce Lee has given Pc George their own Infernus.
+[cmd] Bruce Lee: [givepveh]
+** Head Helper Pc George: ook speed nokate **
+[cmd] Pc George: [c]
+** Developer Bruce Lee: ok  **
+[cmd] Bruce Lee: [c]
+[cmd] Ma Lik: [deliver]
+[cmd] Ookan Tintu: [cook]
+[cmd] Ma Lik: [stats]
+** Developer Bruce Lee: city il arrkum kodukkatha vandi anu **
+[cmd] Bruce Lee: [c]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ma Lik: [atm]
+** Head Helper Pc George: athre lakshama **
+[cmd] Pc George: [c]
+[connection] 137.97.124.138:48561 requests connection cookie.
+[connection] incoming connection: 137.97.124.138:48561 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (137.97.124.138) ...
+[sv:dbg:network:connect] : player (5) assigned key (8a7c6189646b3e0b)
+[join] Mr_Torres has joined the server (5:137.97.124.138)
+[sv:dbg:network:receive] : player (5) identified (port:38787)
+** Developer Bruce Lee: kodukkunilla enna paranjekkunne ellarodum ath koduthal sheriyavilla ko... **
+** Developer Bruce Lee: ...rach seen anu aa vandi **
+[cmd] Bruce Lee: [c]
+[cmd] Mr Torres: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+** Head Helper Pc George: 223 kernunulu **
+[cmd] Pc George: [c]
+[cmd] Ma Lik: [loadtruck]
+Bruce Lee has teleported to Ookan Tintu's position.
+[cmd] Bruce Lee: [goto]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ookan Tintu: [cook]
+[cmd] Bruce Lee: [cook]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Mr Torres: [deliver]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Ma Lik: [loadtruck]
+[cmd] Bruce Lee: [setstat]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr Torres: [atm]
+[cmd] Ookan Tintu: [give]
+** Head Helper Pc George: remington irakunundo **
+[cmd] Pc George: [c]
+[connection] 106.200.49.222:6856 requests connection cookie.
+[connection] incoming connection: 106.200.49.222:6856 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (106.200.49.222) ...
+[sv:dbg:network:connect] : player (6) assigned key (de31c86a7e14309b)
+[join] Mr_Dizooza has joined the server (6:106.200.49.222)
+[cmd] Ma Lik: [deliver]
+[cmd] Ma Lik: [deliver]
+[cmd] Bruce Lee: [setstat]
+[cmd] Mr Dizooza: [charity]
+[cmd] Bruce Lee: [settime]
+[chat] [Mr_Dizooza]: type
+[cmd] Bruce Lee: [veh]
+AdmCmd: Bruce Lee spawned a Remington.
+[cmd] Bruce Lee: [veh]
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Torres: [loadtruck]
+[cmd] Ookan Tintu: [cook]
+[chat] [Ma_Lik]: njan pova
+[chat] [Mr_Dizooza]: ha
+[cmd] Ookan Tintu: [pay]
+[cmd] Ma Lik: [stats]
+[cmd] Ookan Tintu: [pay]
+[cmd] Mr Dizooza: [members]
+[cmd] Mr Torres: [loadtruck]
+[cmd] Ma Lik: [saveall]
+[cmd] Ookan Tintu: [pay]
+[cmd] Mr Torres: [loadtruck]
+[cmd] Mr Dizooza: [loadtruck]
+** Developer Bruce Lee: infernus ozhichu bakki ellam kodukkan plan und korach aalkar ayitt auc... **
+** Developer Bruce Lee: ...tion vekkam enn vichariche **
+[cmd] Bruce Lee: [c]
+[chat] [Mr_Dizooza]: hi
+[cmd] Mr kutan: [loadtruck]
+[chat] [Mr_Torres]: h
+[cmd] Ookan Tintu: [pay]
+[cmd] Mr Torres: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Ma_Lik has left the server (3:0)
+[chat] [Mr_kutan]: kooi
+[cmd] Mr Torres: [loadtruck]
+[chat] [Mr_Torres]: hi
+[cmd] Pc George: [r]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr kutan: [loadtruck]
+** Head Helper Pc George: remingtn nokite para **
+[cmd] Pc George: [c]
+[cmd] Mr Dizooza: [deliver]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Mr Torres: [deliver]
+** Developer Bruce Lee: pc evide aa vandi eduth thara **
+[cmd] Bruce Lee: [c]
+[connection] 157.44.156.105:51148 requests connection cookie.
+[connection] incoming connection: 157.44.156.105:51148 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (157.44.156.105) ...
+[sv:dbg:network:connect] : player (3) assigned key (699c2c9d9101d878)
+[join] Rax_Mon has joined the server (3:157.44.156.105)
+[sv:dbg:network:receive] : player (3) identified (port:55202)
+** Head Helper Pc George: ethu vandi **
+[cmd] Pc George: [c]
+[cmd] Rax Mon: [f]
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Mr_Dizooza has left the server (6:0)
+[cmd] Mr kutan: [deliver]
+[connection] 106.200.49.222:35313 requests connection cookie.
+[connection] incoming connection: 106.200.49.222:35313 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (106.200.49.222) ...
+[sv:dbg:network:connect] : player (6) assigned key (de31c86adc44b855)
+[join] Mr_Dizooza has joined the server (6:106.200.49.222)
+[sv:dbg:network:receive] : player (6) identified (port:53789)
+** Head Helper Pc George: ne ingu va infernus angu thera **
+[cmd] Pc George: [c]
+[cmd] Rax Mon: [f]
+[chat] [Mr_Torres]: ulupp undo
+** Developer Bruce Lee: remington :) speed illa but look und **
+[cmd] Bruce Lee: [c]
+[cmd] Mr Dizooza: [loadtruck]
+** Developer Bruce Lee: evideya **
+[cmd] Bruce Lee: [c]
+[chat] [Mr_Torres]: pokki kalikkn
+Bruce Lee has teleported to Pc George's position.
+[cmd] Bruce Lee: [goto]
+[cmd] Ookan Tintu: [f]
+** Head Helper Pc George: ya athonda inki remingtn ende **
+[cmd] Pc George: [c]
+[chat] [Pc_George]: id para
+[cmd] Rax Mon: [neon]
+[cmd] Bruce Lee: [oldcar]
+[cmd] Mr Dizooza: [deliver]
+[chat] [Pc_George]: anna repair
+[cmd] Bruce Lee: [removevehicle]
+[cmd] Ookan Tintu: [cook]
+[cmd] Ookan Tintu: [f]
+[cmd] Mr Torres: [loadtruck]
+[chat] [Pc_George]: inne mech ake
+[cmd] Mr Torres: [loadtruck]
+[cmd] Mr Torres: [loadtruck]
+AdmCmd: Bruce Lee has made Pc George a Mechanic Head in MGMC AUTOPARTS.
+[cmd] Bruce Lee: [setfaction]
+[cmd] Bruce Lee: [ah]
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Bruce Lee: [faction]
+[cmd] Mr Dizooza: [rvc]
+[cmd] Pc George: [paintcar]
+[cmd] Pc George: [paintcar]
+[cmd] Mr Torres: [deliver]
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Mr_Dizooza has left the server (6:0)
+[cmd] Pc George: [paintcar]
+[cmd] Pc George: [paintcar]
+[connection] 106.200.49.222:34031 requests connection cookie.
+[connection] incoming connection: 106.200.49.222:34031 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (106.200.49.222) ...
+[sv:dbg:network:connect] : player (6) assigned key (de31c86adb0ac050)
+[join] Mr_Dizooza has joined the server (6:106.200.49.222)
+[cmd] Pc George: [paintcar]
+[cmd] Pc George: [paintcar]
+[cmd] Rax Mon: [neon]
+[cmd] Pc George: [paintcar]
+[cmd] Rax Mon: [neon]
+[cmd] Pc George: [paintcar]
+[cmd] Rax Mon: [lock]
+[cmd] Mr Dizooza: [loadtruck]
+[chat] [Pc_George]: oru blue indenualo missing
+[cmd] Pc George: [paintcar]
+[cmd] Pc George: [paintcar]
+[cmd] Pc George: [repair]
+[cmd] Rax Mon: [cook]
+[cmd] Pc George: [tune]
+[cmd] Rax Mon: [drink]
+[cmd] Mr Dizooza: [deliver]
+[cmd] Rax Mon: [drink]
+[cmd] Rax Mon: [eat]
+AdmCmd: Bruce Lee has made Bruce Lee a Mechanic Head in MGMC AUTOPARTS.
+[cmd] Bruce Lee: [setfaction]
+[SYSTEM] Database sucessfully saved
+[cmd] Bruce Lee: [badge]
+[cmd] Rax Mon: [drink]
+[cmd] Mr Torres: [selfrepair]
+[cmd] Pc George: [tune]
+[cmd] Bruce Lee: [paintcar]
+[cmd] Bruce Lee: [paintcar]
+[cmd] Rax Mon: [eat]
+[cmd] Bruce Lee: [paintcar]
+[cmd] Bruce Lee: [paintcar]
+[cmd] Bruce Lee: [paintcar]
+[cmd] Pc George: [tune]
+[cmd] Rax Mon: [usedrug]
+[cmd] Bruce Lee: [paintcar]
+[chat] [Pc_George]: illa 0 vecho
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Mr_Dizooza has left the server (6:0)
+[cmd] Pc George: [tune]
+[cmd] Rax Mon: [usedrug]
+[connection] 106.200.49.222:39663 requests connection cookie.
+[connection] incoming connection: 106.200.49.222:39663 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (106.200.49.222) ...
+[sv:dbg:network:connect] : player (6) assigned key (de31c86ae1080bbd)
+[join] Mr_Dizooza has joined the server (6:106.200.49.222)
+[cmd] Bruce Lee: [paintcar]
+[cmd] Bruce Lee: [paintcar]
+[cmd] Pc George: [tune]
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Rax Mon: [cook]
+[cmd] Bruce Lee: [ah]
+[cmd] Bruce Lee: [ah]
+[cmd] Pc George: [tune]
+[cmd] Pc George: [tune]
+[cmd] Mr Torres: [products]
+[cmd] Bruce Lee: [tune]
+[cmd] Mr Dizooza: [deliver]
+[connection] 157.44.156.204:46031 requests connection cookie.
+[connection] incoming connection: 157.44.156.204:46031 id: 7
+[sv:dbg:network:connect] : connecting player (7) with address (157.44.156.204) ...
+[sv:dbg:network:connect] : player (7) assigned key (cc9c2c9daf51a29d)
+[join] Kukku_Boss has joined the server (7:157.44.156.204)
+[sv:dbg:network:receive] : player (7) identified (port:49750)
+[cmd] Mr Torres: [businessmenu]
+[cmd] Pc George: [tune]
+[cmd] Bruce Lee: [tune]
+[cmd] Mr Torres: [products]
+[cmd] Mr Dizooza: [stats]
+[cmd] Pc George: [tune]
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Torres: [products]
+[cmd] Pc George: [tune]
+[cmd] Kukku Boss: [f]
+[cmd] Mr Torres: [products]
+[cmd] Rax Mon: [f]
+[cmd] Bruce Lee: [ah]
+[cmd] Rax Mon: [f]
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Mr_Dizooza has left the server (6:0)
+[cmd] Kukku Boss: [gstash]
+[cmd] Rax Mon: [cook]
+[cmd] Mr Torres: [products]
+[connection] 27.61.50.246:51302 requests connection cookie.
+[connection] incoming connection: 27.61.50.246:51302 id: 6
+[cmd] Pc George: [repair]
+[sv:dbg:network:connect] : connecting player (6) with address (27.61.50.246) ...
+[sv:dbg:network:connect] : player (6) assigned key (f6323d1bacfbfe02)
+[join] Mr_Dizooza has joined the server (6:27.61.50.246)
+[cmd] Rax Mon: [inv]
+[chat] [Pc_George]: ithe nize vandiya
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Torres has left the server (5:0)
+[connection] 137.97.124.138:42252 requests connection cookie.
+[cmd] Mr kutan: [loadtruck]
+[connection] incoming connection: 137.97.124.138:42252 id: 5
+[chat] [Pc_George]: last city intel indenu
+[sv:dbg:network:connect] : connecting player (5) with address (137.97.124.138) ...
+[sv:dbg:network:connect] : player (5) assigned key (8a7c618928dad102)
+[join] Mr_Torres has joined the server (5:137.97.124.138)
+[cmd] Mr Dizooza: [loadtruck]
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Torres has left the server (5:0)
+[cmd] Bruce Lee: [ah]
+[cmd] Bruce Lee: [ah]
+[cmd] Mr Dizooza: [deliver]
+[connection] 137.97.124.138:38145 requests connection cookie.
+[cmd] Kukku Boss: [f]
+[connection] incoming connection: 137.97.124.138:38145 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (137.97.124.138) ...
+[sv:dbg:network:connect] : player (5) assigned key (8a7c61892e1c4be5)
+[join] Mr_Torres has joined the server (5:137.97.124.138)
+[sv:dbg:network:receive] : player (5) identified (port:41459)
+[cmd] Rax Mon: [cook]
+[cmd] Rax Mon: [f]
+[chat] [Pc_George]: ithe pole oru vani kude ine
+[cmd] Rax Mon: [cook]
+[cmd] Mr Torres: [products]
+[chat] [Pc_George]: korech long
+AdmCmd: Bruce Lee has made Bruce Lee a BOSS in VALHALLA.
+[cmd] Bruce Lee: [setgang]
+[cmd] Mr Torres: [products]
+[chat] [Bruce_Lee]: name
+[cmd] Mr Torres: [products]
+[chat] [Pc_George]: ithe athre rate
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Mr_Dizooza has left the server (6:0)
+[cmd] Mr Torres: [products]
+[chat] [Pc_George]: orma illa name
+[chat] [Pc_George]: nokanem
+[chat] [Pc_George]: wait
+[cmd] Mr Torres: [products]
+[connection] 27.61.50.246:46042 requests connection cookie.
+[connection] incoming connection: 27.61.50.246:46042 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (27.61.50.246) ...
+[sv:dbg:network:connect] : player (6) assigned key (f6323d1bb56ccbe5)
+[join] Mr_Dizooza has joined the server (6:27.61.50.246)
+[sv:dbg:network:receive] : player (6) identified (port:58655)
+[cmd] Mr Torres: [products]
+[chat] [Bruce_Lee]: ith rate onnum ittitt illa ippo kodukkuilla kond :)
+[cmd] Mr Dizooza: [loadtruck]
+[cmd] Mr Torres: [products]
+[cmd] Mr Dizooza: [members]
+[cmd] Mr Torres: [products]
+[chat] [Bruce_Lee]: kodukkano rate idam 1 cr :)
+[cmd] Rax Mon: [cook]
+[cmd] Kukku Boss: [s]
+[cmd] Rax Mon: [toys]
+[cmd] Rax Mon: [toys]
+[cmd] Mr Torres: [products]
+[cmd] Rax Mon: [toys]
+[cmd] Mr Torres: [products]
+[cmd] Kukku Boss: [loadtruck]
+[chat] [Bruce_Lee]: 1.25 cr )
+[connection] 42.106.180.207:41345 requests connection cookie.
+[cmd] Kukku Boss: [phone]
+[connection] incoming connection: 42.106.180.207:41345 id: 8
+[sv:dbg:network:connect] : connecting player (8) with address (42.106.180.207) ...
+[sv:dbg:network:connect] : player (8) assigned key (cfb46a2a8c7742e4)
+[join] Veerappan_Op has joined the server (8:42.106.180.207)
+[chat] [Mr_Torres]: 1000
+[sv:dbg:network:receive] : player (8) identified (port:26503)
+[cmd] Bruce Lee: [turfs]
+[cmd] Mr Dizooza: [deliver]
+[cmd] Mr Torres: [products]
+[cmd] Mr kutan: [deliver]
+[cmd] Mr Dizooza: [phone]
+[cmd] Mr Torres: [products]
+[cmd] Bruce Lee: [editturf]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Rax Mon: [sendloc]
+[cmd] Bruce Lee: [editturf]
+sscanf warning: Format specifier does not match parameter count.
+[cmd] Rax Mon: [sendloc]
+[cmd] Mr Torres: [products]
+[connection] 42.105.69.208:16262 requests connection cookie.
+[connection] incoming connection: 42.105.69.208:16262 id: 9
+[sv:dbg:network:connect] : connecting player (9) with address (42.105.69.208) ...
+[sv:dbg:network:connect] : player (9) assigned key (d045692a481d7812)
+[join] Rayan_Annan has joined the server (9:42.105.69.208)
+[sv:dbg:network:receive] : player (9) identified (port:16312)
+[cmd] Mr Dizooza: [gangs]
+[cmd] Mr Dizooza: [gangs]
+AdmCmd: Bruce Lee has set the time of turf 1 to 24 hours.
+[cmd] Bruce Lee: [editturf]
+[cmd] Rax Mon: [cook]
+[cmd] Bruce Lee: [turfs]
+[cmd] Rax Mon: [inv]
+[cmd] Kukku Boss: [deliver]
+[chat] [Pc_George]: dei pande city 3 laksham vandi enu 
+[cmd] Mr Torres: [products]
+[chat] [Pc_George]: ook set
+[cmd] Mr Torres: [products]
+[cmd] Kukku Boss: [f]
+[chat] [Pc_George]: savana adutho
+[chat] [Pc_George]: ithe 1cr
+AdmCmd: Bruce Lee destroyed all admin spawned vehicles.
+[cmd] Bruce Lee: [destroyveh]
+[chat] [Pc_George]: savanna
+[cmd] Rax Mon: [f]
+[chat] [Pc_George]: aduke
+AdmCmd: Bruce Lee spawned a Savanna.
+[cmd] Bruce Lee: [veh]
+[cmd] Veerappan Op: [f]
+[cmd] Rax Mon: [gangs]
+[cmd] Kukku Boss: [f]
+[chat] [Pc_George]: ker
+[cmd] Veerappan Op: [gang]
+[cmd] Ookan Tintu: [f]
+[cmd] Bruce Lee: [gangs]
+[cmd] Mr Torres: [f]
+[cmd] Ookan Tintu: [cook]
+[cmd] Rax Mon: [f]
+[cmd] Mr Dizooza: [bwithdraw]
+[chat] [Pc_George]: ithum remington enu last city my car
+[cmd] Veerappan Op: [f]
+[chat] [Rayan_Annan]: hi
+[cmd] Ookan Tintu: [g]
+[cmd] Mr Torres: [f]
+[chat] [Mr_kutan]: hi
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Mr_Dizooza has left the server (6:0)
+Bruce Lee has teleported to Ookan Tintu's position.
+[cmd] Bruce Lee: [goto]
+[cmd] Rayan Annan: [f]
+[cmd] Pc George: [repair]
+[cmd] Kukku Boss: [cook]
+[cmd] Pc George: [paintcar]
+[cmd] Rax Mon: [cook]
+[cmd] Veerappan Op: [f]
+[chat] [Kukku_Boss]: bruce
+[cmd] Pc George: [paintcar]
+[chat] [Mr_kutan]: bro gang cherkumo
+[chat] [Rayan_Annan]: pott
+[cmd] Pc George: [paintcar]
+[cmd] Pc George: [paintcar]
+[chat] [Rayan_Annan]: oo
+[cmd] Pc George: [paintcar]
+[cmd] Bruce Lee: [gangs]
+[cmd] Pc George: [paintcar]
+[chat] [Rayan_Annan]: varuna
+[cmd] Ookan Tintu: [gangs]
+[cmd] Pc George: [tune]
+[chat] [Bruce_Lee]:  /gangs 1
+[chat] [Mr_kutan]: vandi work avnill
+[cmd] Rax Mon: [gangs]
+[chat] [Rayan_Annan]: baa
+[cmd] Ookan Tintu: [gangs]
+[cmd] Bruce Lee: [gangs]
+[cmd] Pc George: [tune]
+[chat] [Kukku_Boss]: 10lakh kiteele matte 8 lakhs bike throo
+[cmd] Rax Mon: [gangs]
+[cmd] Pc George: [tune]
+[chat] [Kukku_Boss]: okai,okao
+[cmd] Pc George: [tune]
+[cmd] Ookan Tintu: [gangs]
+[cmd] Veerappan Op: [gang]
+[cmd] Kukku Boss: [gangs]
+[cmd] Mr Torres: [enter]
+[cmd] Kukku Boss: [gangs]
+[cmd] Mr Torres: [enter]
+[cmd] Kukku Boss: [gangs]
+Bruce Lee is now spectating to Veerappan Op (ID:8).
+[cmd] Bruce Lee: [spec]
+[cmd] Kukku Boss: [gangs]
+[cmd] Rax Mon: [cook]
+[cmd] Veerappan Op: [f]
+[cmd] Kukku Boss: [gangs]
+[chat] [Bruce_Lee]: da ne innale enthinna villiche
+[cmd] Kukku Boss: [gangs]
+[chat] [Rayan_Annan]: vaa
+[cmd] Pc George: [tune]
+[chat] [Mr_kutan]: vani vilkanundo
+[chat] [Bruce_Lee]: sit il ayirunnu innale
+[cmd] Kukku Boss: [gangs]
+[chat] [Veerappan_Op]: avida
+[cmd] Kukku Boss: [gangs]
+[chat] [Veerappan_Op]: spc ano
+Bruce Lee stops spectating Veerappan Op (ID:8).
+[cmd] Bruce Lee: [spec]
+Bruce Lee has teleported to Veerappan Op's position.
+[cmd] Bruce Lee: [goto]
+[chat] [Mr_kutan]: car sale undo
+[cmd] Pc George: [tune]
+[cmd] Mr Torres: [f]
+[chat] [Rayan_Annan]: ellada
+[chat] [Rayan_Annan]: w8
+[chat] [Mr_kutan]: m
+[cmd] Pc George: [tune]
+[cmd] Ookan Tintu: [cook]
+[cmd] Bruce Lee: [gangs]
+[cmd] Rayan Annan: [f]
+[cmd] Kukku Boss: [cook]
+[chat] [Mr_kutan]: bro gangille undo
+[chat] [Rayan_Annan]: mm
+[cmd] Veerappan Op: [f]
+[cmd] Kukku Boss: [gangs]
+[chat] [Mr_kutan]: sry
+[cmd] Pc George: [g]
+[cmd] Kukku Boss: [drink]
+[cmd] Rax Mon: [cook]
+[chat] [Veerappan_Op]: Veerappan_Op
+[chat] [Rayan_Annan]: ne kond payiko
+[cmd] Kukku Boss: [drink]
+[cmd] Kukku Boss: [drink]
+[cmd] Bruce Lee: [editgang]
+[chat] [Rayan_Annan]: nanpon
+[chat] [Rayan_Annan]: by
+[chat] [Mr_kutan]: m 
+[cmd] Kukku Boss: [eat]
+[cmd] Veerappan Op: [g]
+[cmd] Bruce Lee: [editgang]
+[SYSTEM] Database sucessfully saved
+[chat] [Mr_kutan]: bye
+[cmd] Rax Mon: [gangs]
+[cmd] Ookan Tintu: [cook]
+[sv:dbg:network:connect] : disconnecting player (9) ...
+[part] Rayan_Annan has left the server (9:0)
+[cmd] Rax Mon: [gangs]
+[cmd] Kukku Boss: [cook]
+[cmd] Pc George: [g]
+[cmd] Kukku Boss: [eat]
+[connection] 42.109.136.28:59941 requests connection cookie.
+[cmd] Rax Mon: [gangs]
+[connection] incoming connection: 42.109.136.28:59941 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (42.109.136.28) ...
+[sv:dbg:network:connect] : player (6) assigned key (1c886d2af56348c7)
+[join] Kunjatta_Mol has joined the server (6:42.109.136.28)
+[sv:dbg:network:receive] : player (6) identified (port:45274)
+[cmd] Rax Mon: [gangs]
+[cmd] Rax Mon: [gangs]
+AdmCmd: Bruce Lee has set the leader of gang ID 4 to Veerappan_Op.
+[cmd] Bruce Lee: [editgang]
+[cmd] Ookan Tintu: [gangs]
+[cmd] Rax Mon: [gangs]
+[cmd] Bruce Lee: [setgang]
+[cmd] Ookan Tintu: [gangs]
+[chat] [Kukku_Boss]: onind
+[cmd] Rax Mon: [gangs]
+[chat] [Kukku_Boss]: on indallo
+[cmd] Mr Torres: [gstash]
+[cmd] Veerappan Op: [gang]
+[cmd] Veerappan Op: [gangs]
+AdmCmd: Bruce Lee has made Veerappan Op a CK BOSS in CHEKUTHAN KOTTA.
+[cmd] Bruce Lee: [setgang]
+[cmd] Rax Mon: [cook]
+[cmd] Bruce Lee: [gangs]
+[cmd] Veerappan Op: [gang]
+[chat] [Kukku_Boss]: dizoosa ine,ipo,pokkaa vADEI
+[cmd] Kunjatta Mol: [number]
+[cmd] Kunjatta Mol: [number]
+[cmd] Kunjatta Mol: [phone]
+[cmd] Ookan Tintu: [cook]
+[connection] 114.10.11.35:21446 requests connection cookie.
+[connection] incoming connection: 114.10.11.35:21446 id: 9
+[chat] [Kukku_Boss]: NJN,NERTHEE MSG ITTEPO,NTE ADTH ARNN
+[sv:dbg:network:connect] : connecting player (9) with address (114.10.11.35) ...
+[sv:dbg:network:connect] : player (9) assigned key (230b0a72fd9465af)
+[join] Kaizer_Eerr has joined the server (9:114.10.11.35)
+[sv:dbg:network:connect] : disconnecting player (9) ...
+[part] Kaizer_Eerr has left the server (9:2)
+[cmd] Kukku Boss: [cook]
+Bruce Lee has teleported to Pc George's position.
+[cmd] Bruce Lee: [goto]
+[cmd] Bruce Lee: [ah]
+[chat] [Pc_George]: ithum remington enu last city my car
+[cmd] Rax Mon: [cook]
+[cmd] Pc George: [repair]
+Bruce Lee is now spectating to Ookan Tintu (ID:0).
+[cmd] Bruce Lee: [spec]
+Bruce Lee stops spectating Ookan Tintu (ID:0).
+[cmd] Bruce Lee: [spec]
+[chat] [Pc_George]: dei ithoke verum cheap arade thodunathine allam 1 cr idale
+[cmd] Kunjatta Mol: [w]
+AdmWarning: Veerappan Op[8] has respawned their gang vehicles.
+[cmd] Veerappan Op: [grespawncars]
+[cmd] Mr kutan: [buylevel]
+[cmd] Rax Mon: [cook]
+[chat] [Kunjatta_Mol]: do
+[cmd] Veerappan Op: [f]
+[chat] [Bruce_Lee]: .
+[cmd] Bruce Lee: [ah]
+[chat] [Kunjatta_Mol]: gang hq?
+[cmd] Veerappan Op: [f]
+[chat] [Pc_George]: aa vandi ingu thaono njn adukua
+[cmd] Rax Mon: [cook]
+[cmd] Ookan Tintu: [cook]
+[chat] [Pc_George]: ya
+[cmd] Veerappan Op: [gang]
+[chat] [Kukku_Boss]: KUNNATTTE  PIDIKKA
+[chat] [Pc_George]: njn anna adukua loan itto
+[chat] [Mr_Torres]: hi
+[chat] [Pc_George]: inki remington mathi
+[chat] [Veerappan_Op]: ok
+[chat] [Kukku_Boss]: NTHUAA PARANJE,KEETILLA,RAX
+[chat] [Veerappan_Op]: gate pass arilyala
+[chat] [Mr_Torres]: ariya
+[cmd] Kukku Boss: [cook]
+[chat] [Pc_George]: afk alle
+[chat] [Kukku_Boss]: BAA
+[chat] [Kukku_Boss]: GH POVAA AADYM
+[cmd] Kunjatta Mol: [gang]
+[chat] [Kukku_Boss]: GUN,EDKNM
+[chat] [Kunjatta_Mol]: .
+[connection] 27.61.50.246:11318 requests connection cookie.
+[chat] [Mr_Torres]: mic on ano
+[sv:dbg:network:connect] : disconnecting player (2) ...
+[part] Pc_George has left the server (2:0)
+[connection] incoming connection: 27.61.50.246:11318 id: 2
+[cmd] Kunjatta Mol: [gang]
+[sv:dbg:network:connect] : connecting player (2) with address (27.61.50.246) ...
+[sv:dbg:network:connect] : player (2) assigned key (f6323d1bac3167c7)
+[join] Mr_Dizooza has joined the server (2:27.61.50.246)
+[sv:dbg:network:receive] : player (2) identified (port:63103)
+[chat] [Veerappan_Op]: soman alaa kyteth
+[cmd] Kunjatta Mol: [gang]
+[cmd] Rax Mon: [cook]
+[chat] [Veerappan_Op]: no
+[cmd] Kunjatta Mol: [gang]
+[chat] [Mr_Torres]: ok
+[cmd] Mr Dizooza: [members]
+[chat] [Veerappan_Op]: ok 12:00 bayo
+[chat] [Mr_Torres]: soman ann
+[chat] [Veerappan_Op]: haa
+[cmd] Mr Dizooza: [bwithdraw]
+[chat] [Veerappan_Op]: 12:10 oka avoboo gh vaa
+[cmd] Kukku Boss: [cook]
+[chat] [Mr_Torres]: aa
+[cmd] Mr kutan: [loadtruck]
+[chat] [Veerappan_Op]: dc massage aykk
+[chat] [Veerappan_Op]: dm
+[chat] [Mr_Torres]: ippalo
+[chat] [Veerappan_Op]: patokee epo aykk
+[chat] [Mr_Torres]: aa
+[chat] [Mr_Torres]: dc name?
+[cmd] Ookan Tintu: [cook]
+[cmd] Rax Mon: [cook]
+[sv:dbg:network:connect] : disconnecting player (8) ...
+[part] Veerappan_Op has left the server (8:0)
+[cmd] Mr Dizooza: [members]
+[cmd] Rax Mon: [inv]
+[connection] 106.200.94.235:64035 requests connection cookie.
+[connection] incoming connection: 106.200.94.235:64035 id: 8
+[sv:dbg:network:connect] : connecting player (8) with address (106.200.94.235) ...
+[sv:dbg:network:connect] : player (8) assigned key (eb5ec86a862d1b10)
+[join] Soman_Maman has joined the server (8:106.200.94.235)
+[sv:dbg:network:receive] : player (8) identified (port:64038)
+[cmd] Mr kutan: [deliver]
+[cmd] Bruce Lee: [pm]
+[chat] [Kukku_Boss]: VAAA
+[cmd] Mr Dizooza: [members]
+[cmd] Ookan Tintu: [eat]
+[sv:dbg:network:connect] : disconnecting player (5) ...
+[part] Mr_Torres has left the server (5:0)
+[cmd] Ookan Tintu: [eat]
+[sv:dbg:network:connect] : disconnecting player (4) ...
+[part] Bruce_Lee has left the server (4:0)
+[cmd] Mr Dizooza: [members]
+[cmd] Ookan Tintu: [usedrug]
+[cmd] Mr Dizooza: [members]
+[cmd] Rax Mon: [lock]
+[cmd] Mr Dizooza: [f]
+[cmd] Soman Maman: [fb]
+[cmd] Mr Dizooza: [members]
+[chat] [Mr_kutan]: hlo
+[chat] [Soman_Maman]: MM
+[chat] [Soman_Maman]: YANTHAA
+[cmd] Mr Dizooza: [gangs]
+[chat] [Mr_kutan]: bro vandi veno
+[chat] [Soman_Maman]: VANDAA
+[chat] [Soman_Maman]: BICK ONDOO
+[cmd] Ookan Tintu: [gangs]
+[cmd] Mr Dizooza: [atm]
+[chat] [Mr_kutan]: bike anu
+[cmd] Mr Dizooza: [stats]
+[chat] [Soman_Maman]: NOKATT
+[chat] [Kukku_Boss]: NTE VANDI INBOUND AAKI 
+[chat] [Kukku_Boss]: ANDI
+[chat] [Rax_Mon]: nice
+[chat] [Soman_Maman]: VANDAAA
+[chat] [Mr_kutan]: veno
+[cmd] Mr Dizooza: [members]
+[cmd] Ookan Tintu: [usedrug]
+[chat] [Soman_Maman]: YATHARAA 
+[chat] [Soman_Maman]: CHOTHIKUNAA
+[cmd] Rax Mon: [neon]
+[chat] [Mr_kutan]: 80 k
+[cmd] Kukku Boss: [neon]
+[chat] [Soman_Maman]: BICK NOKTT
+[cmd] Mr Dizooza: [gangs]
+[chat] [Kukku_Boss]: LAG AAVUDA
+[cmd] Kukku Boss: [neon]
+[cmd] Ookan Tintu: [f]
+[chat] [Kukku_Boss]: DEI
+[cmd] Rax Mon: [vstash]
+[chat] [Mr_kutan]: veno
+[sv:dbg:network:connect] : disconnecting player (8) ...
+[part] Soman_Maman has left the server (8:0)
+[cmd] Rax Mon: [vstash]
+[chat] [Mr_kutan]: hi
+[cmd] Kukku Boss: [f]
+[chat] [Kukku_Boss]: ILLA
+[cmd] Ookan Tintu: [f]
+[chat] [Kukku_Boss]: GH PO
+[cmd] Kukku Boss: [f]
+[chat] [Kukku_Boss]: OOO
+[chat] [Kukku_Boss]: THA
+[cmd] Ookan Tintu: [vstash]
+[chat] [Kukku_Boss]: 7
+[cmd] Mr Dizooza: [loadtruck]
+[connection] 42.105.69.208:16294 requests connection cookie.
+[cmd] Ookan Tintu: [lock]
+[connection] incoming connection: 42.105.69.208:16294 id: 4
+[sv:dbg:network:connect] : connecting player (4) with address (42.105.69.208) ...
+[sv:dbg:network:connect] : player (4) assigned key (d045692a62ef05bd)
+[join] Rayan_Annan has joined the server (4:42.105.69.208)
+[cmd] Rax Mon: [give]
+[sv:dbg:network:receive] : player (4) identified (port:16277)
+[cmd] Rax Mon: [vstash]
+[cmd] Kukku Boss: [f]
+[cmd] Rax Mon: [vstash]
+[cmd] Mr kutan: [loadtruck]
+[cmd] Ookan Tintu: [f]
+[SYSTEM] Database sucessfully saved
+[cmd] Kukku Boss: [f]
+[cmd] Ookan Tintu: [f]
+[cmd] Mr Dizooza: [members]
+[cmd] Kukku Boss: [neon]
+[chat] [Kukku_Boss]: da wait
+[cmd] Ookan Tintu: [f]
+[chat] [Mr_kutan]: ee vandi kodukundo
+[chat] [Kukku_Boss]: ookante adth po
+[chat] [Kukku_Boss]: nice
+[chat] [Kukku_Boss]: oo,thaa
+[chat] [Ookan_Tintu]: 5CR
+[chat] [Kukku_Boss]: ennit ne gh ker
+[cmd] Rax Mon: [givekeys]
+[part] Mr_kutan has left the server (1:0)
+[connection] 157.44.213.51:42044 requests connection cookie.
+[connection] incoming connection: 157.44.213.51:42044 id: 1
+[sv:dbg:network:connect] : connecting player (1) with address (157.44.213.51) ...
+[sv:dbg:network:connect] : player (1) assigned key (33d52c9dbd77ef82)
+[join] El_Professor has joined the server (1:157.44.213.51)
+[sv:dbg:network:receive] : player (1) identified (port:45337)
+[chat] [Rayan_Annan]: hi
+[cmd] El Professor: [f]
+[chat] [Ookan_Tintu]: HY
+[chat] [Rayan_Annan]: rolax ano
+[cmd] El Professor: [rvc]
+[cmd] El Professor: [f]
+[cmd] El Professor: [members]
+[connection] 137.97.124.138:44385 requests connection cookie.
+[connection] incoming connection: 137.97.124.138:44385 id: 5
+[sv:dbg:network:connect] : connecting player (5) with address (137.97.124.138) ...
+[sv:dbg:network:connect] : player (5) assigned key (8a7c618996bf1358)
+[join] Mr_Torres has joined the server (5:137.97.124.138)
+[sv:dbg:network:receive] : player (5) identified (port:42897)
+[cmd] Kukku Boss: [f]
+[cmd] Ookan Tintu: [f]
+[cmd] Kukku Boss: [f]
+[sv:dbg:network:connect] : disconnecting player (3) ...
+[part] Rax_Mon has left the server (3:0)
+[cmd] El Professor: [members]
+[cmd] Mr Dizooza: [f]
+[cmd] Mr Torres: [lock]
+[cmd] Mr Dizooza: [gbackup]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] El Professor: [f]
+[cmd] Mr Dizooza: [f]
+[cmd] Mr Dizooza: [f]
+[cmd] El Professor: [f]
+[cmd] Kukku Boss: [f]
+[cmd] Mr Dizooza: [f]
+[cmd] Kukku Boss: [park]
+[cmd] Ookan Tintu: [gangs]
+[cmd] Kukku Boss: [neon]
+[chat] [Kukku_Boss]: lock
+[cmd] Ookan Tintu: [lock]
+[cmd] El Professor: [f]
+[cmd] Rayan Annan: [deliver]
+[cmd] Ookan Tintu: [lock]
+[cmd] El Professor: [gangs]
+[cmd] Mr Torres: [phone]
+[connection] 27.62.52.231:59457 requests connection cookie.
+[connection] 27.62.52.231:59457 requests connection cookie.
+[connection] 27.62.52.231:59457 requests connection cookie.
+[connection] 27.62.52.231:59457 requests connection cookie.
+[connection] 27.62.52.231:59457 requests connection cookie.
+[connection] 27.62.52.231:4598 requests connection cookie.
+[connection] 27.62.52.231:4598 requests connection cookie.
+[connection] 27.62.52.231:4598 requests connection cookie.
+[connection] 27.62.52.231:4598 requests connection cookie.
+[connection] 27.62.52.231:4598 requests connection cookie.
+[connection] 27.62.52.231:4598 requests connection cookie.
+[connection] 27.62.52.231:4592 requests connection cookie.
+[connection] 27.62.52.231:4592 requests connection cookie.
+[connection] 27.62.52.231:4592 requests connection cookie.
+[connection] 27.62.52.231:4592 requests connection cookie.
+[connection] 27.62.52.231:4592 requests connection cookie.
+[connection] 27.62.52.231:35373 requests connection cookie.
+[connection] 27.62.52.231:35373 requests connection cookie.
+[connection] 27.62.52.231:4592 requests connection cookie.
+[connection] 27.62.52.231:35373 requests connection cookie.
+[connection] 27.62.52.231:35373 requests connection cookie.
+[connection] 27.62.52.231:35373 requests connection cookie.
+[connection] 27.62.52.231:35373 requests connection cookie.
+[connection] 27.62.52.231:20375 requests connection cookie.
+[connection] 27.62.52.231:20375 requests connection cookie.
+[connection] 27.62.52.231:20375 requests connection cookie.
+[connection] 27.62.52.231:20375 requests connection cookie.
+[connection] 27.62.52.231:20375 requests connection cookie.
+[connection] 27.62.52.231:20375 requests connection cookie.
+[connection] 27.62.52.231:61902 requests connection cookie.
+[connection] 27.62.52.231:61902 requests connection cookie.
+[connection] 27.62.52.231:61902 requests connection cookie.
+[connection] 27.62.52.231:61902 requests connection cookie.
+[connection] 27.62.52.231:61902 requests connection cookie.
+[connection] 27.62.52.231:61902 requests connection cookie.
+[connection] 27.62.52.231:2110 requests connection cookie.
+[connection] 27.62.52.231:2110 requests connection cookie.
+[connection] 27.62.52.231:2110 requests connection cookie.
+[connection] 27.62.52.231:2110 requests connection cookie.
+[connection] 27.62.52.231:2110 requests connection cookie.
+[connection] 27.62.52.231:2110 requests connection cookie.
+[connection] 27.62.52.231:4348 requests connection cookie.
+[connection] 27.62.52.231:4348 requests connection cookie.
+[connection] 27.62.52.231:4348 requests connection cookie.
+[connection] 27.62.52.231:4348 requests connection cookie.
+[connection] 27.62.52.231:4348 requests connection cookie.
+[connection] 27.62.52.231:4348 requests connection cookie.
+[connection] 27.62.52.231:12151 requests connection cookie.
+[connection] 27.62.52.231:12151 requests connection cookie.
+[connection] 27.62.52.231:12151 requests connection cookie.
+[connection] 27.62.52.231:12151 requests connection cookie.
+[connection] 27.62.52.231:12151 requests connection cookie.
+[connection] 27.62.52.231:12151 requests connection cookie.
+[cmd] El Professor: [atm]
+[sv:dbg:network:connect] : disconnecting player (6) ...
+[part] Kunjatta_Mol has left the server (6:1)
+[chat] [Mr_Torres]: hi
+[chat] [Mr_Torres]: kanan varatte
+[chat] [Mr_Torres]: kanan varatte
+[cmd] Kukku Boss: [rvc]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] El Professor: [buy]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Mr Dizooza: [buy]
+[connection] 42.109.136.28:6886 requests connection cookie.
+[connection] incoming connection: 42.109.136.28:6886 id: 3
+[sv:dbg:network:connect] : connecting player (3) with address (42.109.136.28) ...
+[sv:dbg:network:connect] : player (3) assigned key (1c886d2a428ff3b5)
+[join] King_Kakka has joined the server (3:42.109.136.28)
+[sv:dbg:network:receive] : player (3) identified (port:45561)
+[cmd] Rayan Annan: [loadtruck]
+[cmd] Mr Torres: [lock]
+[cmd] Rayan Annan: [loadtruck]
+[connection] 103.203.72.24:9531 requests connection cookie.
+[connection] incoming connection: 103.203.72.24:9531 id: 6
+[sv:dbg:network:connect] : connecting player (6) with address (103.203.72.24) ...
+[sv:dbg:network:connect] : player (6) assigned key (1848cb67eb4f45d4)
+[join] Vasu_Kuttan has joined the server (6:103.203.72.24)
+[sv:dbg:network:receive] : player (6) identified (port:23692)
+AdmCmd: Management King Kakka has logged in.
+[cmd] Rayan Annan: [loadtruck]
+[connection] 137.97.83.113:59615 requests connection cookie.
+[connection] incoming connection: 137.97.83.113:59615 id: 8
+[sv:dbg:network:connect] : connecting player (8) with address (137.97.83.113) ...
+[sv:dbg:network:connect] : player (8) assigned key (71536189ae2a86f0)
+[join] Mr_Arjun has joined the server (8:137.97.83.113)
+[sv:dbg:network:receive] : player (8) identified (port:57457)
+[cmd] El Professor: [members]
+[cmd] King Kakka: [saveall]
+[cmd] King Kakka: [saveall]
+[cmd] King Kakka: [saveall]
+[cmd] King Kakka: [saveall]
+[cmd] King Kakka: [broadcast]
+[cmd] Mr Arjun: [f]
+[cmd] Mr Dizooza: [gangs]
+[cmd] King Kakka: [broadcast]
+[cmd] King Kakka: [broadcast]
+[cmd] Mr Torres: [f]
+[cmd] El Professor: [gpark]
+[cmd] Vasu Kuttan: [f]
+[cmd] Mr Arjun: [members]
+[cmd] El Professor: [f]
+[cmd] Rayan Annan: [deliver]
+[cmd] Rayan Annan: [f]
+[cmd] Mr Arjun: [ganghelp]

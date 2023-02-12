@@ -1,0 +1,40 @@
+=========================== FCNPC Exception Handler ============================
+Signal 11 (Segmentation fault), address is 1319dc from 80d9634
+
+Backtrace:
+  #0 in plugins/FCNPC.so(_ZN17CExceptionHandler24ExceptionHandlerCallbackEiP9siginfo_tPv+0x126) [0xf64796e6]
+  #1 in linux-gate.so.1(__kernel_rt_sigreturn+0) [0xf7f6fb70]
+  #2 in ./samp03svr() [0x80d9634]
+  #3 in plugins/streamer.so(sampgdk_GetVehiclePos+0xc0) [0xf305ea20]
+  #4 in plugins/streamer.so(_ZN8Streamer22processAttachedObjectsEv+0x132) [0xf3088732]
+  #5 in plugins/streamer.so(_ZN8Streamer18processActiveItemsEv+0x51) [0xf30a5db1]
+  #6 in plugins/streamer.so(_ZN8Streamer20startAutomaticUpdateEv+0x358) [0xf30a7008]
+  #7 in plugins/streamer.so(ProcessTick+0x1f) [0xf30a704f]
+  #8 in ./samp03svr() [0x80d1ce2]
+  #9 in ./samp03svr() [0x80aef6c]
+
+Information:
+  System: GNU/Linux
+  SA-MP: 0.3.7 R2
+  FCNPC: 2.0.4
+
+Functions:
+  FUNC_CPlayerPool__DeletePlayer: 0x80d0a90
+  FUNC_CPlayer__Kill: 0x80cb220
+  FUNC_CPlayer__EnterVehicle: 0x80cc1c0
+  FUNC_CPlayer__ExitVehicle: 0x80cc340
+  FUNC_CPlayer__SpawnForWorld: 0x80ccfc0
+  FUNC_GetVehicleModelInfo: 0x80d5d30
+  FUNC_CConsole__GetIntVariable: 0x80a0070
+  FUNC_ClientJoin_RPC: 0x80b0030
+
+Pointers:
+  VAR_ServerAuthentication: 0x81aa8a8
+  VAR_NetVersion: 0xfd9
+
+Offsets:
+  OFFSET_RemoteSystemManager: 0x334
+  OFFSET_RemoteSystemSize: 0xc69
+  OFFSET_RemoteSystem__ConnectMode: 0xc62
+  OFFSET_RemoteSystem__Unknown: 0xc67
+=========================== FCNPC Exception Handler ============================
