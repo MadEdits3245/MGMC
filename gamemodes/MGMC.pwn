@@ -683,6 +683,7 @@ new PlayerText:BlackmoneyTD[MAX_PLAYERS][1];
 new PlayerText:PlayerstatTD[MAX_PLAYERS][1];
 new PlayerText:AtmTD[MAX_PLAYERS][8];
 new PlayerText:VehPanelTD[MAX_PLAYERS][16];
+new PlayerText:RegistrationTD[MAX_PLAYERS][7];
 
 new CITYHALL;
 new PAWNSHOP;
@@ -916,6 +917,7 @@ enum
 	DIALOG_VALESTORAGE,
 	DIALOG_LOGIN,
 	DIALOG_GENDER,
+	DIALOG_SKIN,
 	DIALOG_AGE,
 	DIALOG_RENTCAR,
 	DIALOG_REFERRAL,
@@ -8476,6 +8478,144 @@ stock HideVehPanel(playerid)
     CancelSelectTextDraw(playerid);
     return 1;
 }
+//registertd madedits
+Registration_TD(playerid)
+{
+RegistrationTD[playerid][0] = CreatePlayerTextDraw(playerid, 147.000000, 106.000000, "_");
+PlayerTextDrawFont(playerid, RegistrationTD[playerid][0], 1);
+PlayerTextDrawLetterSize(playerid, RegistrationTD[playerid][0], 0.600000, 29.500000);
+PlayerTextDrawTextSize(playerid, RegistrationTD[playerid][0], 294.000000, 128.000000);
+PlayerTextDrawSetOutline(playerid, RegistrationTD[playerid][0], 1);
+PlayerTextDrawSetShadow(playerid, RegistrationTD[playerid][0], 0);
+PlayerTextDrawAlignment(playerid, RegistrationTD[playerid][0], 2);
+PlayerTextDrawColor(playerid, RegistrationTD[playerid][0], -1);
+PlayerTextDrawBackgroundColor(playerid, RegistrationTD[playerid][0], 255);
+PlayerTextDrawBoxColor(playerid, RegistrationTD[playerid][0], 255);
+PlayerTextDrawUseBox(playerid, RegistrationTD[playerid][0], 1);
+PlayerTextDrawSetProportional(playerid, RegistrationTD[playerid][0], 1);
+PlayerTextDrawSetSelectable(playerid, RegistrationTD[playerid][0], 0);
+
+RegistrationTD[playerid][1] = CreatePlayerTextDraw(playerid, 511.000000, 361.000000, "Create Identity");
+PlayerTextDrawFont(playerid, RegistrationTD[playerid][1], 2);
+PlayerTextDrawLetterSize(playerid, RegistrationTD[playerid][1], 0.183331, 2.349997);
+PlayerTextDrawTextSize(playerid, RegistrationTD[playerid][1], 16.500000, 88.000000);
+PlayerTextDrawSetOutline(playerid, RegistrationTD[playerid][1], 1);
+PlayerTextDrawSetShadow(playerid, RegistrationTD[playerid][1], 0);
+PlayerTextDrawAlignment(playerid, RegistrationTD[playerid][1], 2);
+PlayerTextDrawColor(playerid, RegistrationTD[playerid][1], 852308735);
+PlayerTextDrawBackgroundColor(playerid, RegistrationTD[playerid][1], 255);
+PlayerTextDrawBoxColor(playerid, RegistrationTD[playerid][1], 200);
+PlayerTextDrawUseBox(playerid, RegistrationTD[playerid][1], 1);
+PlayerTextDrawSetProportional(playerid, RegistrationTD[playerid][1], 1);
+PlayerTextDrawSetSelectable(playerid, RegistrationTD[playerid][1], 1);
+
+RegistrationTD[playerid][2] = CreatePlayerTextDraw(playerid, 149.000000, 149.000000, "AGE");
+PlayerTextDrawFont(playerid, RegistrationTD[playerid][2], 2);
+PlayerTextDrawLetterSize(playerid, RegistrationTD[playerid][2], 0.258332, 1.750000);
+PlayerTextDrawTextSize(playerid, RegistrationTD[playerid][2], 12.500000, 57.500000);
+PlayerTextDrawSetOutline(playerid, RegistrationTD[playerid][2], 1);
+PlayerTextDrawSetShadow(playerid, RegistrationTD[playerid][2], 0);
+PlayerTextDrawAlignment(playerid, RegistrationTD[playerid][2], 2);
+PlayerTextDrawColor(playerid, RegistrationTD[playerid][2], -16776961);
+PlayerTextDrawBackgroundColor(playerid, RegistrationTD[playerid][2], 255);
+PlayerTextDrawBoxColor(playerid, RegistrationTD[playerid][2], -1378294072);
+PlayerTextDrawUseBox(playerid, RegistrationTD[playerid][2], 1);
+PlayerTextDrawSetProportional(playerid, RegistrationTD[playerid][2], 1);
+PlayerTextDrawSetSelectable(playerid, RegistrationTD[playerid][2], 1);
+
+RegistrationTD[playerid][3] = CreatePlayerTextDraw(playerid, 149.000000, 193.000000, "GENDER");
+PlayerTextDrawFont(playerid, RegistrationTD[playerid][3], 2);
+PlayerTextDrawLetterSize(playerid, RegistrationTD[playerid][3], 0.258332, 1.750000);
+PlayerTextDrawTextSize(playerid, RegistrationTD[playerid][3], 16.500000, 59.500000);
+PlayerTextDrawSetOutline(playerid, RegistrationTD[playerid][3], 1);
+PlayerTextDrawSetShadow(playerid, RegistrationTD[playerid][3], 0);
+PlayerTextDrawAlignment(playerid, RegistrationTD[playerid][3], 2);
+PlayerTextDrawColor(playerid, RegistrationTD[playerid][3], -16776961);
+PlayerTextDrawBackgroundColor(playerid, RegistrationTD[playerid][3], 255);
+PlayerTextDrawBoxColor(playerid, RegistrationTD[playerid][3], -1378294072);
+PlayerTextDrawUseBox(playerid, RegistrationTD[playerid][3], 1);
+PlayerTextDrawSetProportional(playerid, RegistrationTD[playerid][3], 1);
+PlayerTextDrawSetSelectable(playerid, RegistrationTD[playerid][3], 1);
+
+RegistrationTD[playerid][4] = CreatePlayerTextDraw(playerid, 93.000000, 113.000000, "MGMC CHARACTER CREATION");
+PlayerTextDrawFont(playerid, RegistrationTD[playerid][4], 2);
+PlayerTextDrawLetterSize(playerid, RegistrationTD[playerid][4], 0.183331, 1.549998);
+PlayerTextDrawTextSize(playerid, RegistrationTD[playerid][4], 400.000000, 17.000000);
+PlayerTextDrawSetOutline(playerid, RegistrationTD[playerid][4], 1);
+PlayerTextDrawSetShadow(playerid, RegistrationTD[playerid][4], 0);
+PlayerTextDrawAlignment(playerid, RegistrationTD[playerid][4], 1);
+PlayerTextDrawColor(playerid, RegistrationTD[playerid][4], -1);
+PlayerTextDrawBackgroundColor(playerid, RegistrationTD[playerid][4], 255);
+PlayerTextDrawBoxColor(playerid, RegistrationTD[playerid][4], 50);
+PlayerTextDrawUseBox(playerid, RegistrationTD[playerid][4], 0);
+PlayerTextDrawSetProportional(playerid, RegistrationTD[playerid][4], 1);
+PlayerTextDrawSetSelectable(playerid, RegistrationTD[playerid][4], 0);
+
+RegistrationTD[playerid][5] = CreatePlayerTextDraw(playerid, 148.000000, 239.000000, "SKIN ID");
+PlayerTextDrawFont(playerid, RegistrationTD[playerid][5], 2);
+PlayerTextDrawLetterSize(playerid, RegistrationTD[playerid][5], 0.258332, 1.750000);
+PlayerTextDrawTextSize(playerid, RegistrationTD[playerid][5], 10.000000, 61.500000);
+PlayerTextDrawSetOutline(playerid, RegistrationTD[playerid][5], 1);
+PlayerTextDrawSetShadow(playerid, RegistrationTD[playerid][5], 0);
+PlayerTextDrawAlignment(playerid, RegistrationTD[playerid][5], 2);
+PlayerTextDrawColor(playerid, RegistrationTD[playerid][5], -16776961);
+PlayerTextDrawBackgroundColor(playerid, RegistrationTD[playerid][5], 255);
+PlayerTextDrawBoxColor(playerid, RegistrationTD[playerid][5], -1378294072);
+PlayerTextDrawUseBox(playerid, RegistrationTD[playerid][5], 1);
+PlayerTextDrawSetProportional(playerid, RegistrationTD[playerid][5], 1);
+PlayerTextDrawSetSelectable(playerid, RegistrationTD[playerid][5], 1);
+
+RegistrationTD[playerid][6] = CreatePlayerTextDraw(playerid, 106.000000, 277.000000, "Preview_Model");
+PlayerTextDrawFont(playerid, RegistrationTD[playerid][6], 5);
+PlayerTextDrawLetterSize(playerid, RegistrationTD[playerid][6], 0.600000, 2.000000);
+PlayerTextDrawTextSize(playerid, RegistrationTD[playerid][6], 81.000000, 83.000000);
+PlayerTextDrawSetOutline(playerid, RegistrationTD[playerid][6], 0);
+PlayerTextDrawSetShadow(playerid, RegistrationTD[playerid][6], 0);
+PlayerTextDrawAlignment(playerid, RegistrationTD[playerid][6], 1);
+PlayerTextDrawColor(playerid, RegistrationTD[playerid][6], -1);
+PlayerTextDrawBackgroundColor(playerid, RegistrationTD[playerid][6], 125);
+PlayerTextDrawBoxColor(playerid, RegistrationTD[playerid][6], 0);
+PlayerTextDrawUseBox(playerid, RegistrationTD[playerid][6], 0);
+PlayerTextDrawSetProportional(playerid, RegistrationTD[playerid][6], 1);
+PlayerTextDrawSetSelectable(playerid, RegistrationTD[playerid][6], 0);
+PlayerTextDrawSetPreviewModel(playerid, RegistrationTD[playerid][6], 0);
+PlayerTextDrawSetPreviewRot(playerid, RegistrationTD[playerid][6], -12.000000, 0.000000, -2.000000, 0.899999);
+PlayerTextDrawSetPreviewVehCol(playerid, RegistrationTD[playerid][6], 6, 1);
+}
+forward ShowRegistration(playerid);
+public ShowRegistration(playerid)
+{
+	for( new i = 0; i < 7; i ++)
+	{
+		PlayerTextDrawShow(playerid, RegistrationTD[playerid][i]);
+	}
+}
+stock ShowRegistrationMenu(playerid, bool:show)
+{
+	if(show == true)
+	{
+		Registration_TD(playerid);
+		SetTimerEx("ShowRegistration", 200, false, "d", playerid);
+        SetPVarInt(playerid, "Registration", 1);
+
+		for( new i = 0; i < 7; i ++)
+		{
+			PlayerTextDrawShow(playerid, RegistrationTD[playerid][i]);
+			SelectTextDraw(playerid, 0xFF0000FF);
+		}
+	}
+	else if(show == false)
+	{
+	    DeletePVar(playerid, "Registration");
+		for( new i = 0; i < 7; i ++)
+		{
+			PlayerTextDrawHide(playerid, RegistrationTD[playerid][i]);
+			PlayerTextDrawDestroy(playerid, RegistrationTD[playerid][i]);
+			RegistrationTD[playerid][i] = PlayerText:INVALID_TEXT_DRAW;
+			CancelSelectTextDraw(playerid);
+		}
+	}
+}
 //phone main screen
 stock ShowLock(playerid)
 {
@@ -9434,6 +9574,10 @@ ShowDialogToPlayer(playerid, dialogid)
 		case DIALOG_GENDER:
 		{
 		    ShowPlayerDialog(playerid, DIALOG_GENDER, DIALOG_STYLE_LIST, ""SVRCLR"Gender", "Male\nFemale", "Select", "");
+		}
+		case DIALOG_SKIN:
+		{
+	   		ShowPlayerDialog(playerid, DIALOG_SKIN, DIALOG_STYLE_INPUT, ""SVRCLR"SKIN", ""WHITE"What skin would you like your character to be (Between 1-311 yeas old):", "Submit", "Back");
 		}
 		case DIALOG_VOICECHAT:
 		{
@@ -17567,8 +17711,8 @@ public PlayerSpawn(playerid)
 
 			SetPlayerSkin(playerid, PlayerInfo[playerid][pSkin]);
 
-            SetPlayerPos(playerid, 1642.687, -2241.161, 12.995);
-			SetPlayerFacingAngle(playerid, 360.0);
+            SetPlayerPos(playerid, 1659.378906, -2243.642333, 13.531332);
+			SetPlayerFacingAngle(playerid, 175.31);
 			SetPlayerVirtualWorld(playerid, 0);
 			SetPlayerInterior(playerid, 0);
 
@@ -17592,6 +17736,7 @@ public PlayerSpawn(playerid)
 			SCM(playerid, COLOR_BLUE, "[We are well aware of the script in use, please get to know our community before you pass on any judgement.]");
 			SendClientMessage(playerid, COLOR_YELLOW, "And also you're a poor guy, You need to find a job just type /findjob");
 			SMA(COLOR_LIGHTRED, "MGMC:RP AIRLINES: [%s(%d)] has just arrived to the city, welcome him/her through [/g]", GetRPName(playerid), playerid);
+			ShowRegistrationMenu(playerid, false);
 		}
 	}
 }
@@ -18050,6 +18195,11 @@ public SecondTimer()
 					SendMessage(i, COLOR_GREY, "You fall unconcious due to thirst.");
      				SetPlayerHealth(i, 0);
 				}
+			}
+			if(PlayerInfo[i][pSetup])
+			{
+                PlayerTextDrawSetPreviewModel(i, RegistrationTD[i][6], GetPlayerSkinScript(i));
+	            PlayerTextDrawShow(i, RegistrationTD[i][6]);
 			}
             new Float:health, Float:armour;
 			format(string, sizeof(string), "%d", GetHealth(i));
@@ -22256,7 +22406,10 @@ public OnQueryFinished(threadid, extraid)
         	        	} else {
         	        	    SM(extraid, COLOR_WHITE, "Welcome back to "SVRCLR""SERVER_NAME""WHITE". You have logged in as a level %i player.", PlayerInfo[extraid][pLevel]);
         	        	}
-        	        	SM(extraid, COLOR_WHITE, "Press ESC to continue Your RP");
+        	        	new hour, minute, second;
+        	        	gettime(hour, minute, second);
+        	        	SM(extraid, COLOR_YELLOW, "The time now is %02d:%02d", hour, minute);
+        	        	SM(extraid, COLOR_WHITE, "[Device Detector]: You have Login via %s", IsPlayerAndroid(extraid) ? ("Mobile") : ("PC"));
 					    StopAudioStreamForPlayer(extraid);
 					}
 					if(PlayerInfo[extraid][pFaction] >= 0 && FactionInfo[PlayerInfo[extraid][pFaction]][fType] == FACTION_NONE)
@@ -35471,10 +35624,18 @@ public OnPlayerSpawn(playerid)
 	    	PlayerInfo[playerid][pTutorial] = 0;
 		}
 
-		SetPlayerPos(playerid, 1456.410888, -1721.856567, -24.590217);
+		SetPlayerPos(playerid, 1940.1460, 1911.0525, 3001.8162);//kittisanamkitti
+		SetPlayerFacingAngle(playerid, 180.2150);
+		
+		ShowRegistrationMenu(playerid, true);
+		SetPlayerSkin(playerid, 0);
+
+		SetPlayerCameraPos(playerid,1939.488891,1904.130859,3003.056152);
+        SetPlayerCameraLookAt(playerid,1939.828857,1911.961181,3002.576171);
+
 		TogglePlayerControllable(playerid, false);
 
-		ShowDialogToPlayer(playerid, DIALOG_GENDER);
+		//ShowDialogToPlayer(playerid, DIALOG_GENDER);
 
 		InsideTut[playerid] = 0;
 		SetPlayerVirtualWorld(playerid, 0);
@@ -36870,6 +37031,30 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 		PlayerTextDrawHide(playerid, PortableRadioTD[playerid][3]);
 		PlayerTextDrawHide(playerid, PortableRadioTD[playerid][4]);
 		CancelSelectTextDraw(playerid);
+	}
+	if(playertextid == RegistrationTD[playerid][2])
+	{
+        ShowDialogToPlayer(playerid, DIALOG_AGE);
+	}
+	if(playertextid == RegistrationTD[playerid][3])
+	{
+        ShowDialogToPlayer(playerid, DIALOG_GENDER);
+	}
+	if(playertextid == RegistrationTD[playerid][5])
+	{
+        ShowDialogToPlayer(playerid, DIALOG_SKIN);
+	}
+	if(playertextid == RegistrationTD[playerid][1])
+	{
+            if(PlayerInfo[playerid][pAge] > 0 && PlayerInfo[playerid][pGender] > 0)
+            {
+                PlayerInfo[playerid][pTutorial] = 1;
+				PlayerInfo[playerid][pTutorialTimer] = SetTimerEx("PlayerSpawn", 3000, false, "ii", playerid);
+			}
+			else
+			{
+				  SCM(playerid, COLOR_LIGHTRED, "[System]: "GREY"Specify gender & age to proceed");
+			}
 	}
 	//PHONETD
     if(playertextid == HOMESCREENTD[playerid][29])
@@ -44594,19 +44779,52 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	            {
 	                PlayerInfo[playerid][pGender] = 1;
 	                PlayerInfo[playerid][pSkin] = 299;
-	                SCM(playerid, COLOR_LIGHTRED, "Alright, so you're a Male. Please enter the approximate age of your character.");
+	                SCM(playerid, COLOR_LIGHTRED, "[System]: "WHITE"You have choosen you're character a Male.");
 				}
 				else if(listitem == 1)
 				{
 	                PlayerInfo[playerid][pGender] = 2;
 	                PlayerInfo[playerid][pSkin] = 12;
-	                SCM(playerid, COLOR_LIGHTRED, "Alright, so you're a Female. Please enter the approximate age of your character.");
+	                SCM(playerid, COLOR_LIGHTRED, "[System]: "WHITE"You have choosen you're character a Female");
 				}
-		        ShowDialogToPlayer(playerid, DIALOG_AGE);
+		        //ShowDialogToPlayer(playerid, DIALOG_AGE);
 	        }
 	        else
 	        {
 	            ShowDialogToPlayer(playerid, DIALOG_GENDER);
+			}
+	    }
+        case DIALOG_SKIN:
+	    {
+	        if(response)
+	        {
+	            new skinid;
+
+                if(sscanf(inputtext, "i", skinid))
+	            {
+				    ShowDialogToPlayer(playerid, DIALOG_SKIN);
+				    SCM(playerid, COLOR_SYNTAX, "[skinid]");
+	            }
+	            if(!(0 <= skinid <= 311) || (265 <= skinid <= 267) || (274 <= skinid <= 288) || (300 <= skinid <= 302) || (306 <= skinid <= 311))
+				{
+					 SCM(playerid, COLOR_SYNTAX, "You are not allowed to use that skin as it is either invalid or faction reserved.");
+                     return ShowDialogToPlayer(playerid, DIALOG_SKIN);
+				}
+	            if(!(1 <= skinid <= 311))
+	            {
+	                ShowDialogToPlayer(playerid, DIALOG_SKIN);
+				    SCM(playerid, COLOR_SYNTAX, "Invalid skin specified. (1-311)");
+				    return 1;
+	            }
+
+	            PlayerInfo[playerid][pSkin] = skinid;
+	            SetPlayerSkin(playerid, skinid);
+
+                SM(playerid, COLOR_LIGHTRED, "[System]: "WHITE"You have choosen you're character skin to %i.", PlayerInfo[playerid][pSkin]);
+	        }
+	        else
+	        {
+             ShowDialogToPlayer(playerid, DIALOG_SKIN);
 			}
 	    }
 	    case DIALOG_AGE:
@@ -44625,8 +44843,8 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	            PlayerInfo[playerid][pAge] = age;
 	            PlayerInfo[playerid][pReferralUID] = 0;
 
-	            SM(playerid, COLOR_LIGHTRED, "Alright, so you're %s and %i years old. Now you will need to pick a referrer.", (PlayerInfo[playerid][pGender] == 2) ? ("Female") : ("Male"), age);
-	            ShowDialogToPlayer(playerid, DIALOG_REFERRAL);
+	            SM(playerid, COLOR_LIGHTRED, "[System]: "WHITE"You have choosen %i years old for your character.", age);
+	            //ShowDialogToPlayer(playerid, DIALOG_REFERRAL);
 	        }
 	        else
 	        {
