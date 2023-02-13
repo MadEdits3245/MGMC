@@ -596,6 +596,7 @@ new airplane;
 new gScriptObject[MAX_OBJECTS char];
 
 new zone_paintball[2], area_paintball[2];
+new area_greenzone[4], zone_greenzone[4];
 new pbNext;
 
 new Border3;
@@ -684,6 +685,8 @@ new PlayerText:PlayerstatTD[MAX_PLAYERS][1];
 new PlayerText:AtmTD[MAX_PLAYERS][8];
 new PlayerText:VehPanelTD[MAX_PLAYERS][16];
 new PlayerText:RegistrationTD[MAX_PLAYERS][7];
+new PlayerText:WarningTD[MAX_PLAYERS][6];
+new PlayerText:ClotheTD[MAX_PLAYERS][7];
 
 new CITYHALL;
 new PAWNSHOP;
@@ -1405,6 +1408,8 @@ enum pEnum
 	pConnectTime,
 	pInsideRental,
 	pBank,
+	pOutfit,
+	pTempSkin,
 	pGTAV,
  	pPaycheck,
 	pLevel,
@@ -2447,6 +2452,26 @@ new vehicleColors[MAX_VEHICLES][2];
 new bool:chattingWith[MAX_PLAYERS][MAX_PLAYERS char];
 
 // ---------------------------------------
+new const g_MaleSkins[184] = {
+	1, 2, 3, 4, 5, 6, 7, 8, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+	30, 32, 33, 34, 35, 36, 37, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 57, 58, 59, 60,
+	61, 62, 66, 68, 72, 73, 78, 79, 80, 81, 82, 83, 84, 94, 95, 96, 97, 98, 99, 100, 101, 102,
+	103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120,
+	121, 122, 123, 124, 125, 126, 127, 128, 132, 133, 134, 135, 136, 137, 142, 143, 144, 146,
+	147, 153, 154, 155, 156, 158, 159, 160, 161, 162, 167, 168, 170, 171, 173, 174, 175, 176,
+	177, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 200, 202, 203, 204, 206,
+	208, 209, 210, 212, 213, 220, 221, 222, 223, 228, 229, 230, 234, 235, 236, 239, 240,
+	241, 242, 247, 248, 249, 250, 253, 254, 255, 258, 259, 260, 261, 262, 268, 272, 273, 289,
+	290, 291, 292, 293, 294, 295, 296, 297, 299
+};
+
+new const g_FemaleSkins[77] = {
+	9, 10, 11, 12, 13, 31, 38, 39, 40, 41, 53, 54, 55, 56, 63, 64, 65, 69, 75, 76, 77, 85, 88,
+	89, 90, 91, 92, 93, 129, 130, 131, 138, 140, 141, 145, 148, 150, 151, 152, 157, 169, 178,
+	190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 201, 205, 207, 211, 214, 215, 216, 219,
+	224, 225, 226, 231, 232, 233, 237, 238, 243, 244, 245, 246, 251, 256, 257, 263, 298
+};
+
 new const vehicleNames[212][] = {
     "Landstalker", "Bravura", "Buffalo", "Linerunner", "Perrenial", "Sentinel", "Dumper", "Firetruck", "Trashmaster",
     "Stretch", "Manana", "Infernus", "Voodoo", "Pony", "Mule", "Cheetah", "Ambulance", "Leviathan", "Moonbeam",
@@ -8615,6 +8640,28 @@ stock ShowRegistrationMenu(playerid, bool:show)
 			CancelSelectTextDraw(playerid);
 		}
 	}
+}
+
+ShowWarningTD(playerid)
+{
+   PlayerTextDrawShow(playerid, WarningTD[playerid][0]);
+   PlayerTextDrawShow(playerid, WarningTD[playerid][1]);
+   PlayerTextDrawShow(playerid, WarningTD[playerid][2]);
+   PlayerTextDrawShow(playerid, WarningTD[playerid][3]);
+   PlayerTextDrawShow(playerid, WarningTD[playerid][4]);
+   PlayerTextDrawShow(playerid, WarningTD[playerid][5]);
+   return 1;
+}
+
+HideWarning(playerid)
+{
+   PlayerTextDrawHide(playerid, WarningTD[playerid][0]);
+   PlayerTextDrawHide(playerid, WarningTD[playerid][1]);
+   PlayerTextDrawHide(playerid, WarningTD[playerid][2]);
+   PlayerTextDrawHide(playerid, WarningTD[playerid][3]);
+   PlayerTextDrawHide(playerid, WarningTD[playerid][4]);
+   PlayerTextDrawHide(playerid, WarningTD[playerid][5]);
+   return 1;
 }
 //phone main screen
 stock ShowLock(playerid)
@@ -23788,6 +23835,45 @@ public OnQueryFinished(threadid, extraid)
 	}
 }
 
+ResetClotheSetup(playerid)
+{
+	PlayerInfo[playerid][pOutfit] = 0;
+
+	UpdateClotheSetup(playerid);
+}
+UpdateClotheSetup(playerid)
+{
+	PlayerTextDrawSetPreviewModel(playerid, ClotheTD[playerid][2], GetPlayerSkinScript(playerid));
+	PlayerTextDrawShow(playerid, ClotheTD[playerid][2]);
+
+}
+UpdateClotheSelection(playerid, index)
+{
+	new size;
+
+	if (PlayerInfo[playerid][pGender] == 1) {
+		size = sizeof(g_MaleSkins);
+	} else if (PlayerInfo[playerid][pGender] == 2) {
+		size = sizeof(g_FemaleSkins);
+	}
+
+	if (index < 0) {
+		index = --size;
+	} else if (index >= size) {
+		index = 0;
+	}
+
+	PlayerInfo[playerid][pOutfit] = index;
+
+	if (PlayerInfo[playerid][pGender] == 1) {
+		PlayerInfo[playerid][pSkin] = g_MaleSkins[index];
+	} else if (PlayerInfo[playerid][pGender] == 2) {
+		PlayerInfo[playerid][pSkin] = g_FemaleSkins[index];
+	}
+
+	SetPlayerSkin(playerid, PlayerInfo[playerid][pSkin]);
+}
+
 public OnPlayerClickTextDraw(playerid, Text:clickedid) {
 	// CALLING TD
 	if(clickedid == PICKUP) {
@@ -31814,6 +31900,24 @@ public OnPlayerConnect(playerid)
 	// 	Sniper
 	zone_paintball[1] = GangZoneCreateEx(-2591.2288, -1814.2455, -2178.9082, -1394.5500);
 	area_paintball[1] = CreateDynamicRectangle(-2591.2288, -1814.2455, -2178.9082, -1394.5500);
+	
+		// GREENZONE
+	zone_greenzone[0] = GangZoneCreateEx(1141.7181, -1410.0260, 1257.3652, -1281.1020); // ALLSAINTS
+	area_greenzone[0] = CreateDynamicRectangle(1141.7181, -1410.0260, 1257.3652, -1281.1020); // ALLSAINTS
+
+	zone_greenzone[1] = GangZoneCreateEx(1560.6877, -1827.1387, 1400.1429, -1742.5866); // CITYHALL
+	area_greenzone[1] = CreateDynamicRectangle(1560.6877, -1827.1387, 1400.1429, -1742.5866); // CITYHALL
+
+	zone_greenzone[2] = GangZoneCreateEx(1303.3764, -851.3274, 1372.7999, -925.8069); // PD
+	area_greenzone[2] = CreateDynamicRectangle(1303.3764, -851.3274, 1372.7999, -925.8069); // PD
+
+	zone_greenzone[3] = GangZoneCreateEx(360.4675, -1770.1414, 250.7633, -1858.0473); // MUTHUKE GARAGE
+	area_greenzone[3] = CreateDynamicRectangle(360.4675, -1770.1414, 250.7633, -1858.0473); // MUTHUKE GARAGE
+
+	GangZoneShowForPlayer(playerid, zone_greenzone[0], (0xFF149106FF & ~0xff) + 0xAA);
+	GangZoneShowForPlayer(playerid, zone_greenzone[1], (0xFF149106FF & ~0xff) + 0xAA);
+	GangZoneShowForPlayer(playerid, zone_greenzone[2], (0xFF149106FF & ~0xff) + 0xAA);
+	GangZoneShowForPlayer(playerid, zone_greenzone[3], (0xFF149106FF & ~0xff) + 0xAA);
  //===========meatchopper job==========
 	meatjob[playerid] = 0;
 	onmeat[playerid] = 0;
@@ -33892,6 +33996,193 @@ PlayerTextDrawBoxColor(playerid, VehPanelTD[playerid][15], 200);
 PlayerTextDrawUseBox(playerid, VehPanelTD[playerid][15], 0);
 PlayerTextDrawSetProportional(playerid, VehPanelTD[playerid][15], 1);
 PlayerTextDrawSetSelectable(playerid, VehPanelTD[playerid][15], 0);
+
+    // WARNING TD
+	WarningTD[playerid][0] = CreatePlayerTextDraw(playerid, 531.000000, 187.000000, "ld_beat:chit");
+	PlayerTextDrawFont(playerid, WarningTD[playerid][0], 4);
+	PlayerTextDrawLetterSize(playerid, WarningTD[playerid][0], 0.600000, 2.000000);
+	PlayerTextDrawTextSize(playerid, WarningTD[playerid][0], 7.000000, 9.000000);
+	PlayerTextDrawSetOutline(playerid, WarningTD[playerid][0], 1);
+	PlayerTextDrawSetShadow(playerid, WarningTD[playerid][0], 0);
+	PlayerTextDrawAlignment(playerid, WarningTD[playerid][0], 1);
+	PlayerTextDrawColor(playerid, WarningTD[playerid][0], -65281);
+	PlayerTextDrawBackgroundColor(playerid, WarningTD[playerid][0], 255);
+	PlayerTextDrawBoxColor(playerid, WarningTD[playerid][0], 50);
+	PlayerTextDrawUseBox(playerid, WarningTD[playerid][0], 1);
+	PlayerTextDrawSetProportional(playerid, WarningTD[playerid][0], 1);
+	PlayerTextDrawSetSelectable(playerid, WarningTD[playerid][0], 0);
+
+	WarningTD[playerid][1] = CreatePlayerTextDraw(playerid, 531.000000, 207.000000, "ld_beat:chit");
+	PlayerTextDrawFont(playerid, WarningTD[playerid][1], 4);
+	PlayerTextDrawLetterSize(playerid, WarningTD[playerid][1], 0.600000, 2.000000);
+	PlayerTextDrawTextSize(playerid, WarningTD[playerid][1], 7.000000, 9.000000);
+	PlayerTextDrawSetOutline(playerid, WarningTD[playerid][1], 1);
+	PlayerTextDrawSetShadow(playerid, WarningTD[playerid][1], 0);
+	PlayerTextDrawAlignment(playerid, WarningTD[playerid][1], 1);
+	PlayerTextDrawColor(playerid, WarningTD[playerid][1], -65281);
+	PlayerTextDrawBackgroundColor(playerid, WarningTD[playerid][1], 255);
+	PlayerTextDrawBoxColor(playerid, WarningTD[playerid][1], 50);
+	PlayerTextDrawUseBox(playerid, WarningTD[playerid][1], 1);
+	PlayerTextDrawSetProportional(playerid, WarningTD[playerid][1], 1);
+	PlayerTextDrawSetSelectable(playerid, WarningTD[playerid][1], 0);
+
+	WarningTD[playerid][2] = CreatePlayerTextDraw(playerid, 535.000000, 191.000000, "ld_bum:blkdot");
+	PlayerTextDrawFont(playerid, WarningTD[playerid][2], 4);
+	PlayerTextDrawLetterSize(playerid, WarningTD[playerid][2], 0.600000, 2.000000);
+	PlayerTextDrawTextSize(playerid, WarningTD[playerid][2], -3.000000, 20.500000);
+	PlayerTextDrawSetOutline(playerid, WarningTD[playerid][2], 1);
+	PlayerTextDrawSetShadow(playerid, WarningTD[playerid][2], 0);
+	PlayerTextDrawAlignment(playerid, WarningTD[playerid][2], 1);
+	PlayerTextDrawColor(playerid, WarningTD[playerid][2], -65281);
+	PlayerTextDrawBackgroundColor(playerid, WarningTD[playerid][2], 255);
+	PlayerTextDrawBoxColor(playerid, WarningTD[playerid][2], 50);
+	PlayerTextDrawUseBox(playerid, WarningTD[playerid][2], 1);
+	PlayerTextDrawSetProportional(playerid, WarningTD[playerid][2], 1);
+	PlayerTextDrawSetSelectable(playerid, WarningTD[playerid][2], 0);
+
+	WarningTD[playerid][3] = CreatePlayerTextDraw(playerid, 539.000000, 191.000000, "Warning");
+	PlayerTextDrawFont(playerid, WarningTD[playerid][3], 1);
+	PlayerTextDrawLetterSize(playerid, WarningTD[playerid][3], 0.161999, 0.850000);
+	PlayerTextDrawTextSize(playerid, WarningTD[playerid][3], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, WarningTD[playerid][3], 0);
+	PlayerTextDrawSetShadow(playerid, WarningTD[playerid][3], 0);
+	PlayerTextDrawAlignment(playerid, WarningTD[playerid][3], 1);
+	PlayerTextDrawColor(playerid, WarningTD[playerid][3], -1);
+	PlayerTextDrawBackgroundColor(playerid, WarningTD[playerid][3], 255);
+	PlayerTextDrawBoxColor(playerid, WarningTD[playerid][3], 50);
+	PlayerTextDrawUseBox(playerid, WarningTD[playerid][3], 0);
+	PlayerTextDrawSetProportional(playerid, WarningTD[playerid][3], 1);
+	PlayerTextDrawSetSelectable(playerid, WarningTD[playerid][3], 0);
+
+	WarningTD[playerid][4] = CreatePlayerTextDraw(playerid, 539.000000, 202.000000, "you are in yellow zone");
+	PlayerTextDrawFont(playerid, WarningTD[playerid][4], 1);
+	PlayerTextDrawLetterSize(playerid, WarningTD[playerid][4], 0.128665, 0.849999);
+	PlayerTextDrawTextSize(playerid, WarningTD[playerid][4], 645.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, WarningTD[playerid][4], 0);
+	PlayerTextDrawSetShadow(playerid, WarningTD[playerid][4], 0);
+	PlayerTextDrawAlignment(playerid, WarningTD[playerid][4], 1);
+	PlayerTextDrawColor(playerid, WarningTD[playerid][4], -1);
+	PlayerTextDrawBackgroundColor(playerid, WarningTD[playerid][4], 255);
+	PlayerTextDrawBoxColor(playerid, WarningTD[playerid][4], 0);
+	PlayerTextDrawUseBox(playerid, WarningTD[playerid][4], 1);
+	PlayerTextDrawSetProportional(playerid, WarningTD[playerid][4], 1);
+	PlayerTextDrawSetSelectable(playerid, WarningTD[playerid][4], 0);
+
+	WarningTD[playerid][5] = CreatePlayerTextDraw(playerid, 535.000000, 188.600006, "ld_bum:blkdot");
+	PlayerTextDrawFont(playerid, WarningTD[playerid][5], 4);
+	PlayerTextDrawLetterSize(playerid, WarningTD[playerid][5], 0.600000, 2.000000);
+	PlayerTextDrawTextSize(playerid, WarningTD[playerid][5], 88.500000, 26.000000);
+	PlayerTextDrawSetOutline(playerid, WarningTD[playerid][5], 1);
+	PlayerTextDrawSetShadow(playerid, WarningTD[playerid][5], 0);
+	PlayerTextDrawAlignment(playerid, WarningTD[playerid][5], 1);
+	PlayerTextDrawColor(playerid, WarningTD[playerid][5], 255);
+	PlayerTextDrawBackgroundColor(playerid, WarningTD[playerid][5], 255);
+	PlayerTextDrawBoxColor(playerid, WarningTD[playerid][5], 50);
+	PlayerTextDrawUseBox(playerid, WarningTD[playerid][5], 1);
+	PlayerTextDrawSetProportional(playerid, WarningTD[playerid][5], 1);
+	PlayerTextDrawSetSelectable(playerid, WarningTD[playerid][5], 0);
+
+//CUSTOM CLOTH TD BY MADEDITS
+ClotheTD[playerid][0] = CreatePlayerTextDraw(playerid, 143.000000, 132.000000, "_");
+PlayerTextDrawFont(playerid, ClotheTD[playerid][0], 1);
+PlayerTextDrawLetterSize(playerid, ClotheTD[playerid][0], 0.629166, 17.050090);
+PlayerTextDrawTextSize(playerid, ClotheTD[playerid][0], 140.500000, 131.000000);
+PlayerTextDrawSetOutline(playerid, ClotheTD[playerid][0], 1);
+PlayerTextDrawSetShadow(playerid, ClotheTD[playerid][0], 0);
+PlayerTextDrawAlignment(playerid, ClotheTD[playerid][0], 2);
+PlayerTextDrawColor(playerid, ClotheTD[playerid][0], -1);
+PlayerTextDrawBackgroundColor(playerid, ClotheTD[playerid][0], 255);
+PlayerTextDrawBoxColor(playerid, ClotheTD[playerid][0], -1378294017);
+PlayerTextDrawUseBox(playerid, ClotheTD[playerid][0], 1);
+PlayerTextDrawSetProportional(playerid, ClotheTD[playerid][0], 1);
+PlayerTextDrawSetSelectable(playerid, ClotheTD[playerid][0], 0);
+
+ClotheTD[playerid][1] = CreatePlayerTextDraw(playerid, 143.000000, 142.000000, "_");
+PlayerTextDrawFont(playerid, ClotheTD[playerid][1], 1);
+PlayerTextDrawLetterSize(playerid, ClotheTD[playerid][1], 0.516666, 14.650012);
+PlayerTextDrawTextSize(playerid, ClotheTD[playerid][1], 210.500000, 109.500000);
+PlayerTextDrawSetOutline(playerid, ClotheTD[playerid][1], 1);
+PlayerTextDrawSetShadow(playerid, ClotheTD[playerid][1], 0);
+PlayerTextDrawAlignment(playerid, ClotheTD[playerid][1], 2);
+PlayerTextDrawColor(playerid, ClotheTD[playerid][1], -1);
+PlayerTextDrawBackgroundColor(playerid, ClotheTD[playerid][1], 255);
+PlayerTextDrawBoxColor(playerid, ClotheTD[playerid][1], 255);
+PlayerTextDrawUseBox(playerid, ClotheTD[playerid][1], 1);
+PlayerTextDrawSetProportional(playerid, ClotheTD[playerid][1], 1);
+PlayerTextDrawSetSelectable(playerid, ClotheTD[playerid][1], 0);
+
+ClotheTD[playerid][2] = CreatePlayerTextDraw(playerid, 105.000000, 141.000000, "Preview_Model");
+PlayerTextDrawFont(playerid, ClotheTD[playerid][2], 5);
+PlayerTextDrawLetterSize(playerid, ClotheTD[playerid][2], 0.600000, 2.000000);
+PlayerTextDrawTextSize(playerid, ClotheTD[playerid][2], 74.500000, 101.500000);
+PlayerTextDrawSetOutline(playerid, ClotheTD[playerid][2], 0);
+PlayerTextDrawSetShadow(playerid, ClotheTD[playerid][2], 0);
+PlayerTextDrawAlignment(playerid, ClotheTD[playerid][2], 1);
+PlayerTextDrawColor(playerid, ClotheTD[playerid][2], -1);
+PlayerTextDrawBackgroundColor(playerid, ClotheTD[playerid][2], 125);
+PlayerTextDrawBoxColor(playerid, ClotheTD[playerid][2], 255);
+PlayerTextDrawUseBox(playerid, ClotheTD[playerid][2], 0);
+PlayerTextDrawSetProportional(playerid, ClotheTD[playerid][2], 1);
+PlayerTextDrawSetSelectable(playerid, ClotheTD[playerid][2], 0);
+PlayerTextDrawSetPreviewModel(playerid, ClotheTD[playerid][2], 0);
+PlayerTextDrawSetPreviewRot(playerid, ClotheTD[playerid][2], -15.000000, 0.000000, -7.000000, 1.000000);
+PlayerTextDrawSetPreviewVehCol(playerid, ClotheTD[playerid][2], 1, 1);
+
+ClotheTD[playerid][3] = CreatePlayerTextDraw(playerid, 144.000000, 250.000000, "BUY");
+PlayerTextDrawFont(playerid, ClotheTD[playerid][3], 2);
+PlayerTextDrawLetterSize(playerid, ClotheTD[playerid][3], 0.258332, 1.750000);
+PlayerTextDrawTextSize(playerid, ClotheTD[playerid][3], 15.000000, 44.000000);
+PlayerTextDrawSetOutline(playerid, ClotheTD[playerid][3], 1);
+PlayerTextDrawSetShadow(playerid, ClotheTD[playerid][3], 0);
+PlayerTextDrawAlignment(playerid, ClotheTD[playerid][3], 2);
+PlayerTextDrawColor(playerid, ClotheTD[playerid][3], -1);
+PlayerTextDrawBackgroundColor(playerid, ClotheTD[playerid][3], 255);
+PlayerTextDrawBoxColor(playerid, ClotheTD[playerid][3], 2094792904);
+PlayerTextDrawUseBox(playerid, ClotheTD[playerid][3], 1);
+PlayerTextDrawSetProportional(playerid, ClotheTD[playerid][3], 1);
+PlayerTextDrawSetSelectable(playerid, ClotheTD[playerid][3], 1);
+
+ClotheTD[playerid][4] = CreatePlayerTextDraw(playerid, 174.000000, 244.000000, "ld_beat:right");
+PlayerTextDrawFont(playerid, ClotheTD[playerid][4], 4);
+PlayerTextDrawLetterSize(playerid, ClotheTD[playerid][4], 0.600000, 2.000000);
+PlayerTextDrawTextSize(playerid, ClotheTD[playerid][4], 22.000000, 26.500000);
+PlayerTextDrawSetOutline(playerid, ClotheTD[playerid][4], 1);
+PlayerTextDrawSetShadow(playerid, ClotheTD[playerid][4], 0);
+PlayerTextDrawAlignment(playerid, ClotheTD[playerid][4], 1);
+PlayerTextDrawColor(playerid, ClotheTD[playerid][4], -1);
+PlayerTextDrawBackgroundColor(playerid, ClotheTD[playerid][4], 255);
+PlayerTextDrawBoxColor(playerid, ClotheTD[playerid][4], 50);
+PlayerTextDrawUseBox(playerid, ClotheTD[playerid][4], 1);
+PlayerTextDrawSetProportional(playerid, ClotheTD[playerid][4], 1);
+PlayerTextDrawSetSelectable(playerid, ClotheTD[playerid][4], 1);
+
+ClotheTD[playerid][5] = CreatePlayerTextDraw(playerid, 90.000000, 243.000000, "ld_beat:left");
+PlayerTextDrawFont(playerid, ClotheTD[playerid][5], 4);
+PlayerTextDrawLetterSize(playerid, ClotheTD[playerid][5], 0.600000, 2.000000);
+PlayerTextDrawTextSize(playerid, ClotheTD[playerid][5], 23.000000, 27.500000);
+PlayerTextDrawSetOutline(playerid, ClotheTD[playerid][5], 1);
+PlayerTextDrawSetShadow(playerid, ClotheTD[playerid][5], 0);
+PlayerTextDrawAlignment(playerid, ClotheTD[playerid][5], 1);
+PlayerTextDrawColor(playerid, ClotheTD[playerid][5], -1);
+PlayerTextDrawBackgroundColor(playerid, ClotheTD[playerid][5], 255);
+PlayerTextDrawBoxColor(playerid, ClotheTD[playerid][5], 50);
+PlayerTextDrawUseBox(playerid, ClotheTD[playerid][5], 1);
+PlayerTextDrawSetProportional(playerid, ClotheTD[playerid][5], 1);
+PlayerTextDrawSetSelectable(playerid, ClotheTD[playerid][5], 1);
+
+ClotheTD[playerid][6] = CreatePlayerTextDraw(playerid, 178.000000, 146.000000, "ld_beat:cross");
+PlayerTextDrawFont(playerid, ClotheTD[playerid][6], 4);
+PlayerTextDrawLetterSize(playerid, ClotheTD[playerid][6], 0.600000, 2.000000);
+PlayerTextDrawTextSize(playerid, ClotheTD[playerid][6], 15.500000, 16.500000);
+PlayerTextDrawSetOutline(playerid, ClotheTD[playerid][6], 1);
+PlayerTextDrawSetShadow(playerid, ClotheTD[playerid][6], 0);
+PlayerTextDrawAlignment(playerid, ClotheTD[playerid][6], 1);
+PlayerTextDrawColor(playerid, ClotheTD[playerid][6], -1);
+PlayerTextDrawBackgroundColor(playerid, ClotheTD[playerid][6], 255);
+PlayerTextDrawBoxColor(playerid, ClotheTD[playerid][6], 50);
+PlayerTextDrawUseBox(playerid, ClotheTD[playerid][6], 1);
+PlayerTextDrawSetProportional(playerid, ClotheTD[playerid][6], 1);
+PlayerTextDrawSetSelectable(playerid, ClotheTD[playerid][6], 1);
 	
 	//SPEEDO BY MADEDITS
 SpeedPlayerTD[playerid][0] = CreatePlayerTextDraw(playerid, 291.000000, 393.000000, "LIGHT");
@@ -35914,8 +36205,43 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 	return 1;
 }
 
+public OnPlayerEnterDynamicArea(playerid, areaid)
+{
+new string[2500];
+    if(areaid == area_greenzone[0])
+	{
+       format(string, sizeof(string), "you have ~g~entered ~w~greenzone");
+	   PlayerTextDrawSetString(playerid, WarningTD[playerid][4], string);
+    ShowWarningTD(playerid);
+	   SetTimerEx("HideWarningTD", 5000, false, "i", playerid);
+	}
+	else if(areaid == area_greenzone[1])
+	{
+       format(string, sizeof(string), "you have ~g~entered ~w~greenzone");
+	   PlayerTextDrawSetString(playerid, WarningTD[playerid][4], string);
+    ShowWarningTD(playerid);
+	   SetTimerEx("HideWarningTD", 5000, false, "i", playerid);
+	}
+	else if(areaid == area_greenzone[2])
+	{
+       format(string, sizeof(string), "you have ~g~entered ~w~greenzone");
+	   PlayerTextDrawSetString(playerid, WarningTD[playerid][4], string);
+    ShowWarningTD(playerid);
+	   SetTimerEx("HideWarningTD", 5000, false, "i", playerid);
+	}
+	else if(areaid == area_greenzone[3])
+	{
+       format(string, sizeof(string), "you have ~g~entered ~w~greenzone");
+    PlayerTextDrawSetString(playerid, WarningTD[playerid][4], string);
+    ShowWarningTD(playerid);
+	   SetTimerEx("HideWarningTD", 5000, false, "i", playerid);
+	}
+	return 1;
+}
+
 public OnPlayerLeaveDynamicArea(playerid, areaid)
 {
+new string[2500];
 	if(gettime() - PlayerInfo[playerid][pLastDeath] > 10 && (areaid == area_paintball[0] || areaid == area_paintball[1]))
 	{
 	    if(PlayerInfo[playerid][pPaintball] == 3 || PlayerInfo[playerid][pPaintball] == 4)
@@ -35923,6 +36249,34 @@ public OnPlayerLeaveDynamicArea(playerid, areaid)
 	    	SendClientMessage(playerid, COLOR_RED, "You were poisoned to death for leaving the arena. (Use /exit)");
 	    	SetPlayerHealth(playerid, 0.0);
 		}
+	}
+    else if(areaid == area_greenzone[0])
+	{
+       format(string, sizeof(string), "you have ~r~exited ~w~greenzone");
+       PlayerTextDrawSetString(playerid, WarningTD[playerid][4], string);
+    ShowWarningTD(playerid);
+	   SetTimerEx("HideWarningTD", 5000, false, "i", playerid);
+	}
+	else if(areaid == area_greenzone[1])
+	{
+       format(string, sizeof(string), "you have ~r~exited ~w~greenzone");
+	   PlayerTextDrawSetString(playerid, WarningTD[playerid][4], string);
+    ShowWarningTD(playerid);
+	   SetTimerEx("HideWarningTD", 5000, false, "i", playerid);
+	}
+    else if(areaid == area_greenzone[2])
+	{
+       format(string, sizeof(string), "you have ~r~exited ~w~greenzone");
+	   PlayerTextDrawSetString(playerid, WarningTD[playerid][4], string);
+    ShowWarningTD(playerid);
+	   SetTimerEx("HideWarningTD", 5000, false, "i", playerid);
+	}
+	else if(areaid == area_greenzone[3])
+	{
+       format(string, sizeof(string), "you have ~r~exited ~w~greenzone");
+	   PlayerTextDrawSetString(playerid, WarningTD[playerid][4], string);
+    ShowWarningTD(playerid);
+	   SetTimerEx("HideWarningTD", 5000, false, "i", playerid);
 	}
 	return 1;
 }
@@ -37132,6 +37486,75 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 	{
         callcmd::settings(playerid, "\1");//settings
     }
+   	// CLOTH SHOP
+	if (playertextid == ClotheTD[playerid][5])
+	{
+		UpdateClotheSelection(playerid, PlayerInfo[playerid][pOutfit] - 1);
+		PlayerPlaySound(playerid, 1053, 0.0, 0.0, 0.0);
+		UpdateClotheSetup(playerid);
+	}
+	if (playertextid == ClotheTD[playerid][4]) {
+		UpdateClotheSelection(playerid, PlayerInfo[playerid][pOutfit] + 1);
+		PlayerPlaySound(playerid, 1052, 0.0, 0.0, 0.0);
+		UpdateClotheSetup(playerid);
+	}
+    if (playertextid == ClotheTD[playerid][3])
+	{
+	    new
+			businessid = GetInsideBusiness(playerid);
+
+	    if(businessid >= 0 && BusinessInfo[businessid][bType] == BUSINESS_CLOTHES)
+	    {
+	        if(BusinessInfo[businessid][bProducts] <= 0)
+	        {
+	            return SendClientMessage(playerid, COLOR_GREY, "This business is out of stock.");
+	        }
+	        if(PlayerInfo[playerid][pDonator] == 0 && PlayerInfo[playerid][pCash] < 1000)
+	        {
+	   			for (new i = 0; i < 7; i ++) {
+					PlayerTextDrawHide(playerid, ClotheTD[playerid][i]);
+				}
+		    	CancelSelectTextDraw(playerid);
+	            return SendClientMessage(playerid, COLOR_GREY, "You don't have enough money. You can't buy new clothes.");
+	        }
+			if(PlayerInfo[playerid][pDonator] == 0)
+			{
+			    new price = BusinessInfo[businessid][bPrices][0];
+
+				GivePlayerCash(playerid, -price);
+
+				BusinessInfo[businessid][bCash] += price;
+	        	BusinessInfo[businessid][bProducts]--;
+
+	        	mysql_format(connectionID, queryBuffer, sizeof(queryBuffer), "UPDATE businesses SET cash = %i, products = %i WHERE id = %i", BusinessInfo[businessid][bCash], BusinessInfo[businessid][bProducts], BusinessInfo[businessid][bID]);
+	        	mysql_tquery(connectionID, queryBuffer);
+
+	        	SendProximityMessage(playerid, 20.0, COLOR_PURPLE, "* %s paid %s to the shopkeeper and received a new set of clothes.", GetRPName(playerid), FormatNumber(price));
+	     		SM(playerid, COLOR_WHITE, "You've changed your clothes for $%i.", price);
+	        }
+	        else
+	        {
+	            SendClientMessage(playerid, COLOR_VIP, "VIP Perk: You changed your clothes free of charge.");
+			}
+
+			for (new i = 0; i < 7; i ++) {
+				PlayerTextDrawHide(playerid, ClotheTD[playerid][i]);
+			}
+	    	//SetPlayerSkin(playerid, pData[playerid][pSkin]);
+	    	SetPlayerSkin(playerid, PlayerInfo[playerid][pSkin]);
+	    	SetScriptSkin(playerid, PlayerInfo[playerid][pSkin]);
+	    	CancelSelectTextDraw(playerid);
+	    }
+	}
+	if (playertextid == ClotheTD[playerid][6])
+	{
+		for (new i = 0; i < 7; i ++) {
+			PlayerTextDrawHide(playerid, ClotheTD[playerid][i]);
+		}
+		CancelSelectTextDraw(playerid);
+
+		SetPlayerSkin(playerid, PlayerInfo[playerid][pTempSkin]);
+	}
     //VEHPANEL TD CODES
     if(playertextid == VehPanelTD[playerid][10])
     {
@@ -38383,6 +38806,12 @@ public CasCadeTDAA()
         TextDrawShowForPlayer(i,CasCadeTD[0]);
     }
 }*/
+forward HideWarningTD(playerid);
+public HideWarningTD(playerid)
+{
+ HideWarning(playerid);
+   	return 1;
+}
 
 forward DEATHACTOR(playerid);
 public DEATHACTOR(playerid)
@@ -46232,7 +46661,14 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				    if(listitem == 0)
 					{
 						//ShowDialogToPlayer(playerid, DIALOG_BUYCLOTHES);
-						ShowPlayerSelectionMenu(playerid, MODEL_SELECTION_CLOTHES, "Clothes Shop", clothesShopSkins, sizeof(clothesShopSkins));
+						//ShowPlayerSelectionMenu(playerid, MODEL_SELECTION_CLOTHES, "Clothes Shop", clothesShopSkins, sizeof(clothesShopSkins));
+                        ResetClotheSetup(playerid);
+						SelectTextDraw(playerid, COLOR_AQUA);
+						for (new i = 0; i < 7; i ++) {
+							PlayerTextDrawShow(playerid, ClotheTD[playerid][i]);
+						}
+
+						PlayerInfo[playerid][pTempSkin] = PlayerInfo[playerid][pSkin];
 					}
 					else
 					{
