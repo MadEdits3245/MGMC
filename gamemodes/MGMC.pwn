@@ -377,6 +377,8 @@ new Text:CasCade2;
 new Text:CasCade3;
 new Text:CasCade4;
 
+new PrioText[2500] = "~y~Priority_On_Hold";
+
 //oldcar
 new gLastCar[MAX_PLAYERS];
 
@@ -687,6 +689,11 @@ new PlayerText:VehPanelTD[MAX_PLAYERS][16];
 new PlayerText:RegistrationTD[MAX_PLAYERS][7];
 new PlayerText:WarningTD[MAX_PLAYERS][6];
 new PlayerText:ClotheTD[MAX_PLAYERS][7];
+new PlayerText:TurfTD[MAX_PLAYERS][6];
+new PlayerText:TurfKnockTD[MAX_PLAYERS][3];
+new Text:TurfCountTD[8];
+new Text:AnnounceTD[9];
+new Text:PrioTD[2];
 
 new CITYHALL;
 new PAWNSHOP;
@@ -911,6 +918,47 @@ public pollend(playerid)
 }
 
 // Enums //
+ConvertSecond(time)
+{
+	new mes[9];
+
+	if (time < 60) format(mes, sizeof(mes), "00:%02i", time);
+	else if (time == 60) mes = "01:00";
+	else if (time > 60 && time < 3600)
+	{
+		new Float: minutes = time / 60, seconds = time % 60;
+
+		format(mes, sizeof(mes), "%02.0f:%02i", minutes, seconds);
+	}
+	else if (time == 3600) mes = "01:00:00";
+	else if (time > 3600)
+	{
+		new Float: hours = time / 3600, minutes_int = time % 3600, Float: minutes = minutes_int / 60, seconds = minutes_int % 60;
+
+		format(mes, sizeof(mes), "%02.0f:%02.0f:%02i", hours, minutes, seconds);
+	}
+	return mes;
+}
+
+Formattime(time)
+{
+    new string[50];
+
+   if(3600 <= time <= 86399 && 1 <= time <= 3599)
+   {
+       format(string, sizeof(string), "%02d Hour(s) %02d Minute(s) %02d Second(s)", time / 3600, time / 60, time % 60);
+   }
+
+   return string;
+}
+
+
+FormatTime(time)
+{
+    new string[50];
+    format(string, sizeof(string), "%02d:%02d",time / 60, time % 60);
+    return string;
+}
 
 enum
 {
@@ -976,6 +1024,7 @@ enum
 	DIALOG_BUYAIRCRAFT,
 	DIALOG_SPAWNCAR,
     DIALOG_DESPAWNCAR,
+    DIALOG_NONE,
     DIALOG_FINDCAR,
 	DIALOG_BIZINTERIOR,
 	DIALOG_FACTIONLOCKER,
@@ -992,6 +1041,12 @@ enum
  	DIALOG_VEHICLELOOKUP2,
  	DIALOG_FACTIONPAY1,
  	DIALOG_FACTIONPAY2,
+ 	
+ 		// TURF WAR
+	DIALOG_TURF,
+	DIALOG_TURFID,
+	DIALOG_TURFDFGANG,
+	DIALOG_TURFATTGANG,
 
     DIALOG_PHONE,
 	DIALOG_PHONE_CALL,
@@ -1420,6 +1475,7 @@ enum pEnum
 	pMinutes,
 	pHours,
 	pAdmin,
+	pInfluenced,
 	pJewRobbing,
 	pFleecaRobbing,
 	pHammer,
@@ -1899,6 +1955,19 @@ enum rEnum
 	rHandledBy,
 	rText[128],
 	rTime
+};
+
+enum infEnum
+{
+   iEnabled,
+   iGangid,
+   iTime,
+   iStart,
+   iTurf,
+   iDefGang,
+   iAttGang,
+   iDefGangMembers,
+   iAttGangMembers
 };
 
 enum eventEnum
@@ -2421,6 +2490,7 @@ new gPrisonCells[24];
 new gFires, gFireObjects[MAX_FIRES] = {INVALID_OBJECT_ID, ...}, Float:gFireHealth[MAX_FIRES];
 
 new EventInfo[eventEnum];
+new InfluenceInfo[infEnum];
 new RobberyInfo[robberyEnum];
 new totalDamages[MAX_PLAYERS];
 new DamageData[MAX_PLAYERS][MAX_DAMAGES][e_Damages];
@@ -6605,6 +6675,32 @@ GetAdminDivision(playerid)
 	return division;
 }
 
+GetGangName(gangid)
+{
+	new string[45];
+
+	switch(gangid)
+	{
+		case -1: string = "Police";
+		case 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20: format(string, sizeof(string), "%s", GangInfo[gangid][gName]);
+	}
+
+	return string;
+}
+
+GetGangColor(gangid)
+{
+	new color;
+
+	switch(gangid)
+	{
+         case -1: color = COLOR_BLUE;
+         case 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20: color = GangInfo[gangid][gColor];
+	}
+
+	return color;
+}
+
 GetAdminRank(playerid)
 {
 	new string[35];
@@ -8640,6 +8736,28 @@ stock ShowRegistrationMenu(playerid, bool:show)
 			CancelSelectTextDraw(playerid);
 		}
 	}
+}
+
+ShowTurfTD(playerid)
+{
+   PlayerTextDrawShow(playerid, TurfTD[playerid][0]);
+   PlayerTextDrawShow(playerid, TurfTD[playerid][1]);
+   PlayerTextDrawShow(playerid, TurfTD[playerid][2]);
+   PlayerTextDrawShow(playerid, TurfTD[playerid][3]);
+   PlayerTextDrawShow(playerid, TurfTD[playerid][4]);
+   PlayerTextDrawShow(playerid, TurfTD[playerid][5]);
+   return 1;
+}
+
+HideTurfTD(playerid)
+{
+   PlayerTextDrawHide(playerid, TurfTD[playerid][0]);
+   PlayerTextDrawHide(playerid, TurfTD[playerid][1]);
+   PlayerTextDrawHide(playerid, TurfTD[playerid][2]);
+   PlayerTextDrawHide(playerid, TurfTD[playerid][3]);
+   PlayerTextDrawHide(playerid, TurfTD[playerid][4]);
+   PlayerTextDrawHide(playerid, TurfTD[playerid][5]);
+   return 1;
 }
 
 ShowWarningTD(playerid)
@@ -15236,6 +15354,51 @@ stock TerminateInfo(playerid, reason)
 	        ReloadTurf(i);
 	    }
 	}
+ 	for(new i = 0; i < MAX_TURFS; i ++)
+	{
+		if(TurfInfo[i][tExists] && InfluenceInfo[iTurf] == i)
+		{
+            if(PlayerInfo[playerid][pGang] == InfluenceInfo[iAttGang])
+            {
+			     if(PlayerInfo[playerid][pInfluenced] == 1)
+			     {
+                      InfluenceInfo[iAttGangMembers]--;
+                      PlayerInfo[playerid][pInfluenced] = 0;
+			     }
+		    }
+		    else if(InfluenceInfo[iAttGang] == -1)
+              {
+          		if(IsLawEnforcement(playerid))
+              	{
+                   if(PlayerInfo[playerid][pInfluenced] == 0)
+                   {
+                       InfluenceInfo[iAttGangMembers]--;
+                       PlayerInfo[playerid][pInfluenced] = 1;
+                   }
+              	}
+			  }
+
+			if(PlayerInfo[playerid][pGang] == InfluenceInfo[iDefGang])
+		    {
+                 if(PlayerInfo[playerid][pInfluenced] == 1)
+			     {
+                      InfluenceInfo[iDefGangMembers]--;
+                      PlayerInfo[playerid][pInfluenced] = 0;
+			     }
+			}
+			else if(InfluenceInfo[iDefGang] == -1)
+              {
+    			if(IsLawEnforcement(playerid))
+              	{
+                   if(PlayerInfo[playerid][pInfluenced] == 0)
+                   {
+                       InfluenceInfo[iDefGangMembers]--;
+                       PlayerInfo[playerid][pInfluenced] = 1;
+                   }
+              	}
+			  }
+		}
+	}
 	switch(reason)
 	{
 	    case 0: SendProximityMessage(playerid, 20.0, COLOR_WHITE, "** %s has left the server. (Timeout)", GetRPName(playerid));
@@ -17466,6 +17629,44 @@ SendHelperMessage(color, const text[], {Float,_}:...)
 	return 1;
 }
 
+SendTurfAdminMessage(turfid, color, const text[], {Float,_}:...)
+{
+	static
+  	    args,
+	    str[192];
+
+	if((args = numargs()) <= 3)
+	{
+		SAM(color, text);
+	}
+	else
+	{
+		while(--args >= 3)
+		{
+			#emit LCTRL 	5
+			#emit LOAD.alt 	args
+			#emit SHL.C.alt 2
+			#emit ADD.C 	12
+			#emit ADD
+			#emit LOAD.I
+			#emit PUSH.pri
+		}
+		#emit PUSH.S 	text
+		#emit PUSH.C 	192
+		#emit PUSH.C 	str
+		#emit PUSH.S	8
+		#emit SYSREQ.C 	format
+		#emit LCTRL 	5
+		#emit SCTRL 	4
+
+
+		SAM(color, str);
+
+		#emit RETN
+	}
+	return 1;
+}
+
 SendTurfMessage(turfid, color, const text[], {Float,_}:...)
 {
 	static
@@ -17520,16 +17721,11 @@ getTurftype(tid)
 	switch(id)
 	{
 		case 0: { ret = "Normal"; }
-		case 1: { ret = "Hollow point ammo"; } // hollowpoimt
-		case 2: { ret = "Poison tip ammo"; }// poisontip
-		case 3: { ret = "FMJ ammo"; }// fmj
-		case 4: { ret = "Materials"; } // old weps
-		case 5: { ret = "Traphouse"; }
-		case 6: { ret = "Crackhouse"; }
-		case 7: { ret = "Sales tax"; }
-		case 8: { ret = "Low class weapons"; }
-		case 9: { ret = "Medium class weapons"; }
-		case 10: { ret = "High class weapons"; }
+		case 1: { ret = "Material Turf"; }
+		case 2: { ret = "Drug Turf"; }
+		case 3: { ret = "Income Turf"; }
+		case 4: { ret = "Money Turf"; }
+		case 5: { ret = "Black Market"; }
 	}
 	return ret;
 }
@@ -17828,6 +18024,20 @@ public HidetheMarko(playerid)
 	return 1;
 }
 
+forward HideKnockTD(playerid);
+public HideKnockTD(playerid)
+{
+   foreach(new i : Player)
+   {
+	   if(GetNearbyTurf(i) == InfluenceInfo[iTurf])
+	   {
+           PlayerTextDrawHide(i, TurfKnockTD[i][0]);
+           PlayerTextDrawHide(i, TurfKnockTD[i][1]);
+           PlayerTextDrawHide(i, TurfKnockTD[i][2]);
+       }
+   }
+}
+
 stock Dyuze(playerid, title[], string[], time = 5000)
 {
 	if(PlayerInfo[playerid][pDyuze])
@@ -17957,6 +18167,29 @@ public VehicleUnfreeze(playerid, vehicleid, Float:x, Float:y, Float:z, interior,
 	TogglePlayerControllable(playerid, 1);
 }
 
+forward TeleportPlayerFromTurf(playerid);
+public TeleportPlayerFromTurf(playerid)
+{
+    PlayerInfo[playerid][pInjured] = 0;
+	PlayerInfo[playerid][pHunger] = 100;
+	PlayerInfo[playerid][pHungerTimer] = 0;
+    PlayerInfo[playerid][pThirst] = 100;
+	PlayerInfo[playerid][pThirstTimer] = 0;
+
+	ResetPlayerWeaponsEx(playerid);
+
+    TogglePlayerControllable(playerid, 1);
+	SetPlayerHealth(playerid, 100.0);
+	SetPlayerVirtualWorld(playerid, 0);
+	ClearAnimations(playerid, 1);
+	UpdateDynamic3DTextLabelText(InjuredLabel[playerid], COLOR_DOCTOR, "");
+	SetPlayerPos(playerid, 329.465301, -1803.470581, 4.600659);
+
+	ClearDamages(playerid);
+
+	SM(playerid, COLOR_AQUA, "You have been send to Garage From Turf.");
+}
+
 forward UnfreezePlayer(playerid, Float:x, Float:y, Float:z);
 public UnfreezePlayer(playerid, Float:x, Float:y, Float:z)
 {
@@ -18067,6 +18300,10 @@ public SecondTimer()
 {
 	new hour, minute, boomboxid, string[128];
 	gettime(hour, minute);
+	if(InfluenceInfo[iTime] > 0)
+	{
+	    InfluenceInfo[iTime]--;
+	}
 	foreach(new i : Player)
 	{
   		//SetPlayerTime(i, hour, minute);
@@ -18248,6 +18485,137 @@ public SecondTimer()
                 PlayerTextDrawSetPreviewModel(i, RegistrationTD[i][6], GetPlayerSkinScript(i));
 	            PlayerTextDrawShow(i, RegistrationTD[i][6]);
 			}
+			            if(InfluenceInfo[iEnabled] == 1)
+			{
+             //new gangid = InfluenceInfo[iGangid];
+			 new turfid = GetNearbyTurf(i);
+
+			 new attackinggang = InfluenceInfo[iAttGang];
+  	         new defendinggang = InfluenceInfo[iDefGang];
+	         new attackinggangmembers = InfluenceInfo[iAttGangMembers];
+	         new defendinggangmembers = InfluenceInfo[iDefGangMembers];
+
+
+			 if(turfid == InfluenceInfo[iTurf])
+             {
+     ShowTurfTD(i);
+
+
+				 if(attackinggangmembers > defendinggangmembers)
+			     {
+                     format(string, sizeof(string), "%s", GetGangName(attackinggang));
+                     PlayerTextDrawSetString(i, TurfTD[i][5], string);
+	              // PlayerTextDrawColor(i, TurfTD[i][0], (GetGangColor(attackinggang) & ~0xff) + 0xFF);
+				 }
+			     else if(defendinggangmembers > attackinggangmembers)
+			     {
+				      format(string, sizeof(string), "%s", GetGangName(defendinggang));
+                      PlayerTextDrawSetString(i, TurfTD[i][5], string);
+	                   // PlayerTextDrawColor(i, TurfTD[i][0], (GetGangColor(defendinggang) & ~0xff) + 0xFF);
+				 }
+                 else if(attackinggangmembers == defendinggangmembers)
+			     {
+					 format(string, sizeof(string), "%s", GetGangName(defendinggang));
+                     PlayerTextDrawSetString(i, TurfTD[i][5], string);
+	                // PlayerTextDrawColor(i, TurfTD[i][0], (GetGangColor(defendinggang) & ~0xff) + 0xFF);
+				 }
+			  }
+			  else
+ 	          {
+				 HideTurfTD(i);
+			  }
+ 	        }
+ 	        else
+ 	        {
+               HideTurfTD(i);
+			}
+
+            new turfid = GetNearbyTurf(i);
+
+            if(turfid == InfluenceInfo[iTurf])
+            {
+
+	   	 	    if(InfluenceInfo[iTime] > 0)
+			    {
+			        new time = InfluenceInfo[iTime];
+                    format(string, sizeof(string), "%s", FormatTime(time));
+                    PlayerTextDrawSetString(i, TurfTD[i][2], string);
+                    PlayerTextDrawShow(i, TurfTD[i][2]);
+
+                    format(string, sizeof(string), "%s", TurfInfo[turfid][tName]);
+                    PlayerTextDrawSetString(i, TurfTD[i][4], string);
+                    PlayerTextDrawShow(i, TurfTD[i][4]);
+			    }
+			    else
+			    {
+                   PlayerTextDrawHide(i, TurfTD[i][1]);
+                   PlayerTextDrawHide(i, TurfTD[i][5]);
+                   PlayerTextDrawHide(i, TurfTD[i][3]);
+                   PlayerTextDrawHide(i, TurfTD[i][4]);
+			    }
+			}
+			else
+			{
+                 PlayerTextDrawHide(i, TurfTD[i][1]);
+                 PlayerTextDrawHide(i, TurfTD[i][5]);
+                 PlayerTextDrawHide(i, TurfTD[i][3]);
+                 PlayerTextDrawHide(i, TurfTD[i][4]);
+			}
+
+
+			if(InfluenceInfo[iEnabled] == 1 && PlayerInfo[i][pAdmin])
+			{
+                    if(turfid == InfluenceInfo[iTurf])
+                    {
+							  new attmembers = InfluenceInfo[iAttGangMembers];
+							  new defmembers = InfluenceInfo[iDefGangMembers];
+							  new attackinggang = InfluenceInfo[iAttGang];
+  	                          new defendinggang = InfluenceInfo[iDefGang];
+
+							  format(string, sizeof(string), "%d", attmembers);
+							  TextDrawSetString(TurfCountTD[4], string);
+
+							  format(string, sizeof(string), "%s", GetGangName(attackinggang));
+							  TextDrawSetString(TurfCountTD[6], string);
+
+							  format(string, sizeof(string), "%d", defmembers);
+							  TextDrawSetString(TurfCountTD[5], string);
+
+							  format(string, sizeof(string), "%s", GetGangName(defendinggang));
+							  TextDrawSetString(TurfCountTD[7], string);
+
+							  TextDrawShowForPlayer(i, TurfCountTD[0]);
+							  TextDrawShowForPlayer(i, TurfCountTD[1]);
+							  TextDrawShowForPlayer(i, TurfCountTD[2]);
+							  TextDrawShowForPlayer(i, TurfCountTD[3]);
+							  TextDrawShowForPlayer(i, TurfCountTD[4]);
+							  TextDrawShowForPlayer(i, TurfCountTD[5]);
+							  TextDrawShowForPlayer(i, TurfCountTD[6]);
+							  TextDrawShowForPlayer(i, TurfCountTD[7]);
+					}
+					else
+					{
+                         TextDrawHideForPlayer(i, TurfCountTD[0]);
+							  TextDrawHideForPlayer(i, TurfCountTD[1]);
+							  TextDrawHideForPlayer(i, TurfCountTD[2]);
+							  TextDrawHideForPlayer(i, TurfCountTD[3]);
+							  TextDrawHideForPlayer(i, TurfCountTD[4]);
+							  TextDrawHideForPlayer(i, TurfCountTD[5]);
+							  TextDrawHideForPlayer(i, TurfCountTD[6]);
+							  TextDrawHideForPlayer(i, TurfCountTD[7]);
+					}
+			}
+            else
+					{
+                         TextDrawHideForPlayer(i, TurfCountTD[0]);
+							  TextDrawHideForPlayer(i, TurfCountTD[1]);
+							  TextDrawHideForPlayer(i, TurfCountTD[2]);
+							  TextDrawHideForPlayer(i, TurfCountTD[3]);
+							  TextDrawHideForPlayer(i, TurfCountTD[4]);
+							  TextDrawHideForPlayer(i, TurfCountTD[5]);
+							  TextDrawHideForPlayer(i, TurfCountTD[6]);
+							  TextDrawHideForPlayer(i, TurfCountTD[7]);
+					}
             new Float:health, Float:armour;
 			format(string, sizeof(string), "%d", GetHealth(i));
             PlayerTextDrawSetString(i, HungerTD[i][14], string);
@@ -22456,7 +22824,7 @@ public OnQueryFinished(threadid, extraid)
         	        	new hour, minute, second;
         	        	gettime(hour, minute, second);
         	        	SM(extraid, COLOR_YELLOW, "The time now is %02d:%02d", hour, minute);
-        	        	SM(extraid, COLOR_WHITE, "[Device Detector]: You have Login via %s", IsPlayerAndroid(extraid) ? ("Mobile") : ("PC"));
+        	        	SM(extraid, COLOR_WHITE, "[Client Detector]: You have Login via %s", IsPlayerAndroid(extraid) ? ("Mobile") : ("PC"));
 					    StopAudioStreamForPlayer(extraid);
 					}
 					if(PlayerInfo[extraid][pFaction] >= 0 && FactionInfo[PlayerInfo[extraid][pFaction]][fType] == FACTION_NONE)
@@ -24516,7 +24884,7 @@ public OnGameModeInit()
 	TextDrawSetOutline(CasCade4, 1);
 	TextDrawSetProportional(CasCade4, 1);
 	
-	    NoticeTxtdraw[0] = TextDrawCreate(186.000000, 181.000000, "Box");
+    NoticeTxtdraw[0] = TextDrawCreate(186.000000, 181.000000, "Box");
 	TextDrawBackgroundColor(NoticeTxtdraw[0], 0);
 	TextDrawFont(NoticeTxtdraw[0], 1);
 	TextDrawLetterSize(NoticeTxtdraw[0], 1.590000, 7.700005);
@@ -24574,132 +24942,146 @@ public OnGameModeInit()
 	TextDrawSetSelectable(CRPTD, 0);
 	SetTimer("TDUpdates", 8000, true);
 
-	CasCadeIntro[0] = TextDrawCreate(268.000000, 108.000000, "~y~Ma~w~llu~b~Ga~w~mers");
-	TextDrawFont(CasCadeIntro[0], 0);
-	TextDrawLetterSize(CasCadeIntro[0], 0.908333, 2.999999);
-	TextDrawTextSize(CasCadeIntro[0], 400.000000, 17.000000);
-	TextDrawSetOutline(CasCadeIntro[0], 1);
-	TextDrawSetShadow(CasCadeIntro[0], 0);
-	TextDrawAlignment(CasCadeIntro[0], 1);
-	TextDrawColor(CasCadeIntro[0], -1);
-	TextDrawBackgroundColor(CasCadeIntro[0], 255);
-	TextDrawBoxColor(CasCadeIntro[0], 50);
-	TextDrawUseBox(CasCadeIntro[0], 0);
-	TextDrawSetProportional(CasCadeIntro[0], 1);
-	TextDrawSetSelectable(CasCadeIntro[0], 0);
+TurfCountTD[0] = TextDrawCreate(478.000000, 238.000000, "ld_bum:blkdot");
+TextDrawFont(TurfCountTD[0], 4);
+TextDrawLetterSize(TurfCountTD[0], 0.600000, 2.000000);
+TextDrawTextSize(TurfCountTD[0], 28.000000, 25.000000);
+TextDrawSetOutline(TurfCountTD[0], 1);
+TextDrawSetShadow(TurfCountTD[0], 0);
+TextDrawAlignment(TurfCountTD[0], 1);
+TextDrawColor(TurfCountTD[0], -3841);
+TextDrawBackgroundColor(TurfCountTD[0], 255);
+TextDrawBoxColor(TurfCountTD[0], 50);
+TextDrawUseBox(TurfCountTD[0], 1);
+TextDrawSetProportional(TurfCountTD[0], 1);
+TextDrawSetSelectable(TurfCountTD[0], 0);
 
-	CasCadeIntro[1] = TextDrawCreate(334.000000, 131.000000, "~y~Mobile Community");
-	TextDrawFont(CasCadeIntro[1], 0);
-	TextDrawLetterSize(CasCadeIntro[1], 0.787500, 2.249999);
-	TextDrawTextSize(CasCadeIntro[1], 400.000000, 17.000000);
-	TextDrawSetOutline(CasCadeIntro[1], 1);
-	TextDrawSetShadow(CasCadeIntro[1], 0);
-	TextDrawAlignment(CasCadeIntro[1], 1);
-	TextDrawColor(CasCadeIntro[1], -1);
-	TextDrawBackgroundColor(CasCadeIntro[1], 255);
-	TextDrawBoxColor(CasCadeIntro[1], 50);
-	TextDrawUseBox(CasCadeIntro[1], 0);
-	TextDrawSetProportional(CasCadeIntro[1], 1);
-	TextDrawSetSelectable(CasCadeIntro[1], 0);
+TurfCountTD[1] = TextDrawCreate(480.000000, 241.000000, "ld_bum:blkdot");
+TextDrawFont(TurfCountTD[1], 4);
+TextDrawLetterSize(TurfCountTD[1], 0.600000, 2.000000);
+TextDrawTextSize(TurfCountTD[1], 24.500000, 19.000000);
+TextDrawSetOutline(TurfCountTD[1], 1);
+TextDrawSetShadow(TurfCountTD[1], 0);
+TextDrawAlignment(TurfCountTD[1], 1);
+TextDrawColor(TurfCountTD[1], 16777215);
+TextDrawBackgroundColor(TurfCountTD[1], 255);
+TextDrawBoxColor(TurfCountTD[1], 50);
+TextDrawUseBox(TurfCountTD[1], 1);
+TextDrawSetProportional(TurfCountTD[1], 1);
+TextDrawSetSelectable(TurfCountTD[1], 0);
 
-	CasCadeIntro[2] = TextDrawCreate(282.000000, 167.000000, "~r~Role~w~play");
-	TextDrawFont(CasCadeIntro[2], 0);
-	TextDrawLetterSize(CasCadeIntro[2], 0.775000, 1.850000);
-	TextDrawTextSize(CasCadeIntro[2], 400.000000, 17.000000);
-	TextDrawSetOutline(CasCadeIntro[2], 1);
-	TextDrawSetShadow(CasCadeIntro[2], 0);
-	TextDrawAlignment(CasCadeIntro[2], 1);
-	TextDrawColor(CasCadeIntro[2], -1);
-	TextDrawBackgroundColor(CasCadeIntro[2], 255);
-	TextDrawBoxColor(CasCadeIntro[2], 50);
-	TextDrawUseBox(CasCadeIntro[2], 0);
-	TextDrawSetProportional(CasCadeIntro[2], 1);
-	TextDrawSetSelectable(CasCadeIntro[2], 0);
+TurfCountTD[2] = TextDrawCreate(478.000000, 270.000000, "ld_bum:blkdot");
+TextDrawFont(TurfCountTD[2], 4);
+TextDrawLetterSize(TurfCountTD[2], 0.600000, 2.000000);
+TextDrawTextSize(TurfCountTD[2], 28.000000, 25.000000);
+TextDrawSetOutline(TurfCountTD[2], 1);
+TextDrawSetShadow(TurfCountTD[2], 0);
+TextDrawAlignment(TurfCountTD[2], 1);
+TextDrawColor(TurfCountTD[2], -3841);
+TextDrawBackgroundColor(TurfCountTD[2], 255);
+TextDrawBoxColor(TurfCountTD[2], 50);
+TextDrawUseBox(TurfCountTD[2], 1);
+TextDrawSetProportional(TurfCountTD[2], 1);
+TextDrawSetSelectable(TurfCountTD[2], 0);
 
-	CasCadeIntro[3] = TextDrawCreate(267.000000, 355.000000, "ld_pool:ball");
-	TextDrawFont(CasCadeIntro[3], 4);
-	TextDrawLetterSize(CasCadeIntro[3], 0.600000, 2.000000);
-	TextDrawTextSize(CasCadeIntro[3], 17.000000, 17.000000);
-	TextDrawSetOutline(CasCadeIntro[3], 1);
-	TextDrawSetShadow(CasCadeIntro[3], 0);
-	TextDrawAlignment(CasCadeIntro[3], 1);
-	TextDrawColor(CasCadeIntro[3], -1);
-	TextDrawBackgroundColor(CasCadeIntro[3], 255);
-	TextDrawBoxColor(CasCadeIntro[3], 50);
-	TextDrawUseBox(CasCadeIntro[3], 1);
-	TextDrawSetProportional(CasCadeIntro[3], 1);
-	TextDrawSetSelectable(CasCadeIntro[3], 0);
+TurfCountTD[3] = TextDrawCreate(480.000000, 273.000000, "ld_bum:blkdot");
+TextDrawFont(TurfCountTD[3], 4);
+TextDrawLetterSize(TurfCountTD[3], 0.600000, 2.000000);
+TextDrawTextSize(TurfCountTD[3], 24.000000, 19.000000);
+TextDrawSetOutline(TurfCountTD[3], 1);
+TextDrawSetShadow(TurfCountTD[3], 0);
+TextDrawAlignment(TurfCountTD[3], 1);
+TextDrawColor(TurfCountTD[3], 16777215);
+TextDrawBackgroundColor(TurfCountTD[3], 255);
+TextDrawBoxColor(TurfCountTD[3], 50);
+TextDrawUseBox(TurfCountTD[3], 1);
+TextDrawSetProportional(TurfCountTD[3], 1);
+TextDrawSetSelectable(TurfCountTD[3], 0);
 
-	CasCadeIntro[4] = TextDrawCreate(273.000000, 354.000000, "!");
-	TextDrawFont(CasCadeIntro[4], 1);
-	TextDrawLetterSize(CasCadeIntro[4], 0.600000, 2.000000);
-	TextDrawTextSize(CasCadeIntro[4], 400.000000, 17.000000);
-	TextDrawSetOutline(CasCadeIntro[4], 1);
-	TextDrawSetShadow(CasCadeIntro[4], 0);
-	TextDrawAlignment(CasCadeIntro[4], 1);
-	TextDrawColor(CasCadeIntro[4], -1);
-	TextDrawBackgroundColor(CasCadeIntro[4], 255);
-	TextDrawBoxColor(CasCadeIntro[4], 50);
-	TextDrawUseBox(CasCadeIntro[4], 0);
-	TextDrawSetProportional(CasCadeIntro[4], 1);
-	TextDrawSetSelectable(CasCadeIntro[4], 0);
+TurfCountTD[4] = TextDrawCreate(485.000000, 240.000000, "10");
+TextDrawFont(TurfCountTD[4], 2);
+TextDrawLetterSize(TurfCountTD[4], 0.358333, 1.850000);
+TextDrawTextSize(TurfCountTD[4], 400.000000, 17.000000);
+TextDrawSetOutline(TurfCountTD[4], 0);
+TextDrawSetShadow(TurfCountTD[4], 0);
+TextDrawAlignment(TurfCountTD[4], 1);
+TextDrawColor(TurfCountTD[4], -16776961);
+TextDrawBackgroundColor(TurfCountTD[4], 255);
+TextDrawBoxColor(TurfCountTD[4], 50);
+TextDrawUseBox(TurfCountTD[4], 0);
+TextDrawSetProportional(TurfCountTD[4], 1);
+TextDrawSetSelectable(TurfCountTD[4], 0);
 
-	CasCadeIntro[5] = TextDrawCreate(286.000000, 353.000000, "~r~C~w~onnecting.");
-	TextDrawFont(CasCadeIntro[5], 0);
-	TextDrawLetterSize(CasCadeIntro[5], 0.775000, 1.850000);
-	TextDrawTextSize(CasCadeIntro[5], 400.000000, 17.000000);
-	TextDrawSetOutline(CasCadeIntro[5], 1);
-	TextDrawSetShadow(CasCadeIntro[5], 0);
-	TextDrawAlignment(CasCadeIntro[5], 1);
-	TextDrawColor(CasCadeIntro[5], -1);
-	TextDrawBackgroundColor(CasCadeIntro[5], 255);
-	TextDrawBoxColor(CasCadeIntro[5], 50);
-	TextDrawUseBox(CasCadeIntro[5], 0);
-	TextDrawSetProportional(CasCadeIntro[5], 1);
-	TextDrawSetSelectable(CasCadeIntro[5], 0);
+TurfCountTD[5] = TextDrawCreate(485.000000, 273.000000, "10");
+TextDrawFont(TurfCountTD[5], 2);
+TextDrawLetterSize(TurfCountTD[5], 0.358333, 1.850000);
+TextDrawTextSize(TurfCountTD[5], 400.000000, 17.000000);
+TextDrawSetOutline(TurfCountTD[5], 0);
+TextDrawSetShadow(TurfCountTD[5], 0);
+TextDrawAlignment(TurfCountTD[5], 1);
+TextDrawColor(TurfCountTD[5], -16776961);
+TextDrawBackgroundColor(TurfCountTD[5], 255);
+TextDrawBoxColor(TurfCountTD[5], 50);
+TextDrawUseBox(TurfCountTD[5], 0);
+TextDrawSetProportional(TurfCountTD[5], 1);
+TextDrawSetSelectable(TurfCountTD[5], 0);
 
-	CasCadeIntro[6] = TextDrawCreate(286.000000, 353.000000, "~b~C~w~onnecting..");
-	TextDrawFont(CasCadeIntro[6], 0);
-	TextDrawLetterSize(CasCadeIntro[6], 0.775000, 1.850000);
-	TextDrawTextSize(CasCadeIntro[6], 400.000000, 17.000000);
-	TextDrawSetOutline(CasCadeIntro[6], 1);
-	TextDrawSetShadow(CasCadeIntro[6], 0);
-	TextDrawAlignment(CasCadeIntro[6], 1);
-	TextDrawColor(CasCadeIntro[6], -1);
-	TextDrawBackgroundColor(CasCadeIntro[6], 255);
-	TextDrawBoxColor(CasCadeIntro[6], 50);
-	TextDrawUseBox(CasCadeIntro[6], 0);
-	TextDrawSetProportional(CasCadeIntro[6], 1);
-	TextDrawSetSelectable(CasCadeIntro[6], 0);
+TurfCountTD[6] = TextDrawCreate(589.000000, 242.000000, "EASTSIDE BALLAS");
+TextDrawFont(TurfCountTD[6], 2);
+TextDrawLetterSize(TurfCountTD[6], 0.195833, 1.550000);
+TextDrawTextSize(TurfCountTD[6], 400.000000, 17.000000);
+TextDrawSetOutline(TurfCountTD[6], 1);
+TextDrawSetShadow(TurfCountTD[6], 0);
+TextDrawAlignment(TurfCountTD[6], 3);
+TextDrawColor(TurfCountTD[6], -1);
+TextDrawBackgroundColor(TurfCountTD[6], 255);
+TextDrawBoxColor(TurfCountTD[6], 50);
+TextDrawUseBox(TurfCountTD[6], 0);
+TextDrawSetProportional(TurfCountTD[6], 1);
+TextDrawSetSelectable(TurfCountTD[6], 0);
 
-	CasCadeIntro[7] = TextDrawCreate(284.000000, 353.000000, "~r~C~w~onnecting...");
-	TextDrawFont(CasCadeIntro[7], 0);
-	TextDrawLetterSize(CasCadeIntro[7], 0.737500, 1.900000);
-	TextDrawTextSize(CasCadeIntro[7], 400.000000, 17.000000);
-	TextDrawSetOutline(CasCadeIntro[7], 1);
-	TextDrawSetShadow(CasCadeIntro[7], 0);
-	TextDrawAlignment(CasCadeIntro[7], 1);
-	TextDrawColor(CasCadeIntro[7], -1);
-	TextDrawBackgroundColor(CasCadeIntro[7], 255);
-	TextDrawBoxColor(CasCadeIntro[7], 50);
-	TextDrawUseBox(CasCadeIntro[7], 0);
-	TextDrawSetProportional(CasCadeIntro[7], 1);
-	TextDrawSetSelectable(CasCadeIntro[7], 0);
+TurfCountTD[7] = TextDrawCreate(589.000000, 275.000000, "POLICE");
+TextDrawFont(TurfCountTD[7], 2);
+TextDrawLetterSize(TurfCountTD[7], 0.283333, 1.400000);
+TextDrawTextSize(TurfCountTD[7], 400.000000, 17.000000);
+TextDrawSetOutline(TurfCountTD[7], 1);
+TextDrawSetShadow(TurfCountTD[7], 0);
+TextDrawAlignment(TurfCountTD[7], 3);
+TextDrawColor(TurfCountTD[7], -1);
+TextDrawBackgroundColor(TurfCountTD[7], 255);
+TextDrawBoxColor(TurfCountTD[7], 50);
+TextDrawUseBox(TurfCountTD[7], 0);
+TextDrawSetProportional(TurfCountTD[7], 1);
+TextDrawSetSelectable(TurfCountTD[7], 0);
+	
+    PrioTD[0] = TextDrawCreate(428.000000, 9.000000, "Priority_Cooldown:");
+	TextDrawFont(PrioTD[0], 2);
+	TextDrawLetterSize(PrioTD[0], 0.162499, 1.449998);
+	TextDrawTextSize(PrioTD[0], 400.000000, 17.000000);
+	TextDrawSetOutline(PrioTD[0], 1);
+	TextDrawSetShadow(PrioTD[0], 0);
+	TextDrawAlignment(PrioTD[0], 1);
+	TextDrawColor(PrioTD[0], -1);
+	TextDrawBackgroundColor(PrioTD[0], 255);
+	TextDrawBoxColor(PrioTD[0], 50);
+	TextDrawUseBox(PrioTD[0], 0);
+	TextDrawSetProportional(PrioTD[0], 1);
+	TextDrawSetSelectable(PrioTD[0], 0);
 
-	CasCadeIntro[8] = TextDrawCreate(286.000000, 353.000000, "~g~Connected");
-	TextDrawFont(CasCadeIntro[8], 0);
-	TextDrawLetterSize(CasCadeIntro[8], 0.775000, 1.850000);
-	TextDrawTextSize(CasCadeIntro[8], 400.000000, 17.000000);
-	TextDrawSetOutline(CasCadeIntro[8], 1);
-	TextDrawSetShadow(CasCadeIntro[8], 0);
-	TextDrawAlignment(CasCadeIntro[8], 1);
-	TextDrawColor(CasCadeIntro[8], -1);
-	TextDrawBackgroundColor(CasCadeIntro[8], 255);
-	TextDrawBoxColor(CasCadeIntro[8], 50);
-	TextDrawUseBox(CasCadeIntro[8], 0);
-	TextDrawSetProportional(CasCadeIntro[8], 1);
-	TextDrawSetSelectable(CasCadeIntro[8], 0);
-
+	PrioTD[1] = TextDrawCreate(503.000000, 9.000000, "");
+	TextDrawFont(PrioTD[1], 2);
+	TextDrawLetterSize(PrioTD[1], 0.162499, 1.449998);
+	TextDrawTextSize(PrioTD[1], 400.000000, 17.000000);
+	TextDrawSetOutline(PrioTD[1], 1);
+	TextDrawSetShadow(PrioTD[1], 0);
+	TextDrawAlignment(PrioTD[1], 1);
+	TextDrawColor(PrioTD[1], -1);
+	TextDrawBackgroundColor(PrioTD[1], 255);
+	TextDrawBoxColor(PrioTD[1], 50);
+	TextDrawUseBox(PrioTD[1], 0);
+	TextDrawSetProportional(PrioTD[1], 1);
+	TextDrawSetSelectable(PrioTD[1], 0);
+	
 	PublicTD[0] = TextDrawCreate(421.000000, 110.000000, "_");
 	TextDrawFont(PublicTD[0], 2);
 	TextDrawLetterSize(PublicTD[0], 0.366665, 1.350000);
@@ -31433,6 +31815,7 @@ public OnPlayerConnect(playerid)
           printf("\n Airplane NPC Spawned. \n");
          SpawnPlayer(playerid);
 	}
+	ShowTurfsOnMap(playerid, true);
 	}
 	    // WHITELIST
     SCM(playerid, COLOR_LIGHTRED, "[System] {84a9ff}Checking Account Details..");
@@ -31567,6 +31950,7 @@ public OnPlayerConnect(playerid)
 	PlayerInfo[playerid][pFightStyle] = 0;
 	PlayerInfo[playerid][pAccent] = 0;
 	PlayerInfo[playerid][pDirtyCash] = 0;
+	PlayerInfo[playerid][pInfluenced] = 0;
 	gLastCar[playerid] = 0;
 
 	/*#if defined Christmas
@@ -33772,6 +34156,134 @@ PlayerTextDrawUseBox(playerid, AtmTD[playerid][7], 0);
 PlayerTextDrawSetProportional(playerid, AtmTD[playerid][7], 1);
 PlayerTextDrawSetSelectable(playerid, AtmTD[playerid][7], 0);
 
+//turf td
+TurfTD[playerid][0] = CreatePlayerTextDraw(playerid, 474.000000, 395.000000, "CONTROL:");
+PlayerTextDrawFont(playerid, TurfTD[playerid][0], 2);
+PlayerTextDrawLetterSize(playerid, TurfTD[playerid][0], 0.241667, 1.350000);
+PlayerTextDrawTextSize(playerid, TurfTD[playerid][0], 400.000000, 17.000000);
+PlayerTextDrawSetOutline(playerid, TurfTD[playerid][0], 1);
+PlayerTextDrawSetShadow(playerid, TurfTD[playerid][0], 0);
+PlayerTextDrawAlignment(playerid, TurfTD[playerid][0], 3);
+PlayerTextDrawColor(playerid, TurfTD[playerid][0], -16776961);
+PlayerTextDrawBackgroundColor(playerid, TurfTD[playerid][0], 255);
+PlayerTextDrawBoxColor(playerid, TurfTD[playerid][0], 50);
+PlayerTextDrawUseBox(playerid, TurfTD[playerid][0], 0);
+PlayerTextDrawSetProportional(playerid, TurfTD[playerid][0], 1);
+PlayerTextDrawSetSelectable(playerid, TurfTD[playerid][0], 0);
+
+TurfTD[playerid][1] = CreatePlayerTextDraw(playerid, 474.000000, 381.000000, "ZONE:");
+PlayerTextDrawFont(playerid, TurfTD[playerid][1], 2);
+PlayerTextDrawLetterSize(playerid, TurfTD[playerid][1], 0.316666, 1.200000);
+PlayerTextDrawTextSize(playerid, TurfTD[playerid][1], 400.000000, 17.000000);
+PlayerTextDrawSetOutline(playerid, TurfTD[playerid][1], 1);
+PlayerTextDrawSetShadow(playerid, TurfTD[playerid][1], 0);
+PlayerTextDrawAlignment(playerid, TurfTD[playerid][1], 3);
+PlayerTextDrawColor(playerid, TurfTD[playerid][1], -16776961);
+PlayerTextDrawBackgroundColor(playerid, TurfTD[playerid][1], 255);
+PlayerTextDrawBoxColor(playerid, TurfTD[playerid][1], 50);
+PlayerTextDrawUseBox(playerid, TurfTD[playerid][1], 0);
+PlayerTextDrawSetProportional(playerid, TurfTD[playerid][1], 1);
+PlayerTextDrawSetSelectable(playerid, TurfTD[playerid][1], 0);
+
+TurfTD[playerid][2] = CreatePlayerTextDraw(playerid, 322.000000, 53.000000, "00:00");
+PlayerTextDrawFont(playerid, TurfTD[playerid][2], 2);
+PlayerTextDrawLetterSize(playerid, TurfTD[playerid][2], 0.445832, 2.149997);
+PlayerTextDrawTextSize(playerid, TurfTD[playerid][2], 400.000000, 17.000000);
+PlayerTextDrawSetOutline(playerid, TurfTD[playerid][2], 1);
+PlayerTextDrawSetShadow(playerid, TurfTD[playerid][2], 0);
+PlayerTextDrawAlignment(playerid, TurfTD[playerid][2], 2);
+PlayerTextDrawColor(playerid, TurfTD[playerid][2], 16777215);
+PlayerTextDrawBackgroundColor(playerid, TurfTD[playerid][2], 255);
+PlayerTextDrawBoxColor(playerid, TurfTD[playerid][2], 50);
+PlayerTextDrawUseBox(playerid, TurfTD[playerid][2], 0);
+PlayerTextDrawSetProportional(playerid, TurfTD[playerid][2], 1);
+PlayerTextDrawSetSelectable(playerid, TurfTD[playerid][2], 0);
+
+TurfTD[playerid][3] = CreatePlayerTextDraw(playerid, 282.000000, 37.000000, "Remaining");
+PlayerTextDrawFont(playerid, TurfTD[playerid][3], 2);
+PlayerTextDrawLetterSize(playerid, TurfTD[playerid][3], 0.324999, 1.649999);
+PlayerTextDrawTextSize(playerid, TurfTD[playerid][3], 400.000000, 17.000000);
+PlayerTextDrawSetOutline(playerid, TurfTD[playerid][3], 1);
+PlayerTextDrawSetShadow(playerid, TurfTD[playerid][3], 0);
+PlayerTextDrawAlignment(playerid, TurfTD[playerid][3], 1);
+PlayerTextDrawColor(playerid, TurfTD[playerid][3], -65281);
+PlayerTextDrawBackgroundColor(playerid, TurfTD[playerid][3], 255);
+PlayerTextDrawBoxColor(playerid, TurfTD[playerid][3], 50);
+PlayerTextDrawUseBox(playerid, TurfTD[playerid][3], 0);
+PlayerTextDrawSetProportional(playerid, TurfTD[playerid][3], 1);
+PlayerTextDrawSetSelectable(playerid, TurfTD[playerid][3], 0);
+
+TurfTD[playerid][4] = CreatePlayerTextDraw(playerid, 549.000000, 380.000000, "DRUG TURF");
+PlayerTextDrawFont(playerid, TurfTD[playerid][4], 2);
+PlayerTextDrawLetterSize(playerid, TurfTD[playerid][4], 0.266667, 1.350000);
+PlayerTextDrawTextSize(playerid, TurfTD[playerid][4], 400.000000, 17.000000);
+PlayerTextDrawSetOutline(playerid, TurfTD[playerid][4], 1);
+PlayerTextDrawSetShadow(playerid, TurfTD[playerid][4], 0);
+PlayerTextDrawAlignment(playerid, TurfTD[playerid][4], 3);
+PlayerTextDrawColor(playerid, TurfTD[playerid][4], -1);
+PlayerTextDrawBackgroundColor(playerid, TurfTD[playerid][4], 255);
+PlayerTextDrawBoxColor(playerid, TurfTD[playerid][4], 50);
+PlayerTextDrawUseBox(playerid, TurfTD[playerid][4], 0);
+PlayerTextDrawSetProportional(playerid, TurfTD[playerid][4], 1);
+PlayerTextDrawSetSelectable(playerid, TurfTD[playerid][4], 0);
+
+TurfTD[playerid][5] = CreatePlayerTextDraw(playerid, 583.000000, 395.000000, "VALHALA");
+PlayerTextDrawFont(playerid, TurfTD[playerid][5], 2);
+PlayerTextDrawLetterSize(playerid, TurfTD[playerid][5], 0.275000, 1.350000);
+PlayerTextDrawTextSize(playerid, TurfTD[playerid][5], 400.000000, 17.000000);
+PlayerTextDrawSetOutline(playerid, TurfTD[playerid][5], 1);
+PlayerTextDrawSetShadow(playerid, TurfTD[playerid][5], 0);
+PlayerTextDrawAlignment(playerid, TurfTD[playerid][5], 3);
+PlayerTextDrawColor(playerid, TurfTD[playerid][5], -1);
+PlayerTextDrawBackgroundColor(playerid, TurfTD[playerid][5], 255);
+PlayerTextDrawBoxColor(playerid, TurfTD[playerid][5], 50);
+PlayerTextDrawUseBox(playerid, TurfTD[playerid][5], 0);
+PlayerTextDrawSetProportional(playerid, TurfTD[playerid][5], 1);
+PlayerTextDrawSetSelectable(playerid, TurfTD[playerid][5], 0);
+
+	TurfKnockTD[playerid][0] = CreatePlayerTextDraw(playerid, 512.000000, 119.000000, "ld_beat:chit");
+	PlayerTextDrawFont(playerid, TurfKnockTD[playerid][0], 4);
+	PlayerTextDrawLetterSize(playerid, TurfKnockTD[playerid][0], 0.600000, 2.000000);
+	PlayerTextDrawTextSize(playerid, TurfKnockTD[playerid][0], 30.000000, 35.000000);
+	PlayerTextDrawSetOutline(playerid, TurfKnockTD[playerid][0], 1);
+	PlayerTextDrawSetShadow(playerid, TurfKnockTD[playerid][0], 0);
+	PlayerTextDrawAlignment(playerid, TurfKnockTD[playerid][0], 1);
+	PlayerTextDrawColor(playerid, TurfKnockTD[playerid][0], 1097458175);
+	PlayerTextDrawBackgroundColor(playerid, TurfKnockTD[playerid][0], 255);
+	PlayerTextDrawBoxColor(playerid, TurfKnockTD[playerid][0], 50);
+	PlayerTextDrawUseBox(playerid, TurfKnockTD[playerid][0], 1);
+	PlayerTextDrawSetProportional(playerid, TurfKnockTD[playerid][0], 1);
+	PlayerTextDrawSetSelectable(playerid, TurfKnockTD[playerid][0], 0);
+
+	TurfKnockTD[playerid][1] = CreatePlayerTextDraw(playerid, 528.000000, 125.000000, "ld_dual:white");
+	PlayerTextDrawFont(playerid, TurfKnockTD[playerid][1], 4);
+	PlayerTextDrawLetterSize(playerid, TurfKnockTD[playerid][1], 0.600000, 2.000000);
+	PlayerTextDrawTextSize(playerid, TurfKnockTD[playerid][1], 124.500000, 23.000000);
+	PlayerTextDrawSetOutline(playerid, TurfKnockTD[playerid][1], 1);
+	PlayerTextDrawSetShadow(playerid, TurfKnockTD[playerid][1], 0);
+	PlayerTextDrawAlignment(playerid, TurfKnockTD[playerid][1], 1);
+	PlayerTextDrawColor(playerid, TurfKnockTD[playerid][1], 1097458175);
+	PlayerTextDrawBackgroundColor(playerid, TurfKnockTD[playerid][1], 255);
+	PlayerTextDrawBoxColor(playerid, TurfKnockTD[playerid][1], 50);
+	PlayerTextDrawUseBox(playerid, TurfKnockTD[playerid][1], 1);
+	PlayerTextDrawSetProportional(playerid, TurfKnockTD[playerid][1], 1);
+	PlayerTextDrawSetSelectable(playerid, TurfKnockTD[playerid][1], 0);
+
+	TurfKnockTD[playerid][2] = CreatePlayerTextDraw(playerid, 526.000000, 129.000000, "Daniel_Ken has knocked by Luffy_Ken");
+	PlayerTextDrawFont(playerid, TurfKnockTD[playerid][2], 1);
+	PlayerTextDrawLetterSize(playerid, TurfKnockTD[playerid][2], 0.154166, 1.450000);
+	PlayerTextDrawTextSize(playerid, TurfKnockTD[playerid][2], 985.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, TurfKnockTD[playerid][2], 0);
+	PlayerTextDrawSetShadow(playerid, TurfKnockTD[playerid][2], 0);
+	PlayerTextDrawAlignment(playerid, TurfKnockTD[playerid][2], 1);
+	PlayerTextDrawColor(playerid, TurfKnockTD[playerid][2], -1);
+	PlayerTextDrawBackgroundColor(playerid, TurfKnockTD[playerid][2], 255);
+	PlayerTextDrawBoxColor(playerid, TurfKnockTD[playerid][2], 0);
+	PlayerTextDrawUseBox(playerid, TurfKnockTD[playerid][2], 1);
+	PlayerTextDrawSetProportional(playerid, TurfKnockTD[playerid][2], 1);
+	PlayerTextDrawSetSelectable(playerid, TurfKnockTD[playerid][2], 0);
+
+
 //VEHPANEL BY MADEDITS
 VehPanelTD[playerid][0] = CreatePlayerTextDraw(playerid, 467.000000, 178.000000, "_");
 PlayerTextDrawFont(playerid, VehPanelTD[playerid][0], 1);
@@ -35539,6 +36051,71 @@ PlayerTextDrawSetSelectable(playerid, SpeedPlayerTD[playerid][8], 0);
 
 	PlayerLabel[playerid] = CreateDynamic3DTextLabel("", -1, 0.0, 0.0, -1.5, 10, .attachedplayer = playerid, .testlos = 1);
 	InjuredLabel[playerid] = CreateDynamic3DTextLabel("", COLOR_DOCTOR, 0.0, 0.0, -0.3, 10, .attachedplayer = playerid, .testlos = 1);
+	
+	//Dealership Near Vinewood///////////////////////////////////////////////////////////////////////////////////////////////
+    RemoveBuildingForPlayer(playerid, 1522, 1314.729, -897.265, 38.468, 0.250);
+    RemoveBuildingForPlayer(playerid, 5762, 1315.369, -887.468, 41.703, 0.250);
+    RemoveBuildingForPlayer(playerid, 5852, 1315.369, -887.468, 41.703, 0.250);
+    //new pd
+    RemoveBuildingForPlayer(playerid, 4211, 1380.265, -1655.539, 10.804, 0.250);
+RemoveBuildingForPlayer(playerid, 4198, 1380.265, -1655.539, 10.804, 0.250);
+RemoveBuildingForPlayer(playerid, 6106, 1226.953, -1656.156, 24.773, 0.250);
+RemoveBuildingForPlayer(playerid, 6196, 1225.335, -1642.750, 25.101, 0.250);
+RemoveBuildingForPlayer(playerid, 1525, 1271.484, -1662.320, 20.250, 0.250);
+RemoveBuildingForPlayer(playerid, 1297, 1204.640, -1707.171, 15.929, 0.250);
+RemoveBuildingForPlayer(playerid, 1297, 1235.718, -1707.171, 15.937, 0.250);
+RemoveBuildingForPlayer(playerid, 1297, 1267.039, -1707.304, 15.937, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1190.984, -1686.312, 13.093, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1190.984, -1691.390, 13.093, 0.250);
+RemoveBuildingForPlayer(playerid, 620, 1191.789, -1691.906, 12.015, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1190.984, -1681.523, 13.093, 0.250);
+RemoveBuildingForPlayer(playerid, 620, 1191.406, -1674.421, 12.015, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1190.984, -1674.148, 13.093, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1196.726, -1691.390, 13.093, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1202.414, -1691.390, 13.093, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1202.414, -1686.312, 13.093, 0.250);
+RemoveBuildingForPlayer(playerid, 620, 1204.390, -1692.320, 12.015, 0.250);
+RemoveBuildingForPlayer(playerid, 1350, 1291.835, -1702.460, 12.250, 0.250);
+RemoveBuildingForPlayer(playerid, 1297, 1292.179, -1691.757, 15.890, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1202.414, -1681.523, 13.093, 0.250);
+RemoveBuildingForPlayer(playerid, 1312, 1299.453, -1683.507, 16.585, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1258.578, -1675.500, 14.601, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1267.671, -1675.500, 14.601, 0.250);
+RemoveBuildingForPlayer(playerid, 620, 1203.640, -1674.484, 12.015, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1202.414, -1674.148, 13.093, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1197.273, -1674.148, 13.093, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1181.312, -1665.468, 14.796, 0.250);
+RemoveBuildingForPlayer(playerid, 1281, 1197.234, -1667.054, 13.351, 0.250);
+RemoveBuildingForPlayer(playerid, 1281, 1189.601, -1667.312, 13.351, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1208.281, -1665.468, 14.500, 0.250);
+RemoveBuildingForPlayer(playerid, 1281, 1195.179, -1661.500, 13.351, 0.250);
+RemoveBuildingForPlayer(playerid, 1281, 1187.742, -1661.421, 13.351, 0.250);
+RemoveBuildingForPlayer(playerid, 1280, 1188.343, -1655.820, 13.179, 0.250);
+RemoveBuildingForPlayer(playerid, 1280, 1200.312, -1655.820, 13.179, 0.250);
+RemoveBuildingForPlayer(playerid, 6102, 1226.953, -1656.156, 24.773, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1258.578, -1659.875, 14.601, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1267.671, -1659.875, 14.601, 0.250);
+RemoveBuildingForPlayer(playerid, 1297, 1292.179, -1660.171, 15.890, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1237.500, -1643.429, 14.851, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1233.468, -1643.429, 14.851, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1245.562, -1643.429, 14.851, 0.250);
+RemoveBuildingForPlayer(playerid, 647, 1241.531, -1643.429, 14.851, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1258.578, -1643.367, 14.601, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1267.671, -1643.367, 14.601, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1219.117, -1640.460, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1231.312, -1640.460, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1243.507, -1640.460, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1255.710, -1640.460, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1282.828, -1639.960, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1211.601, -1632.867, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1219.117, -1632.867, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1231.312, -1632.867, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1243.507, -1632.867, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1255.710, -1632.867, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1282.828, -1619.851, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 626, 1282.828, -1629.109, 28.421, 0.250);
+RemoveBuildingForPlayer(playerid, 1297, 1292.179, -1629.101, 15.906, 0.250);
+RemoveBuildingForPlayer(playerid, 1312, 1299.449, -1683.510, 16.585, 0.250);
     //mechanic newwwwwwww
 	RemoveBuildingForPlayer(playerid, 3366, 276.6563, 2023.7578, 16.6328, 0.25);
 	RemoveBuildingForPlayer(playerid, 3366, 276.6563, 1989.5469, 16.6328, 0.25);
@@ -36162,6 +36739,41 @@ public OnPlayerDeath(playerid, killerid, reason)
     		SendDeathMessageToPlayer(i, killerid, playerid, reason);
     	}
 	}
+	 new i = GetNearbyTurf(playerid);
+    new string[250];
+	if(PlayerInfo[playerid][pInjured] && i > 0)
+	{
+
+	   if(TurfInfo[i][tExists] && InfluenceInfo[iStart] == 1 && InfluenceInfo[iTurf] == i)
+ 	   {
+		  if(PlayerInfo[playerid][pGang] > 0)
+		  {
+			 SendTurfAdminMessage(i, COLOR_LIGHTRED, "{007bff}[Turf Kills] {%06x}%s "WHITE"has been Knocked inside the turf. Gang Name: %s | Killed By: %s", GangInfo[PlayerInfo[playerid][pGang]][gColor] >>> 8, GetRPName(playerid), GangInfo[PlayerInfo[playerid][pGang]][gName], GetRPName(killerid));
+			 SetTimerEx("TeleportPlayerFromTurf", 6000, false, "i", playerid);
+		  }
+		  else if(IsLawEnforcement(playerid))
+		  {
+            SendTurfAdminMessage(i, COLOR_LIGHTRED, "{007bff}[Turf Kills] "WHITE"%s has been Knocked inside the turf. Faction: Police | Killed By: %s", GetRPName(playerid), GetRPName(killerid));
+
+            SetTimerEx("TeleportPlayerFromTurf", 6000, false, "i", playerid);
+		  }
+
+		  foreach(new f : Player)
+		  {
+             if(i > 0)
+	         {
+			      format(string, sizeof(string), "%s has killed by %s", GetRPName(playerid), GetRPName(killerid));
+			      PlayerTextDrawSetString(f, TurfKnockTD[f][2], string);
+
+			      PlayerTextDrawShow(f, TurfKnockTD[f][0]);
+			      PlayerTextDrawShow(f, TurfKnockTD[f][1]);
+			      PlayerTextDrawShow(f, TurfKnockTD[f][2]);
+			      SetTimerEx("HideKnockTD", 5000, false, "i", f);
+			   }
+		  }
+	   }
+	}
+
 	/*if(PlayerInfo[playerid][pBleed] > 0)
 	{
 		SendClientMessage(playerid, COLOR_RED, "You have died due to gun shot wounds.");
@@ -37329,27 +37941,27 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 	}
 	if(playertextid == BankTD1[playerid][9])
 	{
-        PlayerInfo[playerid][pBank] -= 0;
-        GivePlayerCash(playerid, 0);
+        PlayerInfo[playerid][pBank] -= 10000;
+        GivePlayerCash(playerid, 10000);
         mysql_format(connectionID, queryBuffer, sizeof(queryBuffer), "UPDATE users SET bank = %i WHERE uid = %i", PlayerInfo[playerid][pBank], PlayerInfo[playerid][pID]);
         mysql_tquery(connectionID, queryBuffer);
-        SM(playerid, COLOR_AQUA, "You have withdrawn $0000 from your account. Your new balance is $%i.", PlayerInfo[playerid][pBank]);
+        SM(playerid, COLOR_AQUA, "You have withdrawn $10000 from your account. Your new balance is $%i.", PlayerInfo[playerid][pBank]);
     }
     if(playertextid == BankTD1[playerid][11])
 	{
-        PlayerInfo[playerid][pBank] -= 0;
-        GivePlayerCash(playerid, 0);
+        PlayerInfo[playerid][pBank] -= 50000;
+        GivePlayerCash(playerid, 50000);
         mysql_format(connectionID, queryBuffer, sizeof(queryBuffer), "UPDATE users SET bank = %i WHERE uid = %i", PlayerInfo[playerid][pBank], PlayerInfo[playerid][pID]);
         mysql_tquery(connectionID, queryBuffer);
-        SM(playerid, COLOR_AQUA, "You have withdrawn $0000 from your account. Your new balance is $%i.", PlayerInfo[playerid][pBank]);
+        SM(playerid, COLOR_AQUA, "You have withdrawn $50000 from your account. Your new balance is $%i.", PlayerInfo[playerid][pBank]);
     }
 	if(playertextid == BankTD1[playerid][13])
 	{
-        PlayerInfo[playerid][pBank] -= 0;
-        GivePlayerCash(playerid, 0);
+        PlayerInfo[playerid][pBank] -= 100000;
+        GivePlayerCash(playerid, 100000);
         mysql_format(connectionID, queryBuffer, sizeof(queryBuffer), "UPDATE users SET bank = %i WHERE uid = %i", PlayerInfo[playerid][pBank], PlayerInfo[playerid][pID]);
         mysql_tquery(connectionID, queryBuffer);
-        SM(playerid, COLOR_AQUA, "You have withdrawn $00000 from your account. Your new balance is $%i.", PlayerInfo[playerid][pBank]);
+        SM(playerid, COLOR_AQUA, "You have withdrawn $100000 from your account. Your new balance is $%i.", PlayerInfo[playerid][pBank]);
     }
 	if(playertextid == BankTD1[playerid][19])
 	{
@@ -37948,6 +38560,109 @@ public OnPlayerUpdate(playerid)
 	{
 	    ResetPlayerMoney(playerid);
 	    GivePlayerMoney(playerid, PlayerInfo[playerid][pCash]);
+	}
+		new turfid = GetNearbyTurf(playerid);
+		if(turfid == InfluenceInfo[iTurf] && PlayerInfo[playerid][pAdminDuty] == 0)
+		{
+			  if(PlayerInfo[playerid][pGang] == InfluenceInfo[iAttGang])
+			  {
+                   if(PlayerInfo[playerid][pInfluenced] == 0)
+                   {
+                   new gangid = InfluenceInfo[iAttGang];
+                       InfluenceInfo[iAttGangMembers]++;
+                       PlayerInfo[playerid][pInfluenced] = 1;
+
+					   if(PlayerInfo[playerid][pBandana] == 0)
+			           {
+			                format(string, sizeof(string), "{%06x}%s\n"WHITE"%s", GangInfo[gangid][gColor] >>> 8, GangInfo[gangid][gName],GangRanks[gangid][PlayerInfo[playerid][pGangRank]]);
+			                UpdateDynamic3DTextLabelText(PlayerLabel[playerid], COLOR_WHITE, string);
+			                PlayerInfo[playerid][pBandana] = 1;
+			                SendClientMessage(playerid, COLOR_WHITE, "Your bandana was enabled automatically as you entered a turf in an active war.");
+			           }
+				   }
+			  }
+			  else if(InfluenceInfo[iAttGang] == -1)
+              {
+    			if(IsLawEnforcement(playerid))
+              	{
+                   if(PlayerInfo[playerid][pInfluenced] == 0)
+                   {
+                       InfluenceInfo[iAttGangMembers]++;
+                       PlayerInfo[playerid][pInfluenced] = 1;
+                   }
+              	}
+			  }
+
+			  if(PlayerInfo[playerid][pGang] == InfluenceInfo[iDefGang])
+			  {
+                   if(PlayerInfo[playerid][pInfluenced] == 0)
+                   {
+                       InfluenceInfo[iDefGangMembers]++;
+                       PlayerInfo[playerid][pInfluenced] = 1;
+                       new gangid = InfluenceInfo[iDefGang];
+
+					   if(PlayerInfo[playerid][pBandana] == 0)
+			           {
+			                format(string, sizeof(string), "{%06x}%s\n"WHITE"%s", GangInfo[gangid][gColor] >>> 8, GangInfo[gangid][gName],GangRanks[gangid][PlayerInfo[playerid][pGangRank]]);
+			                UpdateDynamic3DTextLabelText(PlayerLabel[playerid], COLOR_WHITE, string);
+			                PlayerInfo[playerid][pBandana] = 1;
+			                SendClientMessage(playerid, COLOR_WHITE, "Your bandana was enabled automatically as you entered a turf in an active war.");
+			           }
+				   }
+			  }
+              else if(InfluenceInfo[iDefGang] == -1)
+              {
+    			if(IsLawEnforcement(playerid))
+              	{
+                   if(PlayerInfo[playerid][pInfluenced] == 0)
+                   {
+                       InfluenceInfo[iDefGangMembers]++;
+                       PlayerInfo[playerid][pInfluenced] = 1;
+                   }
+              	}
+			  }
+		}
+ 	    else
+		{
+            if(PlayerInfo[playerid][pGang] == InfluenceInfo[iAttGang])
+            {
+			     if(PlayerInfo[playerid][pInfluenced] == 1)
+			     {
+                      InfluenceInfo[iAttGangMembers]--;
+                      PlayerInfo[playerid][pInfluenced] = 0;
+			     }
+		    }
+		    else if(InfluenceInfo[iAttGang] == -1)
+              {
+    			if(IsLawEnforcement(playerid))
+              	{
+                   if(PlayerInfo[playerid][pInfluenced] == 0)
+                   {
+                       InfluenceInfo[iAttGangMembers]--;
+                       PlayerInfo[playerid][pInfluenced] = 1;
+                   }
+              	}
+			  }
+
+            if(PlayerInfo[playerid][pGang] == InfluenceInfo[iDefGang])
+		    {
+                 if(PlayerInfo[playerid][pInfluenced] == 1)
+			     {
+                      InfluenceInfo[iDefGangMembers]--;
+                      PlayerInfo[playerid][pInfluenced] = 0;
+			     }
+			}
+			else if(InfluenceInfo[iDefGang] == -1)
+              {
+    			if(IsLawEnforcement(playerid))
+              	{
+                   if(PlayerInfo[playerid][pInfluenced] == 0)
+                   {
+                       InfluenceInfo[iDefGangMembers]--;
+                       PlayerInfo[playerid][pInfluenced] = 1;
+                   }
+              	}
+			  }
 	}
 	if(GetPlayerScore(playerid) != PlayerInfo[playerid][pLevel])
 	{
@@ -38829,6 +39544,16 @@ public ANNHIDE(playerid)
 	for(new i = 0; i < 3; i ++)
 	{
 		TextDrawHideForPlayer(playerid, ANN[i]);
+	}
+    return 1;
+}
+
+forward ANNOUNCEHIDE(playerid);
+public ANNOUNCEHIDE(playerid)
+{
+	for(new i = 0; i < 9; i ++)
+	{
+		TextDrawHideForPlayer(playerid, AnnounceTD[i]);
 	}
     return 1;
 }
@@ -44358,6 +45083,128 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				}
 			}
 		}
+				// TURF
+		case DIALOG_TURF:
+		{
+			if(response)
+			{
+				 switch(listitem)
+				 {
+						case 0: // TURF ID
+						{
+							ShowPlayerDialog(playerid, DIALOG_TURFID, DIALOG_STYLE_INPUT, "Turf System v2", "Enter the turf id", "Enter", "Close");
+						}
+     	                case 1: // DEFENDING GANG
+						{
+							ShowPlayerDialog(playerid, DIALOG_TURFDFGANG, DIALOG_STYLE_INPUT, "Turf System v2", "Enter the Defending Gang ID", "Enter", "Close");
+						}
+						case 2: // ATTACKING GANG
+						{
+							ShowPlayerDialog(playerid, DIALOG_TURFATTGANG, DIALOG_STYLE_INPUT, "Turf System v2", "Enter the Defending Gang ID", "Enter", "Close");
+						}
+						case 3: // TURF START
+						{
+                              if(InfluenceInfo[iStart] == 1) {
+							     return SendClientMessage(playerid, COLOR_SYNTAX, "Turf War is already started.");
+							  }
+							  if(InfluenceInfo[iTurf] == 0) {
+							     return SendClientMessage(playerid, COLOR_SYNTAX, "Turf ID Not Specified.");
+							  }
+							  if(InfluenceInfo[iDefGang] == 0) {
+							     return SendClientMessage(playerid, COLOR_SYNTAX, "Defending Gang ID Not Specified.");
+							  }
+							  if(InfluenceInfo[iAttGang] == 0) {
+							     return SendClientMessage(playerid, COLOR_SYNTAX, "Attacking Gang ID Not Specified.");
+							  }
+							  else
+							  {
+							      InfluenceInfo[iStart] = 1;
+							      InfluenceInfo[iEnabled] = 1;
+							      InfluenceInfo[iTime] = 30 * 60;
+							      InfluenceInfo[iGangid] = InfluenceInfo[iDefGang];
+
+							      new turfid = InfluenceInfo[iTurf];
+							      SMA(COLOR_GREEN, "[Turf Info] "WHITE"%s Has Now Started.", TurfInfo[turfid][tName]);
+
+							      foreach(new i: Player)
+                                  {
+	   	                              GangZoneFlashForPlayer(i, TurfInfo[turfid][tGangZone], (0xFFf74d4dFF & ~0xff) + 0xAA);
+
+	   	                              new text[256];
+	   	                              format(text, sizeof(text), "Turf War Started.");
+		                               TextDrawSetString(AnnounceTD[8], text);
+		                               for(new f = 0; f < 9; f ++)
+		                               {
+			                               TextDrawShowForPlayer(i, AnnounceTD[f]);
+		                               }
+
+		                               SetTimerEx("ANNOUNCEHIDE", 10000, false, "i", i);
+		                               PlayerPlaySound(i,1150,0.0,0.0,0.0);
+                                  }
+
+
+                                    new string[2500];
+                                    format(string, sizeof(string), "~r~Turf_On_Progress");
+                                    TextDrawSetString(PrioTD[1], string);
+                                    PrioText = string;
+							  }
+						}
+				 }
+			}
+		}
+		case DIALOG_TURFID:
+		{
+		    if(response)
+		    {
+		          new turfid;
+				 if(sscanf(inputtext, "i", turfid)) return SCM(playerid, COLOR_SYNTAX, "Enter a Turf ID.");
+				 if(!(0 <= turfid < MAX_TURFS) || !TurfInfo[turfid][tExists]) return SCM(playerid, COLOR_SYNTAX, "Invalid turf.");
+                 if(InfluenceInfo[iTurf] == turfid) return SCM(playerid, COLOR_SYNTAX, "This turf is already started.");
+
+                 InfluenceInfo[iTurf] = turfid;
+                 SM(playerid, COLOR_YELLOW, "Edited Turf To %s", TurfInfo[turfid][tName]);
+		    }
+		}
+        case DIALOG_TURFDFGANG:
+		{
+		    if(response)
+		    {
+		          new gangid;
+				 if(sscanf(inputtext, "i", gangid)) return SCM(playerid, COLOR_SYNTAX, "USAGE: gangid.");
+                 if(!(-1 <= gangid < MAX_GANGS) || (gangid >= 0 && !GangInfo[gangid][gSetup])) return SCM(playerid, COLOR_SYNTAX, "Invalid Gang.");
+
+				 if(gangid > 0)
+				 {
+                    InfluenceInfo[iDefGang] = gangid;
+                    SM(playerid, COLOR_YELLOW, "Edited Turf Defending Gang To %s", GangInfo[gangid][gName]);
+                 }
+                 else
+                 {
+                      InfluenceInfo[iDefGang] = gangid;
+                      SM(playerid, COLOR_YELLOW, "Edited Turf Defending Gang To Police");
+				 }
+		    }
+		}
+		case DIALOG_TURFATTGANG:
+		{
+		    if(response)
+		    {
+		          new gangid;
+				 if(sscanf(inputtext, "i", gangid)) return SCM(playerid, COLOR_SYNTAX, "USAGE: gangid.");
+				 if(!(-1 <= gangid < MAX_GANGS) || (gangid >= 0 && !GangInfo[gangid][gSetup])) return SCM(playerid, COLOR_SYNTAX, "Invalid Gang.");
+
+                 if(gangid > 0)
+				 {
+                    InfluenceInfo[iAttGang] = gangid;
+                    SM(playerid, COLOR_YELLOW, "Edited Turf Attacking Gang To %s", GangInfo[gangid][gName]);
+                 }
+                 else
+                 {
+                      InfluenceInfo[iAttGang] = gangid;
+                      SM(playerid, COLOR_YELLOW, "Edited Turf Attacking Gang To Police");
+				 }
+		    }
+		}
 		case DIALOG_TURFLIST:
 		{
 		    if(response)
@@ -47321,16 +48168,6 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 	            SendProximityMessage(playerid, 20.0, COLOR_GLOBAL, "**{C2A2DA} %s presses a button and deposits some cash in their bank account.", GetRPName(playerid));
 	            SCMf(playerid, COLOR_WHITE, "You have deposited %s into your account. Your new balance is %s.", FormatNumber(amount), FormatNumber(PlayerInfo[playerid][pBank]));
-
-				if(fee)
-				{
-				    SCMf(playerid, COLOR_WHITE, "A 1 percent convenience fee of %s was deducted from your bank account.", FormatNumber(fee));
-				    AddToTaxVault(fee);
-	            }
-	            else if(PlayerInfo[playerid][pDonator] > 0)
-	            {
-					SendClientMessage(playerid, COLOR_VIP, "DONATOR Perk: You do not pay the 3 percent convenience fee as you are a DONATOR!");
-	            }
 	        }
 		}
 	    case DIALOG_ATMWITHDRAW:
@@ -47366,15 +48203,6 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	            SendProximityMessage(playerid, 20.0, COLOR_GLOBAL, "**{C2A2DA} %s presses a button and withdraws some cash from the ATM.", GetRPName(playerid));
 	            SCMf(playerid, COLOR_WHITE, "You have withdrawn %s from your account. Your new balance is %s.", FormatNumber(amount), FormatNumber(PlayerInfo[playerid][pBank]));
 
-				if(fee)
-				{
-				    SCMf(playerid, COLOR_WHITE, "A 1 percent convenience fee of %s was deducted from your bank account.", FormatNumber(fee));
-				    AddToTaxVault(fee);
-	            }
-	            else if(PlayerInfo[playerid][pDonator] > 0)
-	            {
-					SendClientMessage(playerid, COLOR_VIP, "DONATOR Perk: You do not pay the 3 percent convenience fee as you are a Donator!");
-	            }
 	        }
 		}
 		case DIALOG_WTRADIO:
@@ -55510,6 +56338,175 @@ CMD:factionhelp(playerid, params[])
 	return 1;
 }
 
+CMD:it(playerid, params[])
+{
+new time;
+   if(PlayerInfo[playerid][pAdmin] < 3)
+   {
+	   return SCM(playerid, COLOR_SYNTAX, "You are not authorised to use this command.");
+   }
+   if(sscanf(params, "i", time))
+   {
+       return SCM(playerid, COLOR_WHITE, "Usage: /it [time]");
+   }
+
+   InfluenceInfo[iTime] = time * 60;
+   SM(playerid, COLOR_YELLOW, "You have set the turf time to %i Minutes", time);
+   return 1;
+}
+
+CMD:i(playerid, params[]) return callcmd::influence(playerid, params);
+CMD:influence(playerid, params[])
+{
+new gangid;
+   if(PlayerInfo[playerid][pAdmin] < 3)
+   {
+	   return SCM(playerid, COLOR_SYNTAX, "You are not authorised to use this command.");
+   }
+   if(sscanf(params, "i", gangid))
+   {
+       SCM(playerid, COLOR_WHITE, "Usage: /infbar [gangid]");
+       SCM(playerid, COLOR_WHITE, "(-1) Police.");
+       return 1;
+   }
+   if(!(-1 <= gangid < MAX_GANGS) || (gangid >= 0 && !GangInfo[gangid][gSetup]))
+   {
+	  return SendClientMessage(playerid, COLOR_GREY, "Invalid gang.");
+   }
+
+
+   InfluenceInfo[iEnabled] = 1;
+   InfluenceInfo[iGangid] = gangid;
+   return 1;
+}
+
+CMD:ioff(playerid, params[]) return callcmd::influenceoff(playerid, params);
+CMD:influenceoff(playerid, params[])
+{
+   if(PlayerInfo[playerid][pAdmin] < 3) return SCM(playerid, COLOR_WHITE, "You are not a admin.");
+   if(InfluenceInfo[iEnabled] == 0) return SCM(playerid, COLOR_SYNTAX, "Influence bar is off");
+
+   InfluenceInfo[iEnabled] = 0;
+   InfluenceInfo[iGangid] = -1;
+
+   SM(playerid, COLOR_YELLOW, "Influence Bar Turned Off.");
+   return 1;
+}
+
+CMD:tstart(playerid, params[])
+{
+    if(PlayerInfo[playerid][pAdmin] < 3) return SCM(playerid, COLOR_WHITE, "You are not a admin.");
+    if(InfluenceInfo[iStart] == 1) return SCM(playerid, COLOR_SYNTAX, "Turf war is already started.");
+
+	ShowPlayerDialog(playerid, DIALOG_TURF, DIALOG_STYLE_LIST, "Turf System v2", "Turf ID\nDefending Gang\nAttacking Gang\nStart Turf", "Select", "Close");
+	return 1;
+}
+CMD:tstop(playerid, params[])
+{
+new turfid;
+   if(PlayerInfo[playerid][pAdmin] < 3) return SCM(playerid, COLOR_WHITE, "You are not a admin.");
+   if(InfluenceInfo[iStart] == 0) return SCM(playerid, COLOR_SYNTAX, "Turf war is not started.");
+   if(sscanf(params, "i", turfid)) return SCM(playerid, COLOR_SYNTAX, "Usage: /tstop [turfid]");
+   if(!(0 <= turfid < MAX_TURFS) || !TurfInfo[turfid][tExists]) return SCM(playerid, COLOR_SYNTAX, "Invalid turf.");
+   if(!turfid) return SCM(playerid, COLOR_SYNTAX, "This turf is not started.");
+
+   if(InfluenceInfo[iTurf] == turfid)
+   {
+      InfluenceInfo[iStart] = 0;
+      InfluenceInfo[iTurf] = -1;
+      SMA(COLOR_GREEN, "[Turf Info]"WHITE" Turf War Ended.");
+      SAM(COLOR_LIGHTRED, "AdmCmd: %s has stopped the turf war.", GetRPName(playerid));
+
+      InfluenceInfo[iEnabled] = 0;
+      InfluenceInfo[iTime] = 0;
+      InfluenceInfo[iDefGang] = -2;
+      InfluenceInfo[iAttGang] = -2;
+      InfluenceInfo[iDefGangMembers] = 0;
+      InfluenceInfo[iAttGangMembers] = 0;
+
+       new string[2500];
+       format(string, sizeof(string), "~y~Priority_On_Hold");
+       TextDrawSetString(PrioTD[1], string);
+       PrioText = string;
+
+       foreach(new i: Player)
+       {
+	   	   GangZoneStopFlashForPlayer(i, TurfInfo[turfid][tGangZone]);
+	   	   new text[256];
+	   	   format(text, sizeof(text), "Turf War Stopped.");
+		   TextDrawSetString(AnnounceTD[8], text);
+
+		   PlayerInfo[i][pInfluenced] = 0;
+		   for(new f = 0; f < 9; f ++)
+		   {
+			     TextDrawShowForPlayer(i, AnnounceTD[f]);
+		   }
+
+		   SetTimerEx("ANNOUNCEHIDE", 10000, false, "i", i);
+		   PlayerPlaySound(i,1150,0.0,0.0,0.0);
+	     //ShowTurfsOnMap(i);
+       }
+   }
+   else
+   {
+		 SCM(playerid, COLOR_SYNTAX, "This turf is not started yet.");
+   }
+   return 1;
+}
+
+
+CMD:tann(playerid, params[])
+{
+   if(PlayerInfo[playerid][pAdmin] < 3)
+   {
+      return SCM(playerid, COLOR_SYNTAX, "You are not authorised");
+   }
+   if(isnull(params)) return SCM(playerid, COLOR_YELLOW, "Usage: /tann [announce text]");
+
+   SMA(COLOR_YELLOW, "[Turf News] "WHITE"%s", params);
+   return 1;
+}
+
+
+CMD:gonline(playerid, params[])
+{
+new gangid;
+new count;
+	if(PlayerInfo[playerid][pAdmin] < 4) return SCM(playerid, COLOR_SYNTAX, "You are not authorised to use this command.");
+	if(sscanf(params, "i", gangid)) return SCM(playerid, COLOR_LIGHTRED, "Usage: "WHITE"/gonline [gangid]");
+	if(!(1 <= gangid < MAX_GANGS) || !GangInfo[gangid][gSetup]) return SCM(playerid, COLOR_LIGHTRED, "Error: "WHITE"Invalid gang.");
+
+	new string[2500], psstring[2500];
+
+	foreach(new i : Player)
+	{
+	new turfid = GetNearbyTurf(i);
+		if(PlayerInfo[i][pGang] == gangid) {
+			count++;
+
+  	if(turfid == InfluenceInfo[iTurf])
+			{
+			    format(psstring, sizeof(psstring), "%s(%i) %s - Location: Inside Of An Active Turf\n", psstring, PlayerInfo[i][pGangRank], GetRPName(i));
+			}
+			else
+			{
+                format(psstring, sizeof(psstring), "%s(%i) %s - Location: %s\n", psstring, PlayerInfo[i][pGangRank], GetRPName(i), GetPlayerZoneName(i));
+			}
+		}
+ }
+
+	if(count > 0)
+	{
+        format(string, sizeof(string), "%s {%06x}[%s]\n\n"WHITE"Online Players: %i\n%s", string, GangInfo[gangid][gColor] >>> 8, GangInfo[gangid][gName], count, psstring);
+		ShowPlayerDialog(playerid, DIALOG_NONE, DIALOG_STYLE_LIST, "Gang Online", string, "Close", "");
+	}
+	else
+	{
+       ShowPlayerDialog(playerid, DIALOG_NONE, DIALOG_STYLE_LIST, "Gang Online", "No Members Online In This Gang", "Close", "");
+	}
+	return 1;
+}
+
 CMD:ganghelp(playerid, params[])
 {
 	if(PlayerInfo[playerid][pGang] == -1)
@@ -63173,6 +64170,25 @@ CMD:myangle(playerid, params[])
     return 1;
 }
 
+CMD:war(playerid, params[])
+{
+    if(PlayerInfo[playerid][pGang] == -1)
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "You Are Not In A Gang To Use War Announcement");
+	}
+	if(isnull(params))
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "Usage: /war [war announcement]");
+	}
+	foreach(Player, i)
+	{
+	    SCMA(COLOR_REALRED, "------------ * War Announcement * ------------");
+	    SMA(COLOR_YELLOW, "** [%s](%s) %s: %s", GangInfo[PlayerInfo[i][pGang]][gName],GangRanks[PlayerInfo[i][pGang]][PlayerInfo[i][pGangRank]], GetRPName(playerid), params);
+		PlayerPlaySound(i,1150,0.0,0.0,0.0);
+	}
+	return 1;
+}
+
 CMD:announce(playerid, params[])
 {
 	new text[128];
@@ -63193,6 +64209,31 @@ CMD:announce(playerid, params[])
 		}
 
 		SetTimerEx("ANNHIDE", 10000, false, "i", i);
+		PlayerPlaySound(i,1150,0.0,0.0,0.0);
+	}
+	return 1;
+}
+
+CMD:ann(playerid, params[])
+{
+	new text[128];
+    if(PlayerInfo[playerid][pAdmin] < 3)
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "You are not authorized to use this command.");
+	}
+	if(sscanf(params, "s[128]", text))
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "Usage: /ann [text]");
+	}
+	foreach(new i : Player)
+	{
+		TextDrawSetString(AnnounceTD[8], text);
+		for(new f = 0; f < 9; f ++)
+		{
+			TextDrawShowForPlayer(i, AnnounceTD[f]);
+		}
+
+		SetTimerEx("ANNOUNCEHIDE", 10000, false, "i", i);
 		PlayerPlaySound(i,1150,0.0,0.0,0.0);
 	}
 	return 1;

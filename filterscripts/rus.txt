@@ -1,0 +1,9 @@
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(1845) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(2957) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(4540) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(9098) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(9720) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(15303) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(15383) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+Pawn compiler 3.2.3664	 	 	Copyright (c) 1997-2016, ITB CompuPhase
+
