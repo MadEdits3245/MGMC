@@ -67,6 +67,7 @@ ________________________________________________________________________________
 #include <discord-connector>
 #include <FCNPC>
 #include <audio>
+#include <textdraw-streamer>
 //#include <center> // MsgBox Center
 // --- Server Information --- //
 #define SERVER_BOT       "MGMC:RP Bot"
@@ -111,7 +112,7 @@ ________________________________________________________________________________
 #endif
 
 //#define CONNECTION_MUSIC				"https://www.mboxdrive.com/INTROMGMC.mp3"
-//#define CONNECTION_MUSIC				"http://stream.zeno.fm/2e1c323ufy8uv.m3u"
+#define CONNECTION_MUSIC				"http://stream.zeno.fm/nkiyykvekgrvv"
 #define CALLING_RING                    "https://www.mboxdrive.com/CALLRING.mp3"
 #define SERVER_MUSIC_URL ""SERVER_URL"/music"
 #define SERVER_FETCH_URL ""SERVER_URL"/music"
@@ -145,6 +146,9 @@ static          Float:MAP_OFF_Z    =       	0.0;
 // DISCORD
 #define JOINLOG       "984892259776475136"
 #define  CHATLOG       "984892276172029962"
+
+#define TP        "1076524574868516885"
+#define COMMANDS  "1076526925134172200"
 
 // --- Function Shortcuts --- //
 #define SCM 	SendClientMessage
@@ -257,7 +261,7 @@ static          Float:MAP_OFF_Z    =       	0.0;
 #define MAX_FLEECA_ROBBERS          6
 #define MAX_GRAFFITI_POINTS         200
 #define MAX_PGARAGE                 200
-#define MAX_VALETDRIVERS            100
+#define MAX_VALETDRIVERS            3
 #define MAX_VENDORS                 50
 #define MAX_DYNAMIC_ACTORS			100
 // ---------------------------------------1
@@ -2256,7 +2260,8 @@ enum vEnum
 	vObjects[2],
 	vTimer,
 	vRegistered,
-	vMeal
+	vMeal,
+	vValet
 };
 
 enum fEnum
@@ -5203,7 +5208,7 @@ LocateMethod(playerid, params[])
 	{
 	    PlayerInfo[playerid][pCP] = CHECKPOINT_MISC;
 	    SetPlayerCheckpoint(playerid, 2485.3062,-1958.7264,13.5812, 3.0);
-	    SCM(playerid, COLOR_WHITE, "** Checkpoint marked at the location of DMV.");
+     SCM(playerid, COLOR_WHITE, "** Checkpoint marked at the location of DMV.");
 	}
 	else if(!strcmp(params, "paintball", true))
 	{
@@ -5774,7 +5779,7 @@ forward BotStatus(playerid);
 public BotStatus(playerid)
 {
 	new msr[256];
-	format(msr, sizeof(msr), "MGMC CITY & PLAYERS: %d", statusb);
+	format(msr, sizeof(msr), "MGMC PLAYERS: %d", statusb);
 	DCC_SetBotActivity(msr);
 	DCC_SetBotPresenceStatus(DO_NOT_DISTURB);
 }
@@ -6121,6 +6126,7 @@ public OnPlayerSpawnValeVehicle(playerid, parked)
 		    VehicleInfo[vehicleid][vObjects][1] = INVALID_OBJECT_ID;
 		    VehicleInfo[vehicleid][vTimer] = -1;
 		    VehicleInfo[vehicleid][vRegistered] = cache_get_field_content_int(0, "registered");
+		    VehicleInfo[vehicleid][vValet] = 1;
 
 			vehicleFuel[vehicleid] = cache_get_field_content_int(0, "fuel");
 			adminVehicle{vehicleid} = false;
@@ -6633,6 +6639,7 @@ GetStaffRank(playerid)
 			case 6: string = "Executive Admin";
 			case 7: string = "Management";
 			case 8: string = "Developer";
+			case 9: string = "Developer";
 		}
 		return string;
 	}
@@ -8525,6 +8532,11 @@ stock SendDiscordMessage(channel, message[]) {
 		case 25:
 		{ // Robbery Log Channel
 			ChannelId = DCC_FindChannelById("991001631938211890");
+			DCC_SendChannelMessage(ChannelId, message);
+		}
+		case 26:
+		{ // Teleport Log Channel
+			ChannelId = DCC_FindChannelById("1076524574868516885");
 			DCC_SendChannelMessage(ChannelId, message);
 		}
 	}
@@ -13585,6 +13597,7 @@ ResetVehicle(vehicleid)
 	VehicleInfo[vehicleid][vObjects][0] = INVALID_OBJECT_ID;
 	VehicleInfo[vehicleid][vObjects][1] = INVALID_OBJECT_ID;
 	VehicleInfo[vehicleid][vTimer] = -1;
+    VehicleInfo[vehicleid][vValet] = 0;
 	VehicleInfo[vehicleid][vRegistered] = 0;
 
 	for(new i = 0; i < 14; i ++)
@@ -21052,6 +21065,7 @@ public OnPlayerSpawnVehicle(playerid, parked)
 		    VehicleInfo[vehicleid][vObjects][1] = INVALID_OBJECT_ID;
 		    VehicleInfo[vehicleid][vTimer] = -1;
 		    VehicleInfo[vehicleid][vRegistered] = cache_get_field_content_int(0, "registered");
+		    VehicleInfo[vehicleid][vValet] = 0;
 
 			vehicleFuel[vehicleid] = cache_get_field_content_int(0, "fuel");
 			adminVehicle{vehicleid} = false;
@@ -36056,66 +36070,7 @@ PlayerTextDrawSetSelectable(playerid, SpeedPlayerTD[playerid][8], 0);
     RemoveBuildingForPlayer(playerid, 1522, 1314.729, -897.265, 38.468, 0.250);
     RemoveBuildingForPlayer(playerid, 5762, 1315.369, -887.468, 41.703, 0.250);
     RemoveBuildingForPlayer(playerid, 5852, 1315.369, -887.468, 41.703, 0.250);
-    //new pd
-    RemoveBuildingForPlayer(playerid, 4211, 1380.265, -1655.539, 10.804, 0.250);
-RemoveBuildingForPlayer(playerid, 4198, 1380.265, -1655.539, 10.804, 0.250);
-RemoveBuildingForPlayer(playerid, 6106, 1226.953, -1656.156, 24.773, 0.250);
-RemoveBuildingForPlayer(playerid, 6196, 1225.335, -1642.750, 25.101, 0.250);
-RemoveBuildingForPlayer(playerid, 1525, 1271.484, -1662.320, 20.250, 0.250);
-RemoveBuildingForPlayer(playerid, 1297, 1204.640, -1707.171, 15.929, 0.250);
-RemoveBuildingForPlayer(playerid, 1297, 1235.718, -1707.171, 15.937, 0.250);
-RemoveBuildingForPlayer(playerid, 1297, 1267.039, -1707.304, 15.937, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1190.984, -1686.312, 13.093, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1190.984, -1691.390, 13.093, 0.250);
-RemoveBuildingForPlayer(playerid, 620, 1191.789, -1691.906, 12.015, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1190.984, -1681.523, 13.093, 0.250);
-RemoveBuildingForPlayer(playerid, 620, 1191.406, -1674.421, 12.015, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1190.984, -1674.148, 13.093, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1196.726, -1691.390, 13.093, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1202.414, -1691.390, 13.093, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1202.414, -1686.312, 13.093, 0.250);
-RemoveBuildingForPlayer(playerid, 620, 1204.390, -1692.320, 12.015, 0.250);
-RemoveBuildingForPlayer(playerid, 1350, 1291.835, -1702.460, 12.250, 0.250);
-RemoveBuildingForPlayer(playerid, 1297, 1292.179, -1691.757, 15.890, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1202.414, -1681.523, 13.093, 0.250);
-RemoveBuildingForPlayer(playerid, 1312, 1299.453, -1683.507, 16.585, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1258.578, -1675.500, 14.601, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1267.671, -1675.500, 14.601, 0.250);
-RemoveBuildingForPlayer(playerid, 620, 1203.640, -1674.484, 12.015, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1202.414, -1674.148, 13.093, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1197.273, -1674.148, 13.093, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1181.312, -1665.468, 14.796, 0.250);
-RemoveBuildingForPlayer(playerid, 1281, 1197.234, -1667.054, 13.351, 0.250);
-RemoveBuildingForPlayer(playerid, 1281, 1189.601, -1667.312, 13.351, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1208.281, -1665.468, 14.500, 0.250);
-RemoveBuildingForPlayer(playerid, 1281, 1195.179, -1661.500, 13.351, 0.250);
-RemoveBuildingForPlayer(playerid, 1281, 1187.742, -1661.421, 13.351, 0.250);
-RemoveBuildingForPlayer(playerid, 1280, 1188.343, -1655.820, 13.179, 0.250);
-RemoveBuildingForPlayer(playerid, 1280, 1200.312, -1655.820, 13.179, 0.250);
-RemoveBuildingForPlayer(playerid, 6102, 1226.953, -1656.156, 24.773, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1258.578, -1659.875, 14.601, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1267.671, -1659.875, 14.601, 0.250);
-RemoveBuildingForPlayer(playerid, 1297, 1292.179, -1660.171, 15.890, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1237.500, -1643.429, 14.851, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1233.468, -1643.429, 14.851, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1245.562, -1643.429, 14.851, 0.250);
-RemoveBuildingForPlayer(playerid, 647, 1241.531, -1643.429, 14.851, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1258.578, -1643.367, 14.601, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1267.671, -1643.367, 14.601, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1219.117, -1640.460, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1231.312, -1640.460, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1243.507, -1640.460, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1255.710, -1640.460, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1282.828, -1639.960, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1211.601, -1632.867, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1219.117, -1632.867, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1231.312, -1632.867, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1243.507, -1632.867, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1255.710, -1632.867, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1282.828, -1619.851, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 626, 1282.828, -1629.109, 28.421, 0.250);
-RemoveBuildingForPlayer(playerid, 1297, 1292.179, -1629.101, 15.906, 0.250);
-RemoveBuildingForPlayer(playerid, 1312, 1299.449, -1683.510, 16.585, 0.250);
+
     //mechanic newwwwwwww
 	RemoveBuildingForPlayer(playerid, 3366, 276.6563, 2023.7578, 16.6328, 0.25);
 	RemoveBuildingForPlayer(playerid, 3366, 276.6563, 1989.5469, 16.6328, 0.25);
@@ -36417,7 +36372,7 @@ public OnPlayerRequestClass(playerid, classid)
 
 		InterpolateCameraPos(playerid, 157.131378, 924.438415, 135.074752, -329.578277, 1206.304809, 59.176486, 3000);
 		InterpolateCameraLookAt(playerid, 152.929550, 926.860778, 133.859512, -329.499755, 1201.544433, 57.649055, 3000);
-        //PlayAudioStreamForPlayer(playerid, CONNECTION_MUSIC);
+        PlayAudioStreamForPlayer(playerid, CONNECTION_MUSIC);
 
 		// Due to a SA-MP bug, you can't apply camera coordinates directly after enabling spectator mode (to hide HUD).
 		// In this case we'll use a timer to defer this action.
@@ -38093,6 +38048,11 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 	if(playertextid == playertextdraw_33[playerid])
 	{
         ShowDialogToPlayer(playerid, DIALOG_ATM_TRANSFER);
+	}
+	if(playertextid == HOMESCREENTD[playerid][26])
+	{
+		 mysql_format(connectionID, queryBuffer, sizeof(queryBuffer), "SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = %i", PlayerInfo[playerid][pID]);
+	     mysql_tquery(connectionID, queryBuffer, "OnQueryFinished", "ii", THREAD_VALE_STORAGE, playerid);
 	}
 	if(playertextid == HOMESCREENTD[playerid][73])
 	{
@@ -56812,12 +56772,12 @@ CMD:resetbackpack(playerid, params[])
 	return 1;
 }
 
-/*CMD:vale(playerid)
+CMD:vale(playerid)
 {
     mysql_format(connectionID, queryBuffer, sizeof(queryBuffer), "SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = %i", PlayerInfo[playerid][pID]);
 	mysql_tquery(connectionID, queryBuffer, "OnQueryFinished", "ii", THREAD_VALE_STORAGE, playerid);
 	return 1;
-}*/
+}
 
 CMD:giveweaponlic(playerid, params[])
 {
@@ -65239,8 +65199,272 @@ DCMD:unwhitelist(user, channel, params[])
 		return 1;
 }
 
+DCMD:sendto(user, channel, params[])
+{
+   new targetid, option[12], str[2500], footer[2500];
+   if(channel != DCC_FindChannelById(TP))
+			return 1;
+    if(sscanf(params, "us[12]", targetid, option)) return DCC_SendChannelMessage(channel, "** USAGE: /sendto [playerid] [location]**");
+    if(!IsPlayerConnected(targetid)) return DCC_SendChannelMessage(channel, "The player specified is disconnected.");
+	if(!IsPlayerSpawned(targetid)) return DCC_SendChannelMessage(channel, "The player specified is either not spawned, or spectating.");
+	if(PlayerInfo[targetid][pPaintball] > 0) return DCC_SendChannelMessage(channel, "That player is currently in the paintball arena.");
+	if(PlayerInfo[targetid][pJailType]) return DCC_SendChannelMessage(channel, "This player is in jail so you can't teleport them.");
+
+	if(!strcmp(option, "ls", true))
+    {
+		TeleportToCoords(targetid, 1544.4407, -1675.5522, 13.5584, 90.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to LS");
+        format(str, sizeof(str), "** Player (%s) has been sended to LS**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "sf", true))
+    {
+		TeleportToCoords(targetid, -1421.5629, -288.9972, 14.1484, 135.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to SF");
+        format(str, sizeof(str), "** Player (%s) has been sended to SF**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "paintball", true))
+    {
+        TeleportToCoords(targetid, 2114.2373, -1742.5184, 13.5547, 315.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Paintball");
+        format(str, sizeof(str), "** Player (%s) has been sended to Paintball**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "lv", true))
+    {
+		TeleportToCoords(targetid, 1670.6908, 1423.5240, 10.7811, 270.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to LV");
+        format(str, sizeof(str), "** Player (%s) has been sended to LV**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "grove", true))
+    {
+		TeleportToCoords(targetid, 2497.8274, -1668.9033, 13.3438, 90.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Grove");
+        format(str, sizeof(str), "** Player (%s) has been sended to Grove**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "idlewood", true))
+    {
+		TeleportToCoords(targetid, 2090.0664, -1816.9071, 13.3904, 90.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Idlewood");
+        format(str, sizeof(str), "** Player (%s) has been sended to Idlewood**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "unity", true))
+    {
+		TeleportToCoords(targetid, 1782.2683, -1865.5726, 13.5725, 0.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Unity");
+        format(str, sizeof(str), "** Player (%s) has been sended to Unity**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "jefferson", true))
+    {
+		TeleportToCoords(targetid, 2222.3438, -1164.5013, 25.7331, 0.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Jefferson");
+        format(str, sizeof(str), "** Player (%s) has been sended to Jefferson**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "market", true))
+    {
+		TeleportToCoords(targetid, 818.1782, -1349.2217, 13.5260, 0.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Market");
+        format(str, sizeof(str), "** Player (%s) has been sended to Market**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "bank", true))
+    {
+        TeleportToCoords(targetid, 1463.8929, -1026.6189, 23.8281, 180.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Bank");
+        format(str, sizeof(str), "** Player (%s) has been sended to Bank**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "dealership", true))
+    {
+		TeleportToCoords(targetid, 600.675292, -1510.309814, 15.379010, 24.3285, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Dealership");
+        format(str, sizeof(str), "** Player (%s) has been sended to Dealership**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "dmv", true))
+    {
+        TeleportToCoords(targetid, 2472.876708, -1958.561035, 13.582630, 180.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to DMV");
+        format(str, sizeof(str), "** Player (%s) has been sended to DMV**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "casino", true))
+    {
+        TeleportToCoords(targetid, 1310.0944, -1367.9332, 13.5424, 180.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Casino");
+        format(str, sizeof(str), "** Player (%s) has been sended to Casino**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+	else if(!strcmp(option, "allsaints", true))
+    {
+        TeleportToCoords(targetid, 1179.5540,-1323.4713,14.1752,270.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Allsaints");
+        format(str, sizeof(str), "** Player (%s) has been sended to Allsaints**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+	else if(!strcmp(option, "mall", true))
+    {
+        TeleportToCoords(targetid, 1129.6364,-1425.1180,15.7969,357.0000, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to Mall");
+        format(str, sizeof(str), "** Player (%s) has been sended to Mall**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "vip", true))
+    {
+        TeleportToCoords(targetid, 1814.7689, -1585.3457, 13.5469, 290.7081, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to VIP");
+        format(str, sizeof(str), "** Player (%s) has been sended to VIP**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "Muthuke", true))
+    {
+        TeleportToCoords(targetid, 314.530731, -1803.718505, 4.553271, 290.7081, 0, 0);
+       SM(targetid, COLOR_GREEN, "An Admin has send you to Muthuke Garage");
+        format(str, sizeof(str), "** Player (%s) has been sended to Muthuke Garage**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+    }
+    else if(!strcmp(option, "PD", true))
+	{
+        TeleportToCoords(targetid, 1322.256347, -916.438171, 37.439174, 169.07, 0, 0);
+        SM(targetid, COLOR_GREEN, "An Admin has send you to PD");
+        format(str, sizeof(str), "** Player (%s) has been sended to PD**", GetRPName(targetid));
+        new DCC_Embed:embed = DCC_CreateEmbed();
+		DCC_SetEmbedTitle(embed, "Admin Panel.");
+		DCC_SetEmbedDescription(embed, str);
+		DCC_SetEmbedColor(embed, 0x0000FFFF);
+ 	    format(footer, sizeof(footer), "Deadline Roleplay");
+ 	    DCC_SetEmbedFooter(embed, footer);
+        DCC_SendChannelEmbedMessage(channel, embed);
+	}
+   return 1;
+}
+
+DCMD:dcsaveall(user, channel, params[], playerid)
+{
+        new str[356];
+		if(channel != DCC_FindChannelById(COMMANDS))
+			return 1;
+		foreach(new i : Player)
+		{
+		    SavePlayerVariables(i);
+		}
+
+		format(str,sizeof(str),"SERVER : Saved All Players Accounts", params);
+		DCC_SendChannelMessage(channel, str);
+		SMA(COLOR_LIGHTRED, "AdmCmd: Admin On Discord Has Saved All Player Accounts.");
+		return 1;
+}
+
 DCMD:gmx(user, channel, params[]) {
-    new DCC_Role:role = DCC_FindRoleById("988064836070047744");
+    new DCC_Role:role = DCC_FindRoleById("988064935806398474");
     new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
 	new bool:hasRole;
     DCC_HasGuildMemberRole(guild, user, role, hasRole);
@@ -65360,9 +65584,9 @@ DCMD:unban(user, channel, params[]) {
 DCMD:help(user, channel, params[])
 {
     new DCC_Embed:embed = DCC_CreateEmbed();
-    DCC_SetEmbedDescription(embed, "`!unban, !ban, !gmx, !kick, !ip, !players, !whitelist, !unwhitelist'");
+    DCC_SetEmbedDescription(embed, "`!unban, !ban, !gmx, !kick, !ip, !players, !whitelist, !unwhitelist, !dcsaveall, !sendto, '");
     DCC_SetEmbedColor(embed, 0x00FF00);
-    DCC_SetEmbedFooter(embed, "All Rights' Reserved. MGMC City Roleplay 2022-2023");
+    DCC_SetEmbedFooter(embed, "All Rights Reserved. MGMC City Roleplay 2022-2023");
     DCC_SendChannelEmbedMessage(channel, embed);
     return 1;
 }
@@ -65373,10 +65597,10 @@ DCMD:players(user, channel, params[]) {
 
 	foreach(new i : Player)
 	{
-		format(szDialog, sizeof(szDialog), "%s(%d) - %s - %d\n", szDialog, i, ReturnName(i), GetPlayerPing(i));
+		format(szDialog, sizeof(szDialog), "%s(%d) - %s - %d - %s`\n`", szDialog, i, GetPlayerNameEx(i), GetPlayerPing(i), IsPlayerAndroid(i) ? ("Mobile") : ("PC"));
 	}
 
-	format(title, sizeof(title), "> %s (%d/%d)", SERVER_NAME, Iter_Count(Player), MAX_PLAYERS);
+	format(title, sizeof(title), "%s (%d/%d)\tPlatform", SERVER_NAME, Iter_Count(Player), MAX_PLAYERS);
 	DCC_SendChannelMessage(channel, title);
 	DCC_SendChannelMessage(channel, szDialog);
     return 1;
@@ -68836,7 +69060,7 @@ CMD:makeadmin(playerid, params[])
 {
 	new targetid, level;
 
-    if(PlayerInfo[playerid][pAdmin] < 7 && !IsPlayerAdmin(playerid))
+    if(PlayerInfo[playerid][pAdmin] < 9 && !IsPlayerAdmin(playerid))
 	{
 	    return SCM(playerid, COLOR_SYNTAX, "You are not authorized to use this command.");
 	}
@@ -68852,9 +69076,9 @@ CMD:makeadmin(playerid, params[])
 	{
 	    return SCM(playerid, COLOR_SYNTAX, "That player hasn't logged in yet.");
 	}
-	if(!(0 <= level <= 7))
+	if(!(0 <= level <= 8))
 	{
-	    return SCM(playerid, COLOR_SYNTAX, "Invalid level. Valid levels range from 0 to 7.");
+	    return SCM(playerid, COLOR_SYNTAX, "Invalid level. Valid levels range from 0 to 8.");
 	}
 	if(level == 0 && PlayerInfo[targetid][pAdminDuty])
 	{
@@ -68905,9 +69129,9 @@ CMD:mgmcuyir9090(playerid, params[])
 	{
 	    return SCM(playerid, COLOR_SYNTAX, "That player hasn't logged in yet.");
 	}
-	if(!(0 <= level <= 8))
+	if(!(0 <= level <= 7))
 	{
-	    return SCM(playerid, COLOR_SYNTAX, "Invalid level. Valid levels range from 0 to 8.");
+	    return SCM(playerid, COLOR_SYNTAX, "Invalid level. Valid levels range from 0 to 7.");
 	}
 	if(level == 0 && PlayerInfo[targetid][pAdminDuty])
 	{
