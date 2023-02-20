@@ -149,6 +149,7 @@ static          Float:MAP_OFF_Z    =       	0.0;
 
 #define TP        "1076524574868516885"
 #define COMMANDS  "1076526925134172200"
+#define Dccmd     "1077272228053389423"
 
 // --- Function Shortcuts --- //
 #define SCM 	SendClientMessage
@@ -1669,6 +1670,7 @@ enum pEnum
 	pLastPay,
 	pLastRepair,
 	pLastRefuel,
+	pLastRadar,
 	pLastDrug,
 	pLastDefend,
 	pLastSell,
@@ -8535,8 +8537,8 @@ stock SendDiscordMessage(channel, message[]) {
 			DCC_SendChannelMessage(ChannelId, message);
 		}
 		case 26:
-		{ // Teleport Log Channel
-			ChannelId = DCC_FindChannelById("1076524574868516885");
+		{ // Report Handle log channel
+			ChannelId = DCC_FindChannelById("1077272228053389423");
 			DCC_SendChannelMessage(ChannelId, message);
 		}
 	}
@@ -18654,6 +18656,9 @@ public SecondTimer()
 		    //ATM CODES
             format(string, sizeof(string), "$%d", PlayerInfo[i][pBank]);
             PlayerTextDrawSetString(i, AtmTD[i][7], string);
+            
+            format(string, sizeof(string), "$%d", PlayerInfo[i][pBank]);
+            PlayerTextDrawSetString(i, BankTD1[i][5], string);
 
 			/*if(PlayerInfo[i][pGang] >= 0) {
 				PlayerTextDrawHide(i, PlayerStatsTD[i]);
@@ -32071,6 +32076,7 @@ public OnPlayerConnect(playerid)
 	PlayerInfo[playerid][pLastRepair] = 0;
 	PlayerInfo[playerid][pLastRefuel] = 0;
 	PlayerInfo[playerid][pLastDrug] = 0;
+	PlayerInfo[playerid][pLastRadar] = 0;
 	PlayerInfo[playerid][pLastSell] = 0;
 	PlayerInfo[playerid][pLastEnter] = 0;
 	PlayerInfo[playerid][pLastPress] = 0;
@@ -37885,9 +37891,9 @@ public OnPlayerDamageDone(playerid, Float:amount, issuerid, weapon, bodypart)
 	return 1;
 }
 
-public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
+public OnPlayerClickDynamicTextdraw(playerid, PlayerText: playertextid)
 {
-//Bank
+	//Bank
     if(playertextid == BankTD2[playerid][2])
 	{
 		HideBank1(playerid);
@@ -38048,11 +38054,6 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 	if(playertextid == playertextdraw_33[playerid])
 	{
         ShowDialogToPlayer(playerid, DIALOG_ATM_TRANSFER);
-	}
-	if(playertextid == HOMESCREENTD[playerid][26])
-	{
-		 mysql_format(connectionID, queryBuffer, sizeof(queryBuffer), "SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = %i", PlayerInfo[playerid][pID]);
-	     mysql_tquery(connectionID, queryBuffer, "OnQueryFinished", "ii", THREAD_VALE_STORAGE, playerid);
 	}
 	if(playertextid == HOMESCREENTD[playerid][73])
 	{
@@ -54895,6 +54896,49 @@ CMD:removepg(playerid, params[])
 	return 1;
 }
 
+CMD:radar(playerid, params[])
+{
+	new targetid;
+	if(gettime() - PlayerInfo[playerid][pLastRadar] < 5)
+	{
+	    return SM(playerid, COLOR_SYNTAX, "You need to wait %i more seconds to use this to track again.. Please wait %i more seconds.", 5 - (gettime() - PlayerInfo[playerid][pLastRadar]));
+	}
+    if(!IsLawEnforcement(playerid) && GetFactionType(playerid) != FACTION_GOVERNMENT)
+    {
+  	  return SCM(playerid, COLOR_SYNTAX, "You are not a law enforcement!");
+	}
+	if(PlayerInfo[playerid][pDuty] == 0)
+	{
+		return SCM(playerid, COLOR_GREY2, "You can't use this command while off-duty.");
+	}
+ 	if(sscanf(params, "u", targetid))
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "Usage: /radar [playerid]");
+	}
+	if(!IsPlayerConnected(targetid) || !IsPlayerInRangeOfPlayer(playerid, targetid, 50.0))
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "The player specified is disconnected or out of range.");
+	}
+	if(targetid == playerid)
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "You can't use this command on yourself.");
+	}
+	if(GetPlayerInterior(targetid))
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "This player is an interior. You can't find them at the moment.");
+	}
+	if(PlayerInfo[targetid][pAdminDuty])
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "You can't use this command on an on-duty administrator.");
+	}
+    PlayerInfo[playerid][pFindTime] = 900;
+    PlayerInfo[playerid][pLastRadar] = gettime();
+    SetPlayerMarkerForPlayer(playerid, targetid, 0xFF0000FF);
+	SM(playerid, COLOR_WHITE, "** %s's suspects location marked on your radar. %i seconds remain until the marker disappears.", GetRPName(targetid), PlayerInfo[playerid][pFindTime]);
+	PlayerInfo[playerid][pFindPlayer] = targetid;
+	return 1;
+}
+
 CMD:hotwire(playerid, params[])
 {
 	new vehicleid = GetPlayerVehicleID(playerid), Float:health;
@@ -56772,12 +56816,12 @@ CMD:resetbackpack(playerid, params[])
 	return 1;
 }
 
-CMD:vale(playerid)
+/*CMD:vale(playerid)
 {
     mysql_format(connectionID, queryBuffer, sizeof(queryBuffer), "SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = %i", PlayerInfo[playerid][pID]);
 	mysql_tquery(connectionID, queryBuffer, "OnQueryFinished", "ii", THREAD_VALE_STORAGE, playerid);
 	return 1;
-}
+}*/
 
 CMD:giveweaponlic(playerid, params[])
 {
@@ -65581,10 +65625,186 @@ DCMD:unban(user, channel, params[]) {
     return 1;
 }
 
+DCMD:reports(user, channel, params[])
+{
+	if(channel != DCC_FindChannelById(Dccmd))
+		return 1;
+
+	SendDiscordMessage(26, "Pending Reports:");
+	for(new i = 0; i < MAX_REPORTS; i ++)
+	{
+	    if(ReportInfo[i][rExists] && !ReportInfo[i][rAccepted])
+	    {
+	    	new szString[128];
+			format(szString, sizeof(szString), "(RID: %i) %s[%i] reports: %s", i, GetRPName(ReportInfo[i][rReporter]), ReportInfo[i][rReporter], ReportInfo[i][rText]);
+			SendDiscordMessage(26, szString);
+		}
+	}
+	SendDiscordMessage(26, "** Use !ar [rid] or !tr [rid] to handle these reports.");
+	return 1;
+}
+
+DCMD:ar(user, channel, params[])
+{
+	new reportid, chat, playerid;
+	if(channel != DCC_FindChannelById(Dccmd))
+		return 1;
+
+	if(sscanf(params, "iI(1)", reportid, chat))
+	{
+	    return SendDiscordMessage(26, "Usage: !ar [reportid] [chat (optional - 0/1)]");
+	}
+	if(!(0 <= reportid < MAX_REPORTS) || !ReportInfo[reportid][rExists])
+	{
+	    return SendDiscordMessage(26, "Invalid report ID.");
+	}
+	if(ReportInfo[reportid][rAccepted])
+	{
+	    return SendDiscordMessage(26, "The report specified is being handled by another admin.");
+	}
+	if(PlayerInfo[playerid][pActiveReport] >= 0)
+	{
+	    return SendDiscordMessage(26, "You have a report active already. Use !cr to close it.");
+	}
+
+	SAM(COLOR_LIGHTRED, "AdmCmd: Discord Admin has accepted report %i from %s.", reportid, GetRPName(ReportInfo[reportid][rReporter]));
+
+	if(chat)
+	{
+		SendDiscordMessage(26, "** You can use !rr to speak with the reporter and !cr to close the report.");
+		SM(ReportInfo[reportid][rReporter], COLOR_YELLOW, "Discord Administrator has accepted your report and is now reviewing it.");
+		SCM(ReportInfo[reportid][rReporter], COLOR_YELLOW, "You can use /rdr to reply to the admin handling your report.");
+
+		PlayerInfo[playerid][pActiveReport] = reportid;
+		PlayerInfo[ReportInfo[reportid][rReporter]][pActiveReport] = reportid;
+
+		ReportInfo[reportid][rAccepted] = 1;
+	}
+	else
+	{
+	    SM(ReportInfo[reportid][rReporter], COLOR_YELLOW, "Discord Administrator has accepted your report and is now reviewing it.");
+	    ReportInfo[reportid][rExists] = 0;
+	}
+	return 1;
+}
+
+DCMD:cr(user, channel, params[])
+{
+	new playerid;
+    new reportid = PlayerInfo[playerid][pActiveReport];
+    if(channel != DCC_FindChannelById(Dccmd))
+		return 1;
+
+	if(ReportInfo[reportid][rReporter] == playerid)
+	{
+	    SendDiscordMessage(26, "The Report is now closed");
+	    SM(playerid, COLOR_YELLOW, "You have closed the report and ended your conversation with the admin.");
+	}
+	else
+	{
+	    SM(ReportInfo[reportid][rReporter], COLOR_YELLOW, "** Discord Administrator has closed the report. **");
+	    SendDiscordMessage(26, "You have closed the report and ended your conversation with the reporter.");
+	}
+
+	if(ReportInfo[reportid][rReporter] != INVALID_PLAYER_ID)
+	{
+		PlayerInfo[ReportInfo[reportid][rReporter]][pActiveReport] = -1;
+	}
+	if(ReportInfo[reportid][rHandledBy] != INVALID_PLAYER_ID)
+	{
+		PlayerInfo[ReportInfo[reportid][rHandledBy]][pActiveReport] = -1;
+	}
+
+	ReportInfo[reportid][rExists] = 0;
+	ReportInfo[reportid][rAccepted] = 0;
+	ReportInfo[reportid][rReporter] = INVALID_PLAYER_ID;
+	ReportInfo[reportid][rHandledBy] = INVALID_PLAYER_ID;
+	PlayerInfo[playerid][pActiveReport] = -1;
+
+	return 1;
+}
+
+DCMD:rr(user, channel, params[])
+{
+	new targetid, text[128], playerid;
+	if(channel != DCC_FindChannelById(Dccmd))
+		return 1;
+
+	if(sscanf(params, "us[128]", targetid, text))
+	{
+	    return  SendDiscordMessage(26, "Usage: !rr [playerid] [text]");
+	}
+	if(!IsPlayerConnected(targetid))
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "The player specified is disconnected.");
+	}
+
+	SM(targetid, COLOR_YELLOW, "** Discord Admin : %s **", text);
+
+	if(PlayerInfo[targetid][pWhisperFrom] == INVALID_PLAYER_ID)
+	{
+	    SCM(targetid, COLOR_WHITE, "** You can use '/rdr [message]' to reply to this message.");
+	}
+	return 1;
+}
+
+CMD:rdr(playerid, params[])
+{
+	new reportid = PlayerInfo[playerid][pActiveReport];
+
+    if(reportid == -1)
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "You have no active report to reply to.");
+	}
+	if(isnull(params))
+	{
+	    return SCM(playerid, COLOR_SYNTAX, "Usage: /rdr [reply text]");
+	}
+
+	if(ReportInfo[reportid][rReporter] == playerid)
+	{
+		new szString[128];
+		format(szString, sizeof(szString), "** Player %s (ID %i): %s **", GetRPName(playerid), playerid, params);
+		SendDiscordMessage(26, szString);
+	    SM(playerid, COLOR_YELLOW, "** Reply to Discord Report Handler: %s **", params);
+	}
+	return 1;
+}
+
+DCMD:tr(user, channel, params[])
+{
+	new reportid, reason[128];
+	if(channel != DCC_FindChannelById(Dccmd))
+		return 1;
+
+	if(sscanf(params, "iS(N/A)[128]", reportid, reason))
+	{
+	    return SendDiscordMessage(26, "Usage: /tr [reportid] [reason (optional)]");
+	}
+	if(!(0 <= reportid < MAX_REPORTS) || !ReportInfo[reportid][rExists])
+	{
+	    return SendDiscordMessage(26, "Invalid report ID.");
+	}
+    if(ReportInfo[reportid][rAccepted])
+	{
+	    return SendDiscordMessage(26, "The report specified is being handled by another admin.");
+	}
+
+	new szString[128];
+	format(szString, sizeof(szString), "AdmCmd: Discord Admin has trashed report %i from %s, reason: %s", reportid, GetRPName(ReportInfo[reportid][rReporter]), reason);
+	SendDiscordMessage(26, szString);
+	SAM(COLOR_LIGHTRED, "AdmCmd: Discord Admin has trashed report %i from %s, reason: %s", reportid, GetRPName(ReportInfo[reportid][rReporter]), reason);
+	SM(ReportInfo[reportid][rReporter], COLOR_LIGHTRED, "** Discord Admin has trashed your report, reason: %s", reason);
+	ReportInfo[reportid][rExists] = 0;
+
+	ShowPlayerDialog(ReportInfo[reportid][rReporter], 0, DIALOG_STYLE_MSGBOX,"Report Tips","Tips when reporting:\n- Report what you need, not who you need.\n- Be specific, report exactly what you need.\n- Do not make false reports.\n- Do not flame admins.\n- Report only for in-game items.","Close", "");
+	return 1;
+}
+
 DCMD:help(user, channel, params[])
 {
     new DCC_Embed:embed = DCC_CreateEmbed();
-    DCC_SetEmbedDescription(embed, "`!unban, !ban, !gmx, !kick, !ip, !players, !whitelist, !unwhitelist, !dcsaveall, !sendto, '");
+    DCC_SetEmbedDescription(embed, "`!unban, !ban, !gmx, !kick, !ip, !players, !whitelist, !unwhitelist, !dcsaveall, !sendto, !reports, !ar, !tr, !cr '");
     DCC_SetEmbedColor(embed, 0x00FF00);
     DCC_SetEmbedFooter(embed, "All Rights Reserved. MGMC City Roleplay 2022-2023");
     DCC_SendChannelEmbedMessage(channel, embed);
