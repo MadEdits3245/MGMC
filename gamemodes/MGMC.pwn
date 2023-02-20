@@ -65211,6 +65211,14 @@ CMD:twt(playerid, params[])
 //discord whitelist
 DCMD:whitelist(user, channel, params[])
 {
+    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
+	new bool:hasRole;
+    DCC_HasGuildMemberRole(guild, user, role, hasRole);
+	if(!hasRole)
+	{
+		return DCC_SendChannelMessage(channel, "You don't have the role required for this command.");
+	}
 		if(channel != DCC_FindChannelById(whitelist))
 			return 1;
 		new String[256], str[356], footer[500];
@@ -65232,6 +65240,14 @@ DCMD:whitelist(user, channel, params[])
 
 DCMD:unwhitelist(user, channel, params[])
 {
+    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
+	new bool:hasRole;
+    DCC_HasGuildMemberRole(guild, user, role, hasRole);
+	if(!hasRole)
+	{
+		return DCC_SendChannelMessage(channel, "You don't have the role required for this command.");
+	}
 		if(channel != DCC_FindChannelById(whitelist))
 			return 1;
 		new String[256], str[356];
@@ -65245,6 +65261,14 @@ DCMD:unwhitelist(user, channel, params[])
 
 DCMD:sendto(user, channel, params[])
 {
+    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
+	new bool:hasRole;
+    DCC_HasGuildMemberRole(guild, user, role, hasRole);
+	if(!hasRole)
+	{
+		return DCC_SendChannelMessage(channel, "You don't have the role required for this command.");
+	}
    new targetid, option[12], str[2500], footer[2500];
    if(channel != DCC_FindChannelById(TP))
 			return 1;
@@ -65493,6 +65517,14 @@ DCMD:sendto(user, channel, params[])
 
 DCMD:dcsaveall(user, channel, params[], playerid)
 {
+    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
+	new bool:hasRole;
+    DCC_HasGuildMemberRole(guild, user, role, hasRole);
+	if(!hasRole)
+	{
+		return DCC_SendChannelMessage(channel, "You don't have the role required for this command.");
+	}
         new str[356];
 		if(channel != DCC_FindChannelById(COMMANDS))
 			return 1;
@@ -65508,7 +65540,7 @@ DCMD:dcsaveall(user, channel, params[], playerid)
 }
 
 DCMD:gmx(user, channel, params[]) {
-    new DCC_Role:role = DCC_FindRoleById("988064935806398474");
+    new DCC_Role:role = DCC_FindRoleById("988064836070047744");
     new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
 	new bool:hasRole;
     DCC_HasGuildMemberRole(guild, user, role, hasRole);
@@ -65538,7 +65570,7 @@ DCMD:gmx(user, channel, params[]) {
 
 DCMD:kick(user, channel, params[]) {
 	new targetid, reason[128];
-    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Role:role = DCC_FindRoleById("988064935806398474");
     new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
 	new bool:hasRole;
     DCC_HasGuildMemberRole(guild, user, role, hasRole);
@@ -65569,7 +65601,7 @@ DCMD:kick(user, channel, params[]) {
 
 DCMD:ban(user, channel, params[]) {
 	new targetid, reason[128];
-    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Role:role = DCC_FindRoleById("988064935806398474");
     new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
 	new bool:hasRole;
     DCC_HasGuildMemberRole(guild, user, role, hasRole);
@@ -65600,7 +65632,7 @@ DCMD:ban(user, channel, params[]) {
 
 DCMD:unban(user, channel, params[]) {
 	new username[MAX_PLAYER_NAME], playerid;
-    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Role:role = DCC_FindRoleById("988064935806398474");
     new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
 	new bool:hasRole;
     DCC_HasGuildMemberRole(guild, user, role, hasRole);
@@ -65627,6 +65659,14 @@ DCMD:unban(user, channel, params[]) {
 
 DCMD:reports(user, channel, params[])
 {
+    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
+	new bool:hasRole;
+    DCC_HasGuildMemberRole(guild, user, role, hasRole);
+	if(!hasRole)
+	{
+		return DCC_SendChannelMessage(channel, "You don't have the role required for this command.");
+	}
 	if(channel != DCC_FindChannelById(Dccmd))
 		return 1;
 
@@ -65646,6 +65686,14 @@ DCMD:reports(user, channel, params[])
 
 DCMD:ar(user, channel, params[])
 {
+    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
+	new bool:hasRole;
+    DCC_HasGuildMemberRole(guild, user, role, hasRole);
+	if(!hasRole)
+	{
+		return DCC_SendChannelMessage(channel, "You don't have the role required for this command.");
+	}
 	new reportid, chat, playerid;
 	if(channel != DCC_FindChannelById(Dccmd))
 		return 1;
@@ -65690,6 +65738,14 @@ DCMD:ar(user, channel, params[])
 
 DCMD:cr(user, channel, params[])
 {
+    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
+	new bool:hasRole;
+    DCC_HasGuildMemberRole(guild, user, role, hasRole);
+	if(!hasRole)
+	{
+		return DCC_SendChannelMessage(channel, "You don't have the role required for this command.");
+	}
 	new playerid;
     new reportid = PlayerInfo[playerid][pActiveReport];
     if(channel != DCC_FindChannelById(Dccmd))
@@ -65726,6 +65782,14 @@ DCMD:cr(user, channel, params[])
 
 DCMD:rr(user, channel, params[])
 {
+    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
+	new bool:hasRole;
+    DCC_HasGuildMemberRole(guild, user, role, hasRole);
+	if(!hasRole)
+	{
+		return DCC_SendChannelMessage(channel, "You don't have the role required for this command.");
+	}
 	new targetid, text[128], playerid;
 	if(channel != DCC_FindChannelById(Dccmd))
 		return 1;
@@ -65773,6 +65837,14 @@ CMD:rdr(playerid, params[])
 
 DCMD:tr(user, channel, params[])
 {
+    new DCC_Role:role = DCC_FindRoleById("988064902876897330");
+    new DCC_Guild:guild = DCC_FindGuildById("984891929751851079");
+	new bool:hasRole;
+    DCC_HasGuildMemberRole(guild, user, role, hasRole);
+	if(!hasRole)
+	{
+		return DCC_SendChannelMessage(channel, "You don't have the role required for this command.");
+	}
 	new reportid, reason[128];
 	if(channel != DCC_FindChannelById(Dccmd))
 		return 1;
