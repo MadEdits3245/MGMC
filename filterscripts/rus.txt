@@ -1,11 +1,11 @@
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(12) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(836) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(1602) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(2714) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(4297) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(8855) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(9477) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(15060) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(15140) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(1179) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(2291) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(3874) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(8432) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(9054) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(13990) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(15057) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(15142) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\filterscripts\acrpmap.pwn(15222) : íåïðàâèëüíàÿ òàáóëÿöèÿ
 Pawn compiler 3.2.3664	 	 	Copyright (c) 1997-2016, ITB CompuPhase
 
