@@ -18,11 +18,11 @@ ackslimit 3000
 useartwork 1
 gamemode0 MGMC
 filterscripts acrpmap ganghouses ESBGANGHQ2
-plugins sampvoice.so crashdetect.so FCNPC.so whirlpool.so pawncmd.so discord-connector.so SKY.so sscanf.so streamer.so mysql_static.so nativechecker.so audio.so
+plugins sampvoice.so crashdetect.so FCNPC.so whirlpool.so pawncmd.so discord-connector.so SKY.so sscanf.so streamer.so mysql_static.so nativechecker.so audio.so textdraw-streamer.so MapAndreas.so 
 onfoot_rate 40
 incar_rate 40
 weapon_rate 40
 stream_distance 300.0
 port 7777
-discord_bot_token OTY2NzYzNDY4NDk1NjgzNTg2.Gy4bgX._0gdt9jhxFjFL2mv2-F00p-dnQSy--1Z4TuKhU
+discord_bot_token MTA1NTg0NDQyNzk4NzQyNzM4OA.GAj_GE.JE0eZRcCBch_vSxklK_pCuHcCsg8ISQUABwGYQ
 output 1
