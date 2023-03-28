@@ -138,32 +138,32 @@ C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71459) : íåïð
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71488) : íåïðàâèëüíàÿ òàáóëÿöèÿ
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71509) : íåïðàâèëüíàÿ òàáóëÿöèÿ
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71512) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71729) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71730) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71752) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71765) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(76589) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(76590) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(76592) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(81572) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(81613) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(83660) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(83664) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96279) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96281) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96346) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96354) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96381) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96413) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96417) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96433) : íåïðàâèëüíàÿ òàáóëÿöèÿ
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96679) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71743) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71744) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71766) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(71779) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(76603) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(76604) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(76606) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(81586) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(81627) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(83674) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(83678) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96293) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96295) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96360) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96368) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96395) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96427) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96431) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96447) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(96693) : íåïðàâèëüíàÿ òàáóëÿöèÿ
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(1013) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "ConvertSecond"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(1035) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "Formattime"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(8465) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "GetFlyModePos"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(6832) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "GetGangColor"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(11060) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "GetNearbySafezone"
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(79719) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "IsAnAmbulance"
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(79733) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "IsAnAmbulance"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(13322) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "IsAngelsBurger"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(211) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "IsFlyMode"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(8453) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "SetFlyModePos"
@@ -174,7 +174,7 @@ C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(887) : èäåíò
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(818) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "banktd"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(2788) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "clothesShopSkins"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(817) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "contactstd"
-C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(82430) : èäåíòèôèêàòîðó ïðèñâîåíî çíà÷åíèå, íî îí íå èñïîëüçóåòñÿ: "gDisabledVPN"
+C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(82444) : èäåíòèôèêàòîðó ïðèñâîåíî çíà÷åíèå, íî îí íå èñïîëüçóåòñÿ: "gDisabledVPN"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(816) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "messagetd"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(819) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "musictd"
 C:\Users\BRAVO\OneDrive\Desktop\MGMC LATEST\gamemodes\MGMC.pwn(410) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "pCount"
